@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Doanc-sharp/1.0.0": {
+        "runtime": {
+          "Doanc-sharp.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Doanc-sharp/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
