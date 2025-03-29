@@ -7,19 +7,37 @@
     <Compile Update="DatCho.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="Form1.cs">
+    <Compile Update="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Chitietbaotri.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Leftmenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Nhanvien.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="Suaban.cs">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="SuaThanhVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Thanhvien.cs">
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="Themban.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="SuaThietBi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="SuaNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ThemNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="ThemThietBi.cs">
