@@ -4,7 +4,13 @@
     <Compile Update="ChiTietDatCho.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="DanhMuc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="DatCho.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Lichsuhoatdong.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="MainForm.cs">
@@ -22,6 +28,9 @@
     <Compile Update="Suaban.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Suadanhmuc.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="SuaThanhVien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -37,10 +46,16 @@
     <Compile Update="SuaNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Themdanhmuc.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="ThemNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="ThemThietBi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Themvipham.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Thietbi.cs">
@@ -54,6 +69,12 @@
     </Compile>
     <Compile Update="ThongKeBaoCao.cs">
       <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Vipham.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Xulyvipham.cs">
+      <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
 </Project>

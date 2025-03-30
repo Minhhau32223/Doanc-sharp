@@ -1,1 +1,16 @@
-{"ShowEmptyProjects":false,"CustomColumnOrderings":{"name":0,"type":1,"neutral-value":2,"neutral-comment":3,"file-path":1,"file-name":2},"ShowValidationErrors":true,"SelectedResourceGroupsByProject":{"C:\\Users\\hau66\\Downloads\\csharp\\Doanc-sharp\\Doanc-sharp\\Doanc-sharp.csproj":["C:\\Users\\hau66\\Downloads\\csharp\\Doanc-sharp\\Doanc-sharp\\Chitietbaotri.resx","C:\\Users\\hau66\\Downloads\\csharp\\Doanc-sharp\\Doanc-sharp\\Leftmenu.resx","C:\\Users\\hau66\\Downloads\\csharp\\Doanc-sharp\\Doanc-sharp\\DatCho.resx"]},"VisibleColumnKeys":["name","neutral-value","neutral-comment"]}
+{
+  "ShowEmptyProjects": false,
+  "SelectedGroups": [],
+  "ExpandedProjects": [],
+  "ColumnOrder": [
+    "name",
+    "type",
+    "neutral-value",
+    "neutral-comment"
+  ],
+  "VisibleColumnKeys": [
+    "name",
+    "neutral-comment",
+    "neutral-value"
+  ]
+}
