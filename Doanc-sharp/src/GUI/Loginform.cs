@@ -10,24 +10,20 @@ using System.Windows.Forms;
 
 namespace Doanc_sharp
 {
-    public partial class Nhanvien : UserControl
+    public partial class Loginform : Form
     {
-        public Nhanvien()
+        public Loginform()
         {
             InitializeComponent();
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
+            
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }

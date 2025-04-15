@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Doanc_sharp
 {
-    public partial class Leftmenu : UserControl
+    public partial class Xulyvipham : Form
     {
-        public Leftmenu()
+        public Xulyvipham()
         {
             InitializeComponent();
+        }
+
+        private void ThoatBtn_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
         }
     }
 }

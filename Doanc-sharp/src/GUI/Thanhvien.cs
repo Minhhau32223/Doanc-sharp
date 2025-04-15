@@ -17,7 +17,13 @@ namespace Doanc_sharp
             InitializeComponent();
         }
 
-        private void DataNhanvien_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void panel1_Click(object sender, EventArgs e)
+        {
+            SuaThanhVien suaThanhVien = new SuaThanhVien();
+
+        }
+
+        private void Thanhvien_Load(object sender, EventArgs e)
         {
 
         }

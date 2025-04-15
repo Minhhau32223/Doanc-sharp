@@ -1,6 +1,6 @@
 ﻿namespace Doanc_sharp
 {
-    partial class Thanhvien
+    partial class Nhanvien
     {
         /// <summary> 
         /// Required designer variable.
@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             Label label1;
-            DataNhanvien = new DataGridView();
             panel1 = new Panel();
+            DataNhanvien = new DataGridView();
             ID = new DataGridViewTextBoxColumn();
             Ten = new DataGridViewTextBoxColumn();
             phone = new DataGridViewTextBoxColumn();
@@ -38,47 +38,48 @@
             Account = new DataGridViewTextBoxColumn();
             Password = new DataGridViewTextBoxColumn();
             Email = new DataGridViewTextBoxColumn();
-            Ngaydangky = new DataGridViewTextBoxColumn();
+            Chucvu = new DataGridViewTextBoxColumn();
             Trangthai = new DataGridViewTextBoxColumn();
             label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)DataNhanvien).BeginInit();
             SuspendLayout();
             // 
-            // DataNhanvien
+            // label1
             // 
-            DataNhanvien.BackgroundColor = SystemColors.ControlLightLight;
-            DataNhanvien.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            DataNhanvien.Columns.AddRange(new DataGridViewColumn[] { ID, Ten, phone, Address, Account, Password, Email, Ngaydangky, Trangthai });
-            DataNhanvien.Location = new Point(18, 65);
-            DataNhanvien.Margin = new Padding(3, 2, 3, 2);
-            DataNhanvien.Name = "DataNhanvien";
-            DataNhanvien.RowHeadersWidth = 51;
-            DataNhanvien.Size = new Size(908, 598);
-            DataNhanvien.TabIndex = 9;
-            DataNhanvien.CellContentClick += DataNhanvien_CellContentClick;
+            label1.AutoSize = true;
+            label1.Font = new Font("Times New Roman", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(24, 22);
+            label1.Name = "label1";
+            label1.Size = new Size(143, 36);
+            label1.TabIndex = 7;
+            label1.Text = "Nhân viên";
+            label1.Click += label1_Click;
             // 
             // panel1
             // 
             panel1.BackColor = Color.Green;
             panel1.BackgroundImage = Properties.Resources.plus_icon;
             panel1.BackgroundImageLayout = ImageLayout.Stretch;
-            panel1.Location = new Point(861, 12);
+            panel1.Location = new Point(867, 22);
             panel1.Margin = new Padding(3, 2, 3, 2);
             panel1.Name = "panel1";
             panel1.Size = new Size(44, 38);
-            panel1.TabIndex = 8;
-            panel1.Paint += this.panel1_Paint;
+            panel1.TabIndex = 5;
+            panel1.Click += panel1_Click;
+            panel1.Paint += panel1_Paint;
             // 
-            // label1
+            // DataNhanvien
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Times New Roman", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(18, 12);
-            label1.Name = "label1";
-            label1.Size = new Size(154, 36);
-            label1.TabIndex = 10;
-            label1.Text = "Thành viên";
-            label1.Click += this.label1_Click;
+            DataNhanvien.BackgroundColor = SystemColors.ControlLightLight;
+            DataNhanvien.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            DataNhanvien.Columns.AddRange(new DataGridViewColumn[] { ID, Ten, phone, Address, Account, Password, Email, Chucvu, Trangthai });
+            DataNhanvien.Location = new Point(24, 75);
+            DataNhanvien.Margin = new Padding(3, 2, 3, 2);
+            DataNhanvien.Name = "DataNhanvien";
+            DataNhanvien.RowHeadersWidth = 51;
+            DataNhanvien.Size = new Size(908, 598);
+            DataNhanvien.TabIndex = 6;
+            DataNhanvien.CellContentClick += dataGridView1_CellContentClick;
             // 
             // ID
             // 
@@ -124,11 +125,11 @@
             Email.HeaderText = "Email";
             Email.Name = "Email";
             // 
-            // Ngaydangky
+            // Chucvu
             // 
-            Ngaydangky.HeaderText = "Ngày đăng ký";
-            Ngaydangky.Name = "Ngaydangky";
-            Ngaydangky.Width = 80;
+            Chucvu.HeaderText = "Chức vụ";
+            Chucvu.Name = "Chucvu";
+            Chucvu.Width = 80;
             // 
             // Trangthai
             // 
@@ -137,15 +138,15 @@
             Trangthai.Name = "Trangthai";
             Trangthai.Width = 80;
             // 
-            // Thanhvien
+            // Nhanvien
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Bisque;
+            Controls.Add(label1);
             Controls.Add(DataNhanvien);
             Controls.Add(panel1);
-            Controls.Add(label1);
-            Name = "Thanhvien";
+            Name = "Nhanvien";
             Size = new Size(945, 675);
             ((System.ComponentModel.ISupportInitialize)DataNhanvien).EndInit();
             ResumeLayout(false);
@@ -154,8 +155,9 @@
 
         #endregion
 
-        private DataGridView DataNhanvien;
         private Panel panel1;
+        private DataGridView DataNhanvien;
+        private Label label1;
         private DataGridViewTextBoxColumn ID;
         private DataGridViewTextBoxColumn Ten;
         private DataGridViewTextBoxColumn phone;
@@ -163,7 +165,7 @@
         private DataGridViewTextBoxColumn Account;
         private DataGridViewTextBoxColumn Password;
         private DataGridViewTextBoxColumn Email;
-        private DataGridViewTextBoxColumn Ngaydangky;
+        private DataGridViewTextBoxColumn Chucvu;
         private DataGridViewTextBoxColumn Trangthai;
     }
 }

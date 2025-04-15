@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace Doanc_sharp
 {
-    public partial class Xulyvipham : Form
+    public partial class ThemNhanVien : Form
     {
-        public Xulyvipham()
+        public ThemNhanVien()
         {
             InitializeComponent();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
         }
     }
 }

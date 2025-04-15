@@ -30,9 +30,12 @@
         {
             folderBrowserDialog1 = new FolderBrowserDialog();
             Leftpanel = new Panel();
-            Rightpanel = new Panel();
             leftmenu1 = new Leftmenu();
+            Rightpanel = new Panel();
+            headerpanel = new Panel();
+            youraccount = new Label();
             Leftpanel.SuspendLayout();
+            headerpanel.SuspendLayout();
             SuspendLayout();
             // 
             // Leftpanel
@@ -43,27 +46,49 @@
             Leftpanel.Size = new Size(300, 1024);
             Leftpanel.TabIndex = 1;
             // 
-            // Rightpanel
-            // 
-            Rightpanel.BackColor = Color.FromArgb(184, 145, 99);
-            Rightpanel.Location = new Point(303, 2);
-            Rightpanel.Name = "Rightpanel";
-            Rightpanel.Size = new Size(1124, 1011);
-            Rightpanel.TabIndex = 1;
-            // 
             // leftmenu1
             // 
             leftmenu1.BackColor = Color.Beige;
-            leftmenu1.Location = new Point(3, 0);
+            leftmenu1.Location = new Point(0, 0);
             leftmenu1.Name = "leftmenu1";
-            leftmenu1.Size = new Size(294, 1011);
+            leftmenu1.Size = new Size(300, 1011);
             leftmenu1.TabIndex = 0;
+            leftmenu1.Load += leftmenu1_Load_1;
+            // 
+            // Rightpanel
+            // 
+            Rightpanel.BackColor = Color.FromArgb(184, 145, 99);
+            Rightpanel.Location = new Point(303, 117);
+            Rightpanel.Name = "Rightpanel";
+            Rightpanel.Size = new Size(1124, 896);
+            Rightpanel.TabIndex = 1;
+            // 
+            // headerpanel
+            // 
+            headerpanel.BackColor = Color.FromArgb(255, 234, 180);
+            headerpanel.Controls.Add(youraccount);
+            headerpanel.Location = new Point(303, -5);
+            headerpanel.Name = "headerpanel";
+            headerpanel.Size = new Size(1124, 122);
+            headerpanel.TabIndex = 2;
+            headerpanel.Paint += headerpanel_Paint;
+            // 
+            // youraccount
+            // 
+            youraccount.AutoSize = true;
+            youraccount.Font = new Font("Times New Roman", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            youraccount.Location = new Point(674, 34);
+            youraccount.Name = "youraccount";
+            youraccount.Size = new Size(345, 36);
+            youraccount.TabIndex = 0;
+            youraccount.Text = "Tài khoản đang đăng nhập";
             // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1424, 1011);
+            Controls.Add(headerpanel);
             Controls.Add(Rightpanel);
             Controls.Add(Leftpanel);
             Font = new Font("Segoe UI", 9F);
@@ -71,6 +96,8 @@
             Text = "Thư quán";
             Load += Form1_Load;
             Leftpanel.ResumeLayout(false);
+            headerpanel.ResumeLayout(false);
+            headerpanel.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -78,7 +105,9 @@
 
         private FolderBrowserDialog folderBrowserDialog1;
         private Panel Leftpanel;
-        private Leftmenu leftmenu1;
         private Panel Rightpanel;
+        private Leftmenu leftmenu1;
+        private Panel headerpanel;
+        private Label youraccount;
     }
 }

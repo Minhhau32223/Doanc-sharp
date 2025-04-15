@@ -1,79 +1,82 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Compile Update="ChiTietDatCho.cs">
+    <Compile Update="src\GUI\ChiTietDatCho.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="DanhMuc.cs">
+    <Compile Update="src\GUI\DanhMuc.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="DatCho.cs">
+    <Compile Update="src\GUI\DatCho.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="Lichsuhoatdong.cs">
+    <Compile Update="src\GUI\Lichsuhoatdong.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="MainForm.cs">
+    <Compile Update="src\GUI\Loginform.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Chitietbaotri.cs">
+    <Compile Update="src\GUI\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Leftmenu.cs">
+    <Compile Update="src\GUI\Chitietbaotri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="src\GUI\Leftmenu.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="Nhanvien.cs">
+    <Compile Update="src\GUI\Nhanvien.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="Suaban.cs">
+    <Compile Update="src\GUI\Suaban.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Suadanhmuc.cs">
+    <Compile Update="src\GUI\Suadanhmuc.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="SuaThanhVien.cs">
+    <Compile Update="src\GUI\SuaThanhVien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Thanhvien.cs">
+    <Compile Update="src\GUI\Thanhvien.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="Themban.cs">
+    <Compile Update="src\GUI\Themban.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="SuaThietBi.cs">
+    <Compile Update="src\GUI\SuaThietBi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="SuaNhanVien.cs">
+    <Compile Update="src\GUI\SuaNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Themdanhmuc.cs">
+    <Compile Update="src\GUI\Themdanhmuc.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="ThemNhanVien.cs">
+    <Compile Update="src\GUI\ThemNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="ThemThietBi.cs">
+    <Compile Update="src\GUI\ThemThietBi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Themvipham.cs">
+    <Compile Update="src\GUI\Themvipham.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Thietbi.cs">
+    <Compile Update="src\GUI\Thietbi.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="Baotri.cs">
+    <Compile Update="src\GUI\Baotri.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="Ban.cs">
+    <Compile Update="src\GUI\Ban.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="ThongKeBaoCao.cs">
+    <Compile Update="src\GUI\ThongKeBaoCao.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="Vipham.cs">
+    <Compile Update="src\GUI\Vipham.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="Xulyvipham.cs">
+    <Compile Update="src\GUI\Xulyvipham.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
