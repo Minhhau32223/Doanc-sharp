@@ -148,6 +148,7 @@
             Controls.Add(panel1);
             Name = "Nhanvien";
             Size = new Size(945, 675);
+            Load += Nhanvien_Load;
             ((System.ComponentModel.ISupportInitialize)DataNhanvien).EndInit();
             ResumeLayout(false);
             PerformLayout();

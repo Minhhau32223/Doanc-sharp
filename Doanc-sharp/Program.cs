@@ -1,3 +1,7 @@
+﻿using Doanc_sharp.src.DAO;
+using Doanc_sharp.src.DTO;
+using MySqlX.XDevAPI.Common;
+
 namespace Doanc_sharp
 {
     internal static class Program
@@ -12,6 +16,7 @@ namespace Doanc_sharp
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             Application.Run(new MainForm());
+          
         }
     }
 }

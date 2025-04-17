@@ -28,35 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            btn_baotri = new Button();
             btn_thanhvien = new Button();
             btn_nhanvien = new Button();
             btn_thietbi = new Button();
             btn_datcho = new Button();
-            btn_ban = new Button();
+            btn_muon = new Button();
             btn_danhmuc = new Button();
             btn_vipham = new Button();
             btn_lshoatdong = new Button();
             btn_baocao_thongke = new Button();
-            btnHoadon = new Button();
+            btnCheck = new Button();
             label1 = new Label();
             panel1 = new Panel();
             label2 = new Label();
+            btn_baotri = new Button();
             panel1.SuspendLayout();
             SuspendLayout();
-            // 
-            // btn_baotri
-            // 
-            btn_baotri.BackColor = Color.FromArgb(167, 123, 79);
-            btn_baotri.Font = new Font("Roboto", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btn_baotri.ForeColor = Color.White;
-            btn_baotri.Location = new Point(0, 566);
-            btn_baotri.Name = "btn_baotri";
-            btn_baotri.Size = new Size(300, 70);
-            btn_baotri.TabIndex = 1;
-            btn_baotri.Text = "Quản lý bảo trì";
-            btn_baotri.UseVisualStyleBackColor = false;
-            btn_baotri.Click += btn_baotri_Click;
             // 
             // btn_thanhvien
             // 
@@ -64,7 +51,7 @@
             btn_thanhvien.FlatAppearance.BorderSize = 0;
             btn_thanhvien.Font = new Font("Roboto", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btn_thanhvien.ForeColor = Color.White;
-            btn_thanhvien.Location = new Point(0, 370);
+            btn_thanhvien.Location = new Point(0, 332);
             btn_thanhvien.Name = "btn_thanhvien";
             btn_thanhvien.Size = new Size(300, 70);
             btn_thanhvien.TabIndex = 2;
@@ -78,7 +65,7 @@
             btn_nhanvien.FlatAppearance.BorderSize = 0;
             btn_nhanvien.Font = new Font("Roboto", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btn_nhanvien.ForeColor = Color.White;
-            btn_nhanvien.Location = new Point(0, 436);
+            btn_nhanvien.Location = new Point(0, 398);
             btn_nhanvien.Name = "btn_nhanvien";
             btn_nhanvien.Size = new Size(300, 70);
             btn_nhanvien.TabIndex = 3;
@@ -92,7 +79,7 @@
             btn_thietbi.FlatAppearance.BorderSize = 0;
             btn_thietbi.Font = new Font("Roboto", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btn_thietbi.ForeColor = Color.White;
-            btn_thietbi.Location = new Point(0, 503);
+            btn_thietbi.Location = new Point(0, 465);
             btn_thietbi.Name = "btn_thietbi";
             btn_thietbi.Size = new Size(300, 70);
             btn_thietbi.TabIndex = 4;
@@ -105,7 +92,7 @@
             btn_datcho.BackColor = Color.FromArgb(167, 123, 79);
             btn_datcho.Font = new Font("Roboto", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btn_datcho.ForeColor = Color.White;
-            btn_datcho.Location = new Point(0, 630);
+            btn_datcho.Location = new Point(0, 599);
             btn_datcho.Name = "btn_datcho";
             btn_datcho.Size = new Size(300, 70);
             btn_datcho.TabIndex = 5;
@@ -113,25 +100,25 @@
             btn_datcho.UseVisualStyleBackColor = false;
             btn_datcho.Click += btn_datcho_Click;
             // 
-            // btn_ban
+            // btn_muon
             // 
-            btn_ban.BackColor = Color.FromArgb(167, 123, 79);
-            btn_ban.Font = new Font("Roboto", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btn_ban.ForeColor = Color.White;
-            btn_ban.Location = new Point(0, 696);
-            btn_ban.Name = "btn_ban";
-            btn_ban.Size = new Size(300, 70);
-            btn_ban.TabIndex = 6;
-            btn_ban.Text = "Quản lý bàn";
-            btn_ban.UseVisualStyleBackColor = false;
-            btn_ban.Click += btn_ban_Click;
+            btn_muon.BackColor = Color.FromArgb(167, 123, 79);
+            btn_muon.Font = new Font("Roboto", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btn_muon.ForeColor = Color.White;
+            btn_muon.Location = new Point(0, 666);
+            btn_muon.Name = "btn_muon";
+            btn_muon.Size = new Size(300, 70);
+            btn_muon.TabIndex = 6;
+            btn_muon.Text = "Quản lý mượn trả";
+            btn_muon.UseVisualStyleBackColor = false;
+            btn_muon.Click += btn_ban_Click;
             // 
             // btn_danhmuc
             // 
             btn_danhmuc.BackColor = Color.FromArgb(167, 123, 79);
             btn_danhmuc.Font = new Font("Roboto", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btn_danhmuc.ForeColor = Color.White;
-            btn_danhmuc.Location = new Point(0, 759);
+            btn_danhmuc.Location = new Point(0, 733);
             btn_danhmuc.Name = "btn_danhmuc";
             btn_danhmuc.Size = new Size(300, 70);
             btn_danhmuc.TabIndex = 7;
@@ -144,7 +131,7 @@
             btn_vipham.BackColor = Color.FromArgb(167, 123, 79);
             btn_vipham.Font = new Font("Roboto", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btn_vipham.ForeColor = Color.White;
-            btn_vipham.Location = new Point(0, 826);
+            btn_vipham.Location = new Point(0, 800);
             btn_vipham.Name = "btn_vipham";
             btn_vipham.Size = new Size(300, 67);
             btn_vipham.TabIndex = 8;
@@ -157,7 +144,7 @@
             btn_lshoatdong.BackColor = Color.FromArgb(167, 123, 79);
             btn_lshoatdong.Font = new Font("Roboto", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btn_lshoatdong.ForeColor = Color.White;
-            btn_lshoatdong.Location = new Point(0, 888);
+            btn_lshoatdong.Location = new Point(0, 861);
             btn_lshoatdong.Name = "btn_lshoatdong";
             btn_lshoatdong.Size = new Size(300, 70);
             btn_lshoatdong.TabIndex = 9;
@@ -170,7 +157,7 @@
             btn_baocao_thongke.BackColor = Color.FromArgb(167, 123, 79);
             btn_baocao_thongke.Font = new Font("Roboto", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btn_baocao_thongke.ForeColor = Color.White;
-            btn_baocao_thongke.Location = new Point(0, 954);
+            btn_baocao_thongke.Location = new Point(0, 927);
             btn_baocao_thongke.Name = "btn_baocao_thongke";
             btn_baocao_thongke.Size = new Size(300, 70);
             btn_baocao_thongke.TabIndex = 10;
@@ -178,19 +165,19 @@
             btn_baocao_thongke.UseVisualStyleBackColor = false;
             btn_baocao_thongke.Click += btn_baocao_thongke_Click;
             // 
-            // btnHoadon
+            // btnCheck
             // 
-            btnHoadon.BackColor = Color.FromArgb(167, 123, 79);
-            btnHoadon.FlatAppearance.BorderSize = 0;
-            btnHoadon.Font = new Font("Roboto", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnHoadon.ForeColor = Color.White;
-            btnHoadon.Location = new Point(0, 307);
-            btnHoadon.Name = "btnHoadon";
-            btnHoadon.Size = new Size(300, 70);
-            btnHoadon.TabIndex = 2;
-            btnHoadon.Text = "Tạo hóa đơn ";
-            btnHoadon.UseVisualStyleBackColor = false;
-            btnHoadon.Click += btn_thanhvien_Click;
+            btnCheck.BackColor = Color.FromArgb(167, 123, 79);
+            btnCheck.FlatAppearance.BorderSize = 0;
+            btnCheck.Font = new Font("Roboto", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnCheck.ForeColor = Color.White;
+            btnCheck.Location = new Point(0, 267);
+            btnCheck.Name = "btnCheck";
+            btnCheck.Size = new Size(300, 70);
+            btnCheck.TabIndex = 2;
+            btnCheck.Text = "Kiểm tra vào thư quán";
+            btnCheck.UseVisualStyleBackColor = false;
+            btnCheck.Click += btn_thanhvien_Click;
             // 
             // label1
             // 
@@ -220,6 +207,19 @@
             label2.TabIndex = 0;
             label2.Text = "img";
             // 
+            // btn_baotri
+            // 
+            btn_baotri.BackColor = Color.FromArgb(167, 123, 79);
+            btn_baotri.Font = new Font("Roboto", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btn_baotri.ForeColor = Color.White;
+            btn_baotri.Location = new Point(0, 532);
+            btn_baotri.Name = "btn_baotri";
+            btn_baotri.Size = new Size(300, 70);
+            btn_baotri.TabIndex = 1;
+            btn_baotri.Text = "Quản lý bảo trì";
+            btn_baotri.UseVisualStyleBackColor = false;
+            btn_baotri.Click += btn_baotri_Click;
+            // 
             // Leftmenu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -228,12 +228,12 @@
             Controls.Add(panel1);
             Controls.Add(label1);
             Controls.Add(btn_baotri);
-            Controls.Add(btnHoadon);
+            Controls.Add(btnCheck);
             Controls.Add(btn_thanhvien);
             Controls.Add(btn_nhanvien);
             Controls.Add(btn_thietbi);
             Controls.Add(btn_datcho);
-            Controls.Add(btn_ban);
+            Controls.Add(btn_muon);
             Controls.Add(btn_danhmuc);
             Controls.Add(btn_vipham);
             Controls.Add(btn_lshoatdong);
@@ -247,20 +247,19 @@
         }
 
         #endregion
-
-        private Button btn_baotri;
         private Button btn_thanhvien;
         private Button btn_nhanvien;
         private Button btn_thietbi;
         private Button btn_datcho;
-        private Button btn_ban;
+        private Button btn_muon;
         private Button btn_danhmuc;
         private Button btn_vipham;
         private Button btn_lshoatdong;
         private Button btn_baocao_thongke;
-        private Button btnHoadon;
+        private Button btnCheck;
         private Label label1;
         private Panel panel1;
         private Label label2;
+        private Button btn_baotri;
     }
 }

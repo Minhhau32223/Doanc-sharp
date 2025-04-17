@@ -71,7 +71,7 @@
             headerpanel.Name = "headerpanel";
             headerpanel.Size = new Size(1124, 122);
             headerpanel.TabIndex = 2;
-            headerpanel.Paint += headerpanel_Paint;
+         
             // 
             // youraccount
             // 

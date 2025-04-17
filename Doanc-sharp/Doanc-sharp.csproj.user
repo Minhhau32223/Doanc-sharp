@@ -67,7 +67,7 @@
     <Compile Update="src\GUI\Baotri.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="src\GUI\Ban.cs">
+    <Compile Update="src\GUI\Muontra.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="src\GUI\ThongKeBaoCao.cs">

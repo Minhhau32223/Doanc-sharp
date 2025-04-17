@@ -1,4 +1,6 @@
 ﻿using System.Runtime;
+using Doanc_sharp.src.DAO;
+using Doanc_sharp.src.DTO;
 
 namespace Doanc_sharp
 {
@@ -8,6 +10,7 @@ namespace Doanc_sharp
         {
             InitializeComponent();
             leftmenu1.ButtonClicked += Leftmenu1_ButtonClicked;
+          
         }
         private void ShowControlInRightPanel(UserControl control)
         {
@@ -51,7 +54,7 @@ namespace Doanc_sharp
                     ShowControlInRightPanel(new Thietbi());
                     break;
                 case "ban":
-                    ShowControlInRightPanel(new Ban());
+                    ShowControlInRightPanel(new Muontra());
                     break;
                 case "danhmuc":
                     ShowControlInRightPanel(new DanhMuc());
@@ -70,9 +73,6 @@ namespace Doanc_sharp
             }
         }
 
-        private void headerpanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+        
     }
 }
