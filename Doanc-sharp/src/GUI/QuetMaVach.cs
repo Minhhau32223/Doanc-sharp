@@ -71,6 +71,7 @@ namespace Doanc_sharp.src.GUI
                 var source = new BitmapLuminanceSource(cloneBitmap);
                 var result = reader.Decode(source);
 
+
                 if (result != null)
                 {
                     Invoke(new MethodInvoker(delegate
