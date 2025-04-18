@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             dataGridView1 = new DataGridView();
-            panel1 = new Panel();
-            label1 = new Label();
             ID = new DataGridViewTextBoxColumn();
             Thanhvien = new DataGridViewTextBoxColumn();
             Tenvipham = new DataGridViewTextBoxColumn();
             Mota = new DataGridViewTextBoxColumn();
             Trangthai = new DataGridViewTextBoxColumn();
+            panel1 = new Panel();
+            label1 = new Label();
             XulyBtn = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -51,31 +51,12 @@
             dataGridView1.Size = new Size(1014, 753);
             dataGridView1.TabIndex = 5;
             // 
-            // panel1
-            // 
-            panel1.BackColor = Color.Green;
-            panel1.BackgroundImage = Properties.Resources.plus_icon;
-            panel1.BackgroundImageLayout = ImageLayout.Stretch;
-            panel1.Location = new Point(1009, 21);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(50, 50);
-            panel1.TabIndex = 4;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Times New Roman", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(35, 21);
-            label1.Name = "label1";
-            label1.Size = new Size(287, 46);
-            label1.TabIndex = 3;
-            label1.Text = "Quản lý vi phạm";
-            // 
             // ID
             // 
             ID.HeaderText = "ID";
             ID.MinimumWidth = 6;
             ID.Name = "ID";
+            ID.Width = 125;
             // 
             // Thanhvien
             // 
@@ -104,6 +85,26 @@
             Trangthai.MinimumWidth = 6;
             Trangthai.Name = "Trangthai";
             Trangthai.Width = 125;
+            // 
+            // panel1
+            // 
+            panel1.BackColor = Color.Green;
+            panel1.BackgroundImage = Properties.Resources.plus_icon;
+            panel1.BackgroundImageLayout = ImageLayout.Stretch;
+            panel1.Location = new Point(1009, 21);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(50, 50);
+            panel1.TabIndex = 4;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Times New Roman", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(35, 21);
+            label1.Name = "label1";
+            label1.Size = new Size(287, 46);
+            label1.TabIndex = 3;
+            label1.Text = "Quản lý vi phạm";
             // 
             // XulyBtn
             // 

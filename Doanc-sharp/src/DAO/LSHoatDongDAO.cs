@@ -32,22 +32,22 @@ namespace Doanc_sharp.src.DAO
             };
         }
 
-        public void InsertLSHoatDong(LSHoatDongDTO lsHoatDong)
+        public int InsertLSHoatDong(LSHoatDongDTO lsHoatDong)
         {
             string query = $"INSERT INTO LSHoatDong (MaThanhVien, MaHoatDong, Loai, ChiTiet, ThoiGian) VALUES ({lsHoatDong.MaThanhVien}, {lsHoatDong.MaHoatDong}, '{lsHoatDong.Loai}', '{lsHoatDong.ChiTiet}', '{lsHoatDong.ThoiGian:yyyy-MM-dd HH:mm:ss}')";
-            dbConnection.ExecuteNonQuery(query);
+            return dbConnection.ExecuteNonQuery(query);
         }
 
-        public void UpdateLSHoatDong(LSHoatDongDTO lsHoatDong)
+        public int UpdateLSHoatDong(LSHoatDongDTO lsHoatDong)
         {
             string query = $"UPDATE LSHoatDong SET Loai = '{lsHoatDong.Loai}', ChiTiet = '{lsHoatDong.ChiTiet}', ThoiGian = '{lsHoatDong.ThoiGian:yyyy-MM-dd HH:mm:ss}' WHERE MaThanhVien = {lsHoatDong.MaThanhVien} AND MaHoatDong = {lsHoatDong.MaHoatDong}";
-            dbConnection.ExecuteNonQuery(query);
+            return dbConnection.ExecuteNonQuery(query);
         }
 
-        public void DeleteLSHoatDong(int maThanhVien, int maHoatDong)
+        public int DeleteLSHoatDong(int maThanhVien, int maHoatDong)
         {
             string query = $"DELETE FROM LSHoatDong WHERE MaThanhVien = {maThanhVien} AND MaHoatDong = {maHoatDong}";
-            dbConnection.ExecuteNonQuery(query);
+            return dbConnection.ExecuteNonQuery(query);
         }
     }
 }

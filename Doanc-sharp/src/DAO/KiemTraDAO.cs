@@ -26,47 +26,5 @@ namespace Doanc_sharp.src.DAO
                           $"WHERE tvvp.MaThanhVien = {maThanhVien}";
             return dbConnection.ExecuteQuery(query);
         }
-
-        public KiemTraDTO KiemTraThanhVien(int maThanhVien)
-        {
-            DataTable dt = GetViPhamByThanhVien(maThanhVien);
-            List<ThanhVienViPhamDTO> viPhamList = new List<ThanhVienViPhamDTO>();
-
-            foreach (DataRow row in dt.Rows)
-            {
-                ThanhVienDTO thanhVien = new ThanhVienDTO
-                {
-                    MaThanhVien = Convert.ToInt32(row["MaThanhVien"]),
-                    HoTen = row["HoTen"].ToString(),
-                    SoDienThoai = row["SoDienThoai"].ToString(),
-                    DiaChi = row["DiaChi"].ToString(),
-                    Email = row["Email"].ToString(),
-                    NgayDangKy = Convert.ToDateTime(row["NgayDangKy"]),
-                    TrangThai = row["TrangThai"].ToString()
-                };
-
-                ViPhamDTO viPham = new ViPhamDTO
-                {
-                    MaViPham = row["MaViPham"].ToString(),
-                    TenViPham = row["TenViPham"].ToString(),
-                    MoTa = row["MoTa"].ToString()
-                };
-
-                ThanhVienViPhamDTO tvvp = new ThanhVienViPhamDTO(
-                    thanhVien,
-                    viPham,
-                    Convert.ToDateTime(row["NgayViPham"]),
-                    row["TrangThai"].ToString()
-                );
-
-                viPhamList.Add(tvvp);
-            }
-
-            KiemTraDTO kiemTra = new KiemTraDTO
-            {
-                ViPham = viPhamList
-            };
-            return kiemTra;
-        }
     }
 }

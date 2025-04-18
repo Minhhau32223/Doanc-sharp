@@ -7,14 +7,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Doanc_sharp.src.BUS;
+using Doanc_sharp.src.DTO;
 
 namespace Doanc_sharp
 {
     public partial class Vipham : UserControl
     {
+        private ViPhamBUS viPhamBUS = new ViPhamBUS();
+
         public Vipham()
         {
             InitializeComponent();
+            LoadData();
+        }
+
+        private void LoadData()
+        {
+            DataTable dt = viPhamBUS.GetAllViPham();
+            dataGridView1.DataSource = dt;
         }
     }
 }

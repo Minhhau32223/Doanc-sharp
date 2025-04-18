@@ -12,17 +12,17 @@ namespace Doanc_sharp.src.DTO
         {
         }
 
-        public ThanhVienDTO ThanhVien { get; set; } = new ThanhVienDTO();
+        //public ThanhVienDTO ThanhVien { get; set; } = new ThanhVienDTO();
         public ViPhamDTO ViPham { get; set; } = new ViPhamDTO();
         public DateTime NgayViPham { get; set; } = new DateTime();
         public string? TrangThai { get; set; }
 
-        public ThanhVienViPhamDTO(ThanhVienDTO thanhVien, ViPhamDTO viPham, DateTime ngayViPham, string trangThai)
-        {
-            ThanhVien = thanhVien;
-            ViPham = viPham;
-            NgayViPham = ngayViPham;
-            TrangThai = trangThai;
-        }
+        //public ThanhVienViPhamDTO(ThanhVienDTO thanhVien, ViPhamDTO viPham, DateTime ngayViPham, string trangThai)
+        //{
+        //    ThanhVien = thanhVien;
+        //    ViPham = viPham;
+        //    NgayViPham = ngayViPham;
+        //    TrangThai = trangThai;
+        //}
     }
 }
