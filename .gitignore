@@ -1,0 +1,18 @@
+# Thư mục Visual Studio
+.vs/
+
+# Thư mục biên dịch đầu ra
+bin/
+obj/
+
+# File tạm thời, cache
+*.user
+*.suo
+*.cache
+*.pdb
+*.exe
+*.dll
+*.log
+
+# Thư mục tạm mới của VS
+.vscode/
