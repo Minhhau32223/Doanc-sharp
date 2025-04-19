@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             button1 = new Button();
-            textBox1 = new TextBox();
+            enterMTV = new TextBox();
             panel1 = new Panel();
             txtMaVach = new Button();
             label1 = new Label();
@@ -47,20 +47,21 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
-            // textBox1
+            // enterMTV
             // 
-            textBox1.Font = new Font("Times New Roman", 19.8000011F);
-            textBox1.ForeColor = SystemColors.ScrollBar;
-            textBox1.Location = new Point(64, 3);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(391, 45);
-            textBox1.TabIndex = 1;
-            textBox1.Text = "Nhập mã thành viên";
+            enterMTV.Font = new Font("Times New Roman", 19.8000011F);
+            enterMTV.ForeColor = SystemColors.ScrollBar;
+            enterMTV.Location = new Point(64, 3);
+            enterMTV.Name = "enterMTV";
+            enterMTV.Size = new Size(391, 45);
+            enterMTV.TabIndex = 1;
+            enterMTV.Text = "Nhập mã thành viên";
+            enterMTV.Enter += onInput;
             // 
             // panel1
             // 
             panel1.Controls.Add(txtMaVach);
-            panel1.Controls.Add(textBox1);
+            panel1.Controls.Add(enterMTV);
             panel1.Controls.Add(button1);
             panel1.Location = new Point(138, 129);
             panel1.Name = "panel1";
@@ -106,7 +107,7 @@
         #endregion
 
         private Button button1;
-        private TextBox textBox1;
+        private TextBox enterMTV;
         private Panel panel1;
         private Button txtMaVach;
         private Label label1;

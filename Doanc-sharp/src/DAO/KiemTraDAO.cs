@@ -19,11 +19,9 @@ namespace Doanc_sharp.src.DAO
 
         public DataTable GetViPhamByThanhVien(int maThanhVien)
         {
-            string query = $"SELECT tv.*, vp.*, tvvp.NgayViPham, tvvp.TrangThai " +
-                          $"FROM ThanhVienViPham tvvp " +
-                          $"JOIN ThanhVien tv ON tvvp.MaThanhVien = tv.MaThanhVien " +
-                          $"JOIN ViPham vp ON tvvp.MaViPham = vp.MaViPham " +
-                          $"WHERE tvvp.MaThanhVien = {maThanhVien}";
+            string query = $"SELECT *" +
+                          $"FROM thanhvienvipham tvvp " +
+                          $"WHERE tvvp.Mathanhvien = {maThanhVien}";
             return dbConnection.ExecuteQuery(query);
         }
     }

@@ -10,6 +10,7 @@ namespace Doanc_sharp.src.GUI
 {
     public partial class QuetMaVach : Form
     {
+        public event Action<string> MaVachQuetThanhCong;
         private FilterInfoCollection videoDevices;
         private VideoCaptureDevice videoSource;
 
@@ -22,16 +23,23 @@ namespace Doanc_sharp.src.GUI
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            videoDevices = new FilterInfoCollection(FilterCategory.VideoInputDevice);
-            if (videoDevices.Count > 0)
+            try
             {
-                videoSource = new VideoCaptureDevice(videoDevices[0].MonikerString); // chọn camera đầu tiên
-                videoSource.NewFrame += VideoSource_NewFrame;
-                videoSource.Start();
+                videoDevices = new FilterInfoCollection(FilterCategory.VideoInputDevice);
+                if (videoDevices.Count > 0)
+                {
+                    videoSource = new VideoCaptureDevice(videoDevices[0].MonikerString);
+                    videoSource.NewFrame += VideoSource_NewFrame;
+                    videoSource.Start();
+                }
+                else
+                {
+                    MessageBox.Show("Không tìm thấy camera.");
+                }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Không tìm thấy camera.");
+                MessageBox.Show("Lỗi khởi động camera: " + ex.Message);
             }
         }
 
@@ -43,17 +51,16 @@ namespace Doanc_sharp.src.GUI
             try
             {
                 bitmap = (Bitmap)eventArgs.Frame.Clone();
-                cloneBitmap = (Bitmap)bitmap.Clone(); // tạo bản sao để decode
+                cloneBitmap = (Bitmap)bitmap.Clone();
 
-                // Cập nhật UI (luồng chính)
                 if (pictureBox1.InvokeRequired)
                 {
                     pictureBox1.Invoke(new MethodInvoker(delegate
                     {
                         if (!pictureBox1.IsDisposed)
                         {
-                            pictureBox1.Image?.Dispose(); // giải phóng ảnh cũ
-                            pictureBox1.Image = (Bitmap)bitmap.Clone(); // clone để tránh bị dispose sớm
+                            pictureBox1.Image?.Dispose();
+                            pictureBox1.Image = (Bitmap)bitmap.Clone();
                         }
                     }));
                 }
@@ -66,11 +73,9 @@ namespace Doanc_sharp.src.GUI
                     }
                 }
 
-                // Decode trên clone để tránh xung đột
                 var reader = new BarcodeReaderGeneric();
                 var source = new BitmapLuminanceSource(cloneBitmap);
                 var result = reader.Decode(source);
-
 
                 if (result != null)
                 {
@@ -78,6 +83,14 @@ namespace Doanc_sharp.src.GUI
                     {
                         if (!txtResult.IsDisposed)
                             txtResult.Text = result.Text;
+
+                        // Gọi sự kiện trả về kết quả cho form chính
+                        MaVachQuetThanhCong?.Invoke(result.Text);
+
+                        // Đóng form sau khi quét thành công
+                        bitmap?.Dispose();
+                        cloneBitmap?.Dispose();
+                        this.Close();
                     }));
                 }
             }
@@ -91,22 +104,34 @@ namespace Doanc_sharp.src.GUI
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (videoSource != null)
+            try
             {
-                videoSource.NewFrame -= VideoSource_NewFrame; // ngắt sự kiện
-                if (videoSource.IsRunning)
+                if (videoSource != null)
                 {
-                    videoSource.SignalToStop();
-                    videoSource.WaitForStop();
-                }
-                videoSource = null;
-            }
+                    if (videoSource.IsRunning)
+                    {
+                        videoSource.SignalToStop();
 
-            // Giải phóng hình ảnh trong pictureBox
-            if (pictureBox1.Image != null)
+                        // Thêm timeout khi chờ camera dừng để tránh bị treo
+                        for (int i = 0; i < 10 && videoSource.IsRunning; i++)
+                        {
+                            System.Threading.Thread.Sleep(100);
+                        }
+                    }
+
+                    videoSource.NewFrame -= VideoSource_NewFrame;
+                    videoSource = null;
+                }
+
+                if (pictureBox1.Image != null)
+                {
+                    pictureBox1.Image.Dispose();
+                    pictureBox1.Image = null;
+                }
+            }
+            catch (Exception ex)
             {
-                pictureBox1.Image.Dispose();
-                pictureBox1.Image = null;
+                MessageBox.Show("Lỗi khi đóng camera: " + ex.Message);
             }
         }
     }

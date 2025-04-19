@@ -21,31 +21,59 @@ namespace Doanc_sharp.src.GUI
 
         private void button2_Click(object sender, EventArgs e)
         {
-            QuetMaVach quetMaVach = new QuetMaVach();
-            quetMaVach.Show();
-            
+            //QuetMaVach quetMaVach = new QuetMaVach();
+            //quetMaVach.Show();
+            var formQuet = new QuetMaVach();
+            formQuet.MaVachQuetThanhCong += (maVach) =>
+            {
+                kiemTraMaTV(int.Parse(maVach));
+            };
+            formQuet.ShowDialog();
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtMaVach.Text))
+            if (string.IsNullOrEmpty(enterMTV.Text))
             {
                 MessageBox.Show("Vui lòng nhập mã vạch.");
                 return;
             }
-            int kiemtra = kiemTraBUS.KiemTraTruocKhiVao(int.Parse(txtMaVach.Text));
-            if (kiemtra == 1)
+
+            int matv;
+            if (!int.TryParse(enterMTV.Text.Trim(), out matv))
             {
-                MessageBox.Show("Kiểm tra thành công.");
+                MessageBox.Show("Mã vạch không hợp lệ. Vui lòng nhập lại.");
+                return;
             }
-            else if (kiemtra == -1)
+            kiemTraMaTV(matv);
+        }
+
+
+        public void kiemTraMaTV(int matv)
+        {
+            int kiemtra = kiemTraBUS.KiemTraTruocKhiVao(matv);
+            switch (kiemtra)
             {
-                MessageBox.Show("Mã vạch không hợp lệ.");
+                case 1:
+                    MessageBox.Show("Kiểm tra thành công.");
+                    break;
+                case -1:
+                    MessageBox.Show("Thành viên vi phạm!");
+                    break;
+                case -2:
+                    MessageBox.Show("Mã thành viên không hợp lệ.");
+                    break;
+                default:
+                    MessageBox.Show("Có l���i xảy ra trong quá trình kiểm tra.");
+                    break;
             }
-            else
-            {
-                MessageBox.Show("Có lỗi xảy ra trong quá trình kiểm tra.");
-            }
+        }
+
+        private void onInput(object sender, EventArgs e)
+        {
+            enterMTV.Text = "";
+            enterMTV.ForeColor = Color.Black;
         }
     }
 }

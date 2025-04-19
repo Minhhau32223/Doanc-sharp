@@ -16,11 +16,22 @@ namespace Doanc_sharp.src.BUS
 
         public int KiemTraTruocKhiVao(int MaThanhVien)
         {
+            if (MaThanhVien <= 0)
+            {
+                return -2; // Mã thành viên không hợp lệ
+            }
+
+
+            // xu ly kiem tra thanh vien co ton tai.
+
+
+
+            // xu ly kiem tra thanh vien vi pham
             DataTable dt = kiemTraDAO.GetViPhamByThanhVien(MaThanhVien);
             List<ThanhVienViPhamDTO> viPhamList = new List<ThanhVienViPhamDTO>();
             foreach (DataRow row in dt.Rows)
             {
-                if (row["trangthai"].ToString() == "Chua xu ly") return -1;
+                if (row["trangthai"].ToString().Equals("chua xu ly")) return -1;
             }
             return 1;
         }
