@@ -14,13 +14,13 @@ namespace Doanc_sharp.src.DAO
 
         public DataTable GetAllLSHoatDong()
         {
-            string query = "SELECT * FROM LSHoatDong";
+            string query = "SELECT * FROM lichsuhoatdong";
             return dbConnection.ExecuteQuery(query);
         }
 
         public LSHoatDongDTO GetLSHoatDongById(int maThanhVien, int maHoatDong)
         {
-            string query = $"SELECT * FROM LSHoatDong WHERE MaThanhVien = {maThanhVien} AND MaHoatDong = {maHoatDong}";
+            string query = $"SELECT * FROM lichsuhoatdong WHERE MaThanhVien = {maThanhVien} AND MaHoatDong = {maHoatDong}";
             DataRow row = dbConnection.ExecuteQuery(query).Rows[0];
             return new LSHoatDongDTO
             {
@@ -34,19 +34,19 @@ namespace Doanc_sharp.src.DAO
 
         public int InsertLSHoatDong(LSHoatDongDTO lsHoatDong)
         {
-            string query = $"INSERT INTO LSHoatDong (MaThanhVien, MaHoatDong, Loai, ChiTiet, ThoiGian) VALUES ({lsHoatDong.MaThanhVien}, {lsHoatDong.MaHoatDong}, '{lsHoatDong.Loai}', '{lsHoatDong.ChiTiet}', '{lsHoatDong.ThoiGian:yyyy-MM-dd HH:mm:ss}')";
+            string query = $"INSERT INTO lichsuhoatdong (MaThanhVien, MaHoatDong, Loai, ChiTiet, ThoiGian) VALUES ({lsHoatDong.MaThanhVien}, {lsHoatDong.MaHoatDong}, '{lsHoatDong.Loai}', '{lsHoatDong.ChiTiet}', '{lsHoatDong.ThoiGian:yyyy-MM-dd HH:mm:ss}')";
             return dbConnection.ExecuteNonQuery(query);
         }
 
         public int UpdateLSHoatDong(LSHoatDongDTO lsHoatDong)
         {
-            string query = $"UPDATE LSHoatDong SET Loai = '{lsHoatDong.Loai}', ChiTiet = '{lsHoatDong.ChiTiet}', ThoiGian = '{lsHoatDong.ThoiGian:yyyy-MM-dd HH:mm:ss}' WHERE MaThanhVien = {lsHoatDong.MaThanhVien} AND MaHoatDong = {lsHoatDong.MaHoatDong}";
+            string query = $"UPDATE lichsuhoatdong SET Loai = '{lsHoatDong.Loai}', ChiTiet = '{lsHoatDong.ChiTiet}', ThoiGian = '{lsHoatDong.ThoiGian:yyyy-MM-dd HH:mm:ss}' WHERE MaThanhVien = {lsHoatDong.MaThanhVien} AND MaHoatDong = {lsHoatDong.MaHoatDong}";
             return dbConnection.ExecuteNonQuery(query);
         }
 
         public int DeleteLSHoatDong(int maThanhVien, int maHoatDong)
         {
-            string query = $"DELETE FROM LSHoatDong WHERE MaThanhVien = {maThanhVien} AND MaHoatDong = {maHoatDong}";
+            string query = $"DELETE FROM lichsuhoatdong WHERE MaThanhVien = {maThanhVien} AND MaHoatDong = {maHoatDong}";
             return dbConnection.ExecuteNonQuery(query);
         }
     }
