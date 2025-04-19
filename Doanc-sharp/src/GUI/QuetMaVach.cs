@@ -50,49 +50,51 @@ namespace Doanc_sharp.src.GUI
 
             try
             {
-                bitmap = (Bitmap)eventArgs.Frame.Clone();
-                cloneBitmap = (Bitmap)bitmap.Clone();
-
-                if (pictureBox1.InvokeRequired)
+                if (eventArgs.Frame != null)
                 {
-                    pictureBox1.Invoke(new MethodInvoker(delegate
+                    bitmap = (Bitmap)eventArgs.Frame.Clone();
+                    cloneBitmap = (Bitmap)bitmap.Clone();
+                    if (pictureBox1.InvokeRequired)
+                    {
+                        pictureBox1.Invoke(new MethodInvoker(delegate
+                        {
+                            if (!pictureBox1.IsDisposed)
+                            {
+                                pictureBox1.Image?.Dispose();
+                                pictureBox1.Image = (Bitmap)bitmap.Clone();
+                            }
+                        }));
+                    }
+                    else
                     {
                         if (!pictureBox1.IsDisposed)
                         {
                             pictureBox1.Image?.Dispose();
                             pictureBox1.Image = (Bitmap)bitmap.Clone();
                         }
-                    }));
-                }
-                else
-                {
-                    if (!pictureBox1.IsDisposed)
+                    }
+
+                    var reader = new BarcodeReaderGeneric();
+                    var source = new BitmapLuminanceSource(cloneBitmap);
+                    var result = reader.Decode(source);
+
+                    if (result != null)
                     {
-                        pictureBox1.Image?.Dispose();
-                        pictureBox1.Image = (Bitmap)bitmap.Clone();
+                        Invoke(new MethodInvoker(delegate
+                        {
+
+                            // Gọi sự kiện trả về kết quả cho form chính
+                            MaVachQuetThanhCong?.Invoke(result.Text);
+
+                            // Đóng form sau khi quét thành công
+                            bitmap?.Dispose();
+                            cloneBitmap?.Dispose();
+                            this.Close();
+                        }));
                     }
                 }
 
-                var reader = new BarcodeReaderGeneric();
-                var source = new BitmapLuminanceSource(cloneBitmap);
-                var result = reader.Decode(source);
-
-                if (result != null)
-                {
-                    Invoke(new MethodInvoker(delegate
-                    {
-                        if (!txtResult.IsDisposed)
-                            txtResult.Text = result.Text;
-
-                        // Gọi sự kiện trả về kết quả cho form chính
-                        MaVachQuetThanhCong?.Invoke(result.Text);
-
-                        // Đóng form sau khi quét thành công
-                        bitmap?.Dispose();
-                        cloneBitmap?.Dispose();
-                        this.Close();
-                    }));
-                }
+                
             }
             catch { }
             finally
