@@ -14,10 +14,10 @@ namespace Doanc_sharp.src.DAO
 
         public DataTable GetAllViPham()
         {
-            string query = "SELECT tvvp.*, tv.HoTen as TenThanhVien, vp.TenViPham, vp.MoTa " +
-                          "FROM ThanhVienViPham tvvp " +
-                          "LEFT JOIN ThanhVien tv ON tvvp.MaThanhVien = tv.MaThanhVien " +
-                          "LEFT JOIN ViPham vp ON tvvp.MaViPham = vp.MaViPham";
+            string query = "SELECT tvvp.Mavipham, tv.HoTen, vp.Tenvipham, vp.Mota, tvvp.Trangthai " +
+                          "FROM Thanhvienvipham tvvp " +
+                          "LEFT JOIN thanhvien tv ON tvvp.MaThanhVien = tv.Mathanhvien " +
+                          "LEFT JOIN vipham vp ON tvvp.Mavipham = vp.Mavipham";
             return dbConnection.ExecuteQuery(query);
         }
 
