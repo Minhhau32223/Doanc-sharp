@@ -42,7 +42,6 @@ namespace Doanc_sharp.src.GUI
                 MessageBox.Show("Lỗi khởi động camera: " + ex.Message);
             }
         }
-
         private void VideoSource_NewFrame(object sender, NewFrameEventArgs eventArgs)
         {
             Bitmap bitmap = null;
@@ -50,59 +49,135 @@ namespace Doanc_sharp.src.GUI
 
             try
             {
-                if (eventArgs.Frame != null)
+                if (eventArgs.Frame == null)
+                    return;
+
+                bitmap = (Bitmap)eventArgs.Frame.Clone();
+                cloneBitmap = (Bitmap)bitmap.Clone();
+
+                // Update pictureBox1
+                if (pictureBox1.InvokeRequired)
                 {
-                    bitmap = (Bitmap)eventArgs.Frame.Clone();
-                    cloneBitmap = (Bitmap)bitmap.Clone();
-                    if (pictureBox1.InvokeRequired)
-                    {
-                        pictureBox1.Invoke(new MethodInvoker(delegate
-                        {
-                            if (!pictureBox1.IsDisposed)
-                            {
-                                pictureBox1.Image?.Dispose();
-                                pictureBox1.Image = (Bitmap)bitmap.Clone();
-                            }
-                        }));
-                    }
-                    else
+                    pictureBox1.Invoke(new MethodInvoker(delegate
                     {
                         if (!pictureBox1.IsDisposed)
                         {
                             pictureBox1.Image?.Dispose();
                             pictureBox1.Image = (Bitmap)bitmap.Clone();
                         }
-                    }
-
-                    var reader = new BarcodeReaderGeneric();
-                    var source = new BitmapLuminanceSource(cloneBitmap);
-                    var result = reader.Decode(source);
-
-                    if (result != null)
+                    }));
+                }
+                else
+                {
+                    if (!pictureBox1.IsDisposed)
                     {
-                        Invoke(new MethodInvoker(delegate
-                        {
-
-                            // Gọi sự kiện trả về kết quả cho form chính
-                            MaVachQuetThanhCong?.Invoke(result.Text);
-
-                            // Đóng form sau khi quét thành công
-                            bitmap?.Dispose();
-                            cloneBitmap?.Dispose();
-                            this.Close();
-                        }));
+                        pictureBox1.Image?.Dispose();
+                        pictureBox1.Image = (Bitmap)bitmap.Clone();
                     }
                 }
 
-                
+                // Initialize BarcodeReader with explicit settings
+                var reader = new BarcodeReaderGeneric
+                {
+                    AutoRotate = true,
+                    Options = new ZXing.Common.DecodingOptions
+                    {
+                        TryHarder = true // Improves barcode detection
+                    }
+                };
+
+                // Ensure cloneBitmap is valid
+                if (cloneBitmap == null)
+                {
+                    throw new InvalidOperationException("cloneBitmap is null.");
+                }
+
+                var source = new BitmapLuminanceSource(cloneBitmap);
+                var result = reader.Decode(source);
+
+                if (result != null)
+                {
+                    Invoke(new MethodInvoker(delegate
+                    {
+                        // Trigger event with barcode result
+                        MaVachQuetThanhCong?.Invoke(result.Text);
+
+                        // Close form after successful scan
+                        this.Close();
+                    }));
+                }
             }
-            catch { }
+            catch (Exception ex)
+            {
+                // Log or display the error for debugging
+                System.Diagnostics.Debug.WriteLine($"Error in VideoSource_NewFrame: {ex.Message}");
+                // Optionally show a message to the user
+                // MessageBox.Show($"Lỗi quét mã vạch: {ex.Message}");
+            }
             finally
             {
                 bitmap?.Dispose();
                 cloneBitmap?.Dispose();
             }
         }
+        //private void VideoSource_NewFrame(object sender, NewFrameEventArgs eventArgs)
+        //{
+        //    Bitmap bitmap = null;
+        //    Bitmap cloneBitmap = null;
+
+        //    try
+        //    {
+        //        if (eventArgs.Frame != null)
+        //        {
+        //            bitmap = (Bitmap)eventArgs.Frame.Clone();
+        //            cloneBitmap = (Bitmap)bitmap.Clone();
+        //            if (pictureBox1.InvokeRequired)
+        //            {
+        //                pictureBox1.Invoke(new MethodInvoker(delegate
+        //                {
+        //                    if (!pictureBox1.IsDisposed)
+        //                    {
+        //                        pictureBox1.Image?.Dispose();
+        //                        pictureBox1.Image = (Bitmap)bitmap.Clone();
+        //                    }
+        //                }));
+        //            }
+        //            else
+        //            {
+        //                if (!pictureBox1.IsDisposed)
+        //                {
+        //                    pictureBox1.Image?.Dispose();
+        //                    pictureBox1.Image = (Bitmap)bitmap.Clone();
+        //                }
+        //            }
+
+        //            var reader = new BarcodeReaderGeneric();
+        //            var source = new BitmapLuminanceSource(cloneBitmap);
+        //            var result = reader.Decode(source);
+
+        //            if (result != null)
+        //            {
+        //                Invoke(new MethodInvoker(delegate
+        //                {
+
+        //                    // Gọi sự kiện trả về kết quả cho form chính
+        //                    MaVachQuetThanhCong?.Invoke(result.Text);
+
+        //                    // Đóng form sau khi quét thành công
+        //                    bitmap?.Dispose();
+        //                    cloneBitmap?.Dispose();
+        //                    this.Close();
+        //                }));
+        //            }
+        //        }
+        //    }
+        //    catch { }
+        //    finally
+        //    {
+        //        bitmap?.Dispose();
+        //        cloneBitmap?.Dispose();
+        //    }
+        //}
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {

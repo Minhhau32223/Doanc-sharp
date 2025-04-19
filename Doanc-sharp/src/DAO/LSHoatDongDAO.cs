@@ -17,6 +17,10 @@ namespace Doanc_sharp.src.DAO
             string query = "SELECT * FROM lichsuhoatdong";
             return dbConnection.ExecuteQuery(query);
         }
+        public DataTable customExecuteQuery(string query)
+        {
+            return dbConnection.ExecuteQuery(query);
+        }
 
         public LSHoatDongDTO GetLSHoatDongById(int maThanhVien, int maHoatDong)
         {

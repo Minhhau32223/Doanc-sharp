@@ -37,5 +37,15 @@ namespace Doanc_sharp.src.BUS
         {
             return lsHoatDongDAO.DeleteLSHoatDong(maThanhVien, maHoatDong) > 0;
         }
+
+
+
+        //others method
+        public DataTable TimKiemLSHoatDong(string findData)
+        {
+            string query = $"SELECT * FROM lichsuhoatdong WHERE MaThanhVien LIKE '%{findData}%' OR MaHoatDong LIKE '%{findData}%' OR Loai LIKE '%{findData}%' OR ChiTiet LIKE '%{findData}%' OR ThoiGian LIKE '%{findData}%'";
+            return lsHoatDongDAO.customExecuteQuery(query);
+        }
+
     }
 }

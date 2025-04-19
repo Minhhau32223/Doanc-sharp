@@ -24,5 +24,56 @@ namespace Doanc_sharp
             DataTable dt = lshdBUS.GetAllLSHoatDong();
             dataGridView1.DataSource = dt;
         }
+
+        private void onFocus(object sender, EventArgs e)
+        {
+            if (FindTbx.Text == "Tìm kiếm...")
+            {
+                FindTbx.Text = "";
+                FindTbx.ForeColor = Color.Black;
+            }
+        }
+
+        private void onBlur(object sender, EventArgs e)
+        {
+            if (FindTbx.Text == "")
+            {
+                FindTbx.Text = "Tìm kiếm...";
+                FindTbx.ForeColor = Color.Gray;
+            }
+        }
+
+        private void onClick(object sender, MouseEventArgs e)
+        {
+            string findData = FindTbx.Text.Trim();
+
+            if (string.IsNullOrEmpty(findData) || findData == "Tìm kiếm...")
+            {
+                LoadData(); // Nếu rỗng hoặc mặc định thì load toàn bộ
+            }
+            else
+            {
+                DataTable dt = lshdBUS.TimKiemLSHoatDong(findData);
+                dataGridView1.DataSource = dt;
+            }
+        }
+
+        private void checkEnter(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                string findData = FindTbx.Text.Trim();
+
+                if (string.IsNullOrEmpty(findData) || findData == "Tìm kiếm...")
+                {
+                    LoadData();
+                }
+                else
+                {
+                    DataTable dt = lshdBUS.TimKiemLSHoatDong(findData);
+                    dataGridView1.DataSource = dt;
+                }
+            }
+        }
     }
 }

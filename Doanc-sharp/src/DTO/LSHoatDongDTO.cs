@@ -12,10 +12,10 @@ namespace Doanc_sharp.src.DTO
 
         public LSHoatDongDTO() { }
 
-        public LSHoatDongDTO(int MaThanhVien, int MaHoatDong, string Loai, string ChiTiet, DateTime ThoiGian)
+        public LSHoatDongDTO(int MaThanhVien, string Loai, string ChiTiet, DateTime ThoiGian)
         {
             this.MaThanhVien = MaThanhVien;
-            this.MaHoatDong = MaHoatDong;
+            //this.MaHoatDong = MaHoatDong; // auto increment
             this.Loai = Loai;
             this.ChiTiet = ChiTiet;
             this.ThoiGian = ThoiGian;
