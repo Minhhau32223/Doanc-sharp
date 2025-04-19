@@ -14,15 +14,15 @@ namespace Doanc_sharp.src.BUS
         private KiemTraDAO kiemTraDAO = new KiemTraDAO();
 
 
-        public Boolean KiemTraTruocKhiVao(int MaThanhVien)
+        public int KiemTraTruocKhiVao(int MaThanhVien)
         {
             DataTable dt = kiemTraDAO.GetViPhamByThanhVien(MaThanhVien);
             List<ThanhVienViPhamDTO> viPhamList = new List<ThanhVienViPhamDTO>();
             foreach (DataRow row in dt.Rows)
             {
-                if (row["trangthai"].ToString() == "Chua xu ly") return false;
+                if (row["trangthai"].ToString() == "Chua xu ly") return -1;
             }
-            return true;
+            return 1;
         }
     }
 }

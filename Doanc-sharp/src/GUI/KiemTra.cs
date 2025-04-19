@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Doanc_sharp.src.BUS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,7 @@ namespace Doanc_sharp.src.GUI
 {
     public partial class KiemTra : UserControl
     {
+        private KiemTraBUS kiemTraBUS = new KiemTraBUS();
         public KiemTra()
         {
             InitializeComponent();
@@ -21,6 +23,29 @@ namespace Doanc_sharp.src.GUI
         {
             QuetMaVach quetMaVach = new QuetMaVach();
             quetMaVach.Show();
+            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtMaVach.Text))
+            {
+                MessageBox.Show("Vui lòng nhập mã vạch.");
+                return;
+            }
+            int kiemtra = kiemTraBUS.KiemTraTruocKhiVao(int.Parse(txtMaVach.Text));
+            if (kiemtra == 1)
+            {
+                MessageBox.Show("Kiểm tra thành công.");
+            }
+            else if (kiemtra == -1)
+            {
+                MessageBox.Show("Mã vạch không hợp lệ.");
+            }
+            else
+            {
+                MessageBox.Show("Có lỗi xảy ra trong quá trình kiểm tra.");
+            }
         }
     }
 }
