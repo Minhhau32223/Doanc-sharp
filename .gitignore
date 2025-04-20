@@ -1,9 +1,9 @@
 # Thư mục Visual Studio
-.vs/
+/.vs/
 
 # Thư mục biên dịch đầu ra
-bin/
-obj/
+/bin/
+/obj/
 
 # File tạm thời, cache
 *.user
@@ -14,6 +14,7 @@ obj/
 *.dll
 *.log
 
+<<<<<<< HEAD
 # VS Code settings (nếu dùng)
 .vscode/
 
@@ -24,3 +25,7 @@ obj/
 
 # Thư mục test results
 TestResults/
+=======
+# Thư mục tạm mới của VS
+/.vscode/
+>>>>>>> 0c6632b0c513f1a2a799abc0c9b73d3595907dbf
