@@ -44,8 +44,9 @@
             panel1.BackColor = Color.NavajoWhite;
             panel1.Controls.Add(label1);
             panel1.Location = new Point(-1, -1);
+            panel1.Margin = new Padding(3, 2, 3, 2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(802, 95);
+            panel1.Size = new Size(702, 71);
             panel1.TabIndex = 16;
             // 
             // label1
@@ -53,9 +54,9 @@
             label1.AutoSize = true;
             label1.Font = new Font("Times New Roman", 25.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.Red;
-            label1.Location = new Point(31, 21);
+            label1.Location = new Point(27, 16);
             label1.Name = "label1";
-            label1.Size = new Size(287, 51);
+            label1.Size = new Size(230, 40);
             label1.TabIndex = 0;
             label1.Text = "Sửa danh mục";
             // 
@@ -63,9 +64,9 @@
             // 
             Motalbl.AutoSize = true;
             Motalbl.Font = new Font("Times New Roman", 13.8F);
-            Motalbl.Location = new Point(169, 230);
+            Motalbl.Location = new Point(148, 172);
             Motalbl.Name = "Motalbl";
-            Motalbl.Size = new Size(71, 26);
+            Motalbl.Size = new Size(58, 21);
             Motalbl.TabIndex = 25;
             Motalbl.Text = "Mô tả:";
             // 
@@ -73,9 +74,9 @@
             // 
             Tenlbl.AutoSize = true;
             Tenlbl.Font = new Font("Times New Roman", 13.8F);
-            Tenlbl.Location = new Point(169, 177);
+            Tenlbl.Location = new Point(148, 133);
             Tenlbl.Name = "Tenlbl";
-            Tenlbl.Size = new Size(54, 26);
+            Tenlbl.Size = new Size(43, 21);
             Tenlbl.TabIndex = 26;
             Tenlbl.Text = "Tên:";
             // 
@@ -84,45 +85,51 @@
             XacnhanBtn.BackColor = Color.Green;
             XacnhanBtn.Font = new Font("Sitka Text", 16.1999989F, FontStyle.Bold, GraphicsUnit.Point, 0);
             XacnhanBtn.ForeColor = SystemColors.ButtonHighlight;
-            XacnhanBtn.Location = new Point(452, 363);
+            XacnhanBtn.Location = new Point(396, 272);
+            XacnhanBtn.Margin = new Padding(3, 2, 3, 2);
             XacnhanBtn.Name = "XacnhanBtn";
-            XacnhanBtn.Size = new Size(249, 69);
+            XacnhanBtn.Size = new Size(218, 52);
             XacnhanBtn.TabIndex = 21;
             XacnhanBtn.Text = "Xác nhận";
             XacnhanBtn.UseVisualStyleBackColor = false;
+            XacnhanBtn.Click += XacnhanBtn_Click;
             // 
             // ThoatBtn
             // 
             ThoatBtn.BackColor = Color.Red;
             ThoatBtn.Font = new Font("Sitka Text", 16.1999989F, FontStyle.Bold, GraphicsUnit.Point, 0);
             ThoatBtn.ForeColor = SystemColors.ButtonHighlight;
-            ThoatBtn.Location = new Point(104, 363);
+            ThoatBtn.Location = new Point(91, 272);
+            ThoatBtn.Margin = new Padding(3, 2, 3, 2);
             ThoatBtn.Name = "ThoatBtn";
-            ThoatBtn.Size = new Size(249, 69);
+            ThoatBtn.Size = new Size(218, 52);
             ThoatBtn.TabIndex = 22;
             ThoatBtn.Text = "Thoát";
             ThoatBtn.UseVisualStyleBackColor = false;
+            ThoatBtn.Click += ThoatBtn_Click;
             // 
             // MotaTbx
             // 
-            MotaTbx.Location = new Point(276, 231);
+            MotaTbx.Location = new Point(242, 173);
+            MotaTbx.Margin = new Padding(3, 2, 3, 2);
             MotaTbx.Name = "MotaTbx";
-            MotaTbx.Size = new Size(339, 27);
+            MotaTbx.Size = new Size(297, 23);
             MotaTbx.TabIndex = 18;
             // 
             // TenTbx
             // 
-            TenTbx.Location = new Point(276, 176);
+            TenTbx.Location = new Point(242, 132);
+            TenTbx.Margin = new Padding(3, 2, 3, 2);
             TenTbx.Name = "TenTbx";
-            TenTbx.Size = new Size(339, 27);
+            TenTbx.Size = new Size(297, 23);
             TenTbx.TabIndex = 19;
             // 
             // Suadanhmuc
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Bisque;
-            ClientSize = new Size(800, 503);
+            ClientSize = new Size(700, 377);
             Controls.Add(panel1);
             Controls.Add(Motalbl);
             Controls.Add(Tenlbl);
@@ -130,6 +137,7 @@
             Controls.Add(ThoatBtn);
             Controls.Add(MotaTbx);
             Controls.Add(TenTbx);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "Suadanhmuc";
             Text = "Sửa danh mục";
             panel1.ResumeLayout(false);
