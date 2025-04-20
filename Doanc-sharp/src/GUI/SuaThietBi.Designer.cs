@@ -28,36 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
-            comboBox1 = new ComboBox();
             panel1 = new Panel();
             label1 = new Label();
             label5 = new Label();
             label4 = new Label();
             label3 = new Label();
             label2 = new Label();
-            button2 = new Button();
+            btnConfirm = new Button();
             button1 = new Button();
-            textBox3 = new TextBox();
-            textBox2 = new TextBox();
-            textBox1 = new TextBox();
+            txtRentPrize = new TextBox();
+            txtDeviceName = new TextBox();
+            txtDeviceID = new TextBox();
+            txtStatus = new TextBox();
             panel1.SuspendLayout();
             SuspendLayout();
-            // 
-            // comboBox1
-            // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(403, 280);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(339, 28);
-            comboBox1.TabIndex = 9;
             // 
             // panel1
             // 
             panel1.BackColor = Color.NavajoWhite;
             panel1.Controls.Add(label1);
             panel1.Location = new Point(-1, 1);
+            panel1.Margin = new Padding(3, 2, 3, 2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(802, 95);
+            panel1.Size = new Size(702, 71);
             panel1.TabIndex = 5;
             // 
             // label1
@@ -65,9 +58,9 @@
             label1.AutoSize = true;
             label1.Font = new Font("Times New Roman", 25.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.Red;
-            label1.Location = new Point(31, 21);
+            label1.Location = new Point(27, 16);
             label1.Name = "label1";
-            label1.Size = new Size(237, 51);
+            label1.Size = new Size(189, 40);
             label1.TabIndex = 0;
             label1.Text = "Sửa thiết bị";
             // 
@@ -75,9 +68,9 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Times New Roman", 13.8F);
-            label5.Location = new Point(198, 288);
+            label5.Location = new Point(173, 216);
             label5.Name = "label5";
-            label5.Size = new Size(112, 26);
+            label5.Size = new Size(88, 21);
             label5.TabIndex = 12;
             label5.Text = "Trạng thái:";
             // 
@@ -85,9 +78,9 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Times New Roman", 13.8F);
-            label4.Location = new Point(198, 236);
+            label4.Location = new Point(173, 177);
             label4.Name = "label4";
-            label4.Size = new Size(50, 26);
+            label4.Size = new Size(40, 21);
             label4.TabIndex = 13;
             label4.Text = "Giá:";
             // 
@@ -95,9 +88,9 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Times New Roman", 13.8F);
-            label3.Location = new Point(198, 187);
+            label3.Location = new Point(173, 140);
             label3.Name = "label3";
-            label3.Size = new Size(124, 26);
+            label3.Size = new Size(98, 21);
             label3.TabIndex = 14;
             label3.Text = "Tên thiết bị:";
             // 
@@ -105,74 +98,89 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Times New Roman", 13.8F);
-            label2.Location = new Point(198, 134);
+            label2.Location = new Point(173, 100);
             label2.Name = "label2";
-            label2.Size = new Size(42, 26);
+            label2.Size = new Size(33, 21);
             label2.TabIndex = 15;
             label2.Text = "ID:";
             // 
-            // button2
+            // btnConfirm
             // 
-            button2.BackColor = Color.Green;
-            button2.Font = new Font("Sitka Text", 16.1999989F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button2.ForeColor = SystemColors.ButtonHighlight;
-            button2.Location = new Point(452, 365);
-            button2.Name = "button2";
-            button2.Size = new Size(249, 69);
-            button2.TabIndex = 10;
-            button2.Text = "Xác nhận";
-            button2.UseVisualStyleBackColor = false;
+            btnConfirm.BackColor = Color.Green;
+            btnConfirm.Font = new Font("Sitka Text", 16.1999989F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnConfirm.ForeColor = SystemColors.ButtonHighlight;
+            btnConfirm.Location = new Point(396, 274);
+            btnConfirm.Margin = new Padding(3, 2, 3, 2);
+            btnConfirm.Name = "btnConfirm";
+            btnConfirm.Size = new Size(218, 52);
+            btnConfirm.TabIndex = 10;
+            btnConfirm.Text = "Xác nhận";
+            btnConfirm.UseVisualStyleBackColor = false;
+            btnConfirm.Click += btnConfirm_Click;
             // 
             // button1
             // 
             button1.BackColor = Color.Red;
             button1.Font = new Font("Sitka Text", 16.1999989F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button1.ForeColor = SystemColors.ButtonHighlight;
-            button1.Location = new Point(104, 365);
+            button1.Location = new Point(91, 274);
+            button1.Margin = new Padding(3, 2, 3, 2);
             button1.Name = "button1";
-            button1.Size = new Size(249, 69);
+            button1.Size = new Size(218, 52);
             button1.TabIndex = 11;
             button1.Text = "Thoát";
             button1.UseVisualStyleBackColor = false;
             // 
-            // textBox3
+            // txtRentPrize
             // 
-            textBox3.Location = new Point(403, 229);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(339, 27);
-            textBox3.TabIndex = 6;
+            txtRentPrize.Location = new Point(353, 172);
+            txtRentPrize.Margin = new Padding(3, 2, 3, 2);
+            txtRentPrize.Name = "txtRentPrize";
+            txtRentPrize.Size = new Size(297, 23);
+            txtRentPrize.TabIndex = 6;
             // 
-            // textBox2
+            // txtDeviceName
             // 
-            textBox2.Location = new Point(403, 180);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(339, 27);
-            textBox2.TabIndex = 7;
+            txtDeviceName.Location = new Point(353, 135);
+            txtDeviceName.Margin = new Padding(3, 2, 3, 2);
+            txtDeviceName.Name = "txtDeviceName";
+            txtDeviceName.Size = new Size(297, 23);
+            txtDeviceName.TabIndex = 7;
             // 
-            // textBox1
+            // txtDeviceID
             // 
-            textBox1.Location = new Point(403, 127);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(339, 27);
-            textBox1.TabIndex = 8;
+            txtDeviceID.Location = new Point(353, 95);
+            txtDeviceID.Margin = new Padding(3, 2, 3, 2);
+            txtDeviceID.Name = "txtDeviceID";
+            txtDeviceID.Size = new Size(297, 23);
+            txtDeviceID.TabIndex = 8;
+            // 
+            // txtStatus
+            // 
+            txtStatus.Location = new Point(353, 214);
+            txtStatus.Margin = new Padding(3, 2, 3, 2);
+            txtStatus.Name = "txtStatus";
+            txtStatus.Size = new Size(297, 23);
+            txtStatus.TabIndex = 6;
             // 
             // SuaThietBi
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Bisque;
-            ClientSize = new Size(800, 503);
-            Controls.Add(comboBox1);
+            ClientSize = new Size(700, 377);
             Controls.Add(panel1);
             Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
-            Controls.Add(button2);
+            Controls.Add(btnConfirm);
             Controls.Add(button1);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(txtStatus);
+            Controls.Add(txtRentPrize);
+            Controls.Add(txtDeviceName);
+            Controls.Add(txtDeviceID);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "SuaThietBi";
             Text = "Sửa thiết bị";
             Load += SuaThietBi_Load;
@@ -191,10 +199,13 @@
         private Label label4;
         private Label label3;
         private Label label2;
-        private Button button2;
+        private Button btnConfirm;
         private Button button1;
+        private TextBox txtRentPrize;
         private TextBox textBox3;
         private TextBox textBox2;
-        private TextBox textBox1;
+        private TextBox txtDeviceName;
+        private TextBox txtDeviceID;
+        private TextBox txtStatus;
     }
 }

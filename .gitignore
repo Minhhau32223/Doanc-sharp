@@ -14,5 +14,13 @@ obj/
 *.dll
 *.log
 
-# Thư mục tạm mới của VS
+# VS Code settings (nếu dùng)
 .vscode/
+
+# File danh sách tuyệt đối khi biên dịch
+*.FileListAbsolute.txt
+*.Build.CppClean.log
+*.tlog/
+
+# Thư mục test results
+TestResults/

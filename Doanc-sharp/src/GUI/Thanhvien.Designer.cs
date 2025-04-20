@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             Label label1;
-            DataNhanvien = new DataGridView();
+            DataThanhvien = new DataGridView();
             ID = new DataGridViewTextBoxColumn();
             Ten = new DataGridViewTextBoxColumn();
             phone = new DataGridViewTextBoxColumn();
@@ -39,9 +39,12 @@
             Email = new DataGridViewTextBoxColumn();
             Ngay = new DataGridViewTextBoxColumn();
             Trangthai = new DataGridViewTextBoxColumn();
-            panel1 = new Panel();
+            btnXoa = new Button();
+            btnExcel = new Button();
+            btnCapnhat = new Button();
+            btnReset = new Button();
             label1 = new Label();
-            ((System.ComponentModel.ISupportInitialize)DataNhanvien).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)DataThanhvien).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -54,17 +57,18 @@
             label1.TabIndex = 10;
             label1.Text = "Thành viên";
             // 
-            // DataNhanvien
+            // DataThanhvien
             // 
-            DataNhanvien.BackgroundColor = SystemColors.ControlLightLight;
-            DataNhanvien.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            DataNhanvien.Columns.AddRange(new DataGridViewColumn[] { ID, Ten, phone, Address, Account, Password, Email, Ngay, Trangthai });
-            DataNhanvien.Location = new Point(18, 65);
-            DataNhanvien.Margin = new Padding(3, 2, 3, 2);
-            DataNhanvien.Name = "DataNhanvien";
-            DataNhanvien.RowHeadersWidth = 51;
-            DataNhanvien.Size = new Size(908, 598);
-            DataNhanvien.TabIndex = 9;
+            DataThanhvien.BackgroundColor = SystemColors.ControlLightLight;
+            DataThanhvien.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            DataThanhvien.Columns.AddRange(new DataGridViewColumn[] { ID, Ten, phone, Address, Account, Password, Email, Ngay, Trangthai });
+            DataThanhvien.Location = new Point(18, 65);
+            DataThanhvien.Margin = new Padding(3, 2, 3, 2);
+            DataThanhvien.Name = "DataThanhvien";
+            DataThanhvien.RowHeadersWidth = 51;
+            DataThanhvien.Size = new Size(908, 598);
+            DataThanhvien.TabIndex = 9;
+            DataThanhvien.CellContentClick += DataThanhvien_CellContentClick;
             // 
             // ID
             // 
@@ -123,37 +127,82 @@
             Trangthai.Name = "Trangthai";
             Trangthai.Width = 80;
             // 
-            // panel1
+            // btnXoa
             // 
-            panel1.BackColor = Color.Green;
-            panel1.BackgroundImage = Properties.Resources.plus_icon;
-            panel1.BackgroundImageLayout = ImageLayout.Stretch;
-            panel1.Location = new Point(861, 12);
-            panel1.Margin = new Padding(3, 2, 3, 2);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(44, 38);
-            panel1.TabIndex = 8;
-            panel1.Click += panel1_Click;
+            btnXoa.BackColor = Color.Red;
+            btnXoa.BackgroundImageLayout = ImageLayout.Zoom;
+            btnXoa.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnXoa.ForeColor = SystemColors.ControlLightLight;
+            btnXoa.Location = new Point(709, 12);
+            btnXoa.Name = "btnXoa";
+            btnXoa.Size = new Size(67, 40);
+            btnXoa.TabIndex = 11;
+            btnXoa.Text = "Xoá";
+            btnXoa.UseVisualStyleBackColor = false;
+            btnXoa.Click += btnXoa_Click;
+            // 
+            // btnExcel
+            // 
+            btnExcel.BackColor = Color.Green;
+            btnExcel.BackgroundImageLayout = ImageLayout.Zoom;
+            btnExcel.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnExcel.ForeColor = SystemColors.ControlLightLight;
+            btnExcel.Location = new Point(793, 12);
+            btnExcel.Name = "btnExcel";
+            btnExcel.Size = new Size(67, 40);
+            btnExcel.TabIndex = 11;
+            btnExcel.Text = "Excel";
+            btnExcel.UseVisualStyleBackColor = false;
+            // 
+            // btnCapnhat
+            // 
+            btnCapnhat.BackColor = Color.SkyBlue;
+            btnCapnhat.BackgroundImageLayout = ImageLayout.Zoom;
+            btnCapnhat.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnCapnhat.ForeColor = SystemColors.ControlLightLight;
+            btnCapnhat.Location = new Point(610, 12);
+            btnCapnhat.Name = "btnCapnhat";
+            btnCapnhat.Size = new Size(81, 40);
+            btnCapnhat.TabIndex = 11;
+            btnCapnhat.Text = "Cập nhật";
+            btnCapnhat.UseVisualStyleBackColor = false;
+            // 
+            // btnReset
+            // 
+            btnReset.BackColor = Color.DarkOrchid;
+            btnReset.BackgroundImageLayout = ImageLayout.Zoom;
+            btnReset.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnReset.ForeColor = SystemColors.ControlLightLight;
+            btnReset.Location = new Point(872, 12);
+            btnReset.Name = "btnReset";
+            btnReset.Size = new Size(54, 40);
+            btnReset.TabIndex = 11;
+            btnReset.Text = "Reset";
+            btnReset.UseVisualStyleBackColor = false;
+            btnReset.Click += btnReset_Click;
             // 
             // Thanhvien
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Bisque;
+            Controls.Add(btnReset);
+            Controls.Add(btnExcel);
+            Controls.Add(btnXoa);
+            Controls.Add(btnCapnhat);
             Controls.Add(label1);
-            Controls.Add(DataNhanvien);
-            Controls.Add(panel1);
+            Controls.Add(DataThanhvien);
             Name = "Thanhvien";
             Size = new Size(945, 675);
             Load += Thanhvien_Load;
-            ((System.ComponentModel.ISupportInitialize)DataNhanvien).EndInit();
+            ((System.ComponentModel.ISupportInitialize)DataThanhvien).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private DataGridView DataNhanvien;
+        private DataGridView DataThanhvien;
         private DataGridViewTextBoxColumn ID;
         private DataGridViewTextBoxColumn Ten;
         private DataGridViewTextBoxColumn phone;
@@ -163,6 +212,9 @@
         private DataGridViewTextBoxColumn Email;
         private DataGridViewTextBoxColumn Ngay;
         private DataGridViewTextBoxColumn Trangthai;
-        private Panel panel1;
+        private Button btnXoa;
+        private Button btnExcel;
+        private Button btnCapnhat;
+        private Button btnReset;
     }
 }
