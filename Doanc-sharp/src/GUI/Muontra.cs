@@ -16,5 +16,21 @@ namespace Doanc_sharp
         {
             InitializeComponent();
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnAdd_Click(object sender, EventArgs e)
+        {
+            Themphieumuon themphieumuon = new Themphieumuon();
+            themphieumuon.ShowDialog();
+        }
     }
 }

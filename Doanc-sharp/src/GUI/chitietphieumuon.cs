@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace Doanc_sharp
 {
-    public partial class Themban : Form
+    public partial class chitietphieumuon : Form
     {
-        public Themban()
+        public chitietphieumuon()
         {
             InitializeComponent();
+        }
+
+        private void SuaThietBi_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -17,5 +17,19 @@ namespace Doanc_sharp
             InitializeComponent();
         }
 
+        private void txtMaThanhVien_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbTrangThai_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
     }
 }

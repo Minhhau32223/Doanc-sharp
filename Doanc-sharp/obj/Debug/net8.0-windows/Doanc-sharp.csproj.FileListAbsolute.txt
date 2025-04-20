@@ -67,7 +67,6 @@ C:\Users\hau66\Downloads\csharp\Doanc-sharp\Doanc-sharp\bin\Debug\net8.0-windows
 C:\Users\hau66\Downloads\csharp\Doanc-sharp\Doanc-sharp\bin\Debug\net8.0-windows\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
 C:\Users\hau66\Downloads\csharp\Doanc-sharp\Doanc-sharp\obj\Debug\net8.0-windows\Doanc-sharp.csproj.AssemblyReference.cache
 C:\Users\hau66\Downloads\csharp\Doanc-sharp\Doanc-sharp\obj\Debug\net8.0-windows\Doanc_sharp.Properties.Resources.resources
-C:\Users\hau66\Downloads\csharp\Doanc-sharp\Doanc-sharp\obj\Debug\net8.0-windows\Doanc_sharp.Ban.resources
 C:\Users\hau66\Downloads\csharp\Doanc-sharp\Doanc-sharp\obj\Debug\net8.0-windows\Doanc_sharp.Baotri.resources
 C:\Users\hau66\Downloads\csharp\Doanc-sharp\Doanc-sharp\obj\Debug\net8.0-windows\Doanc_sharp.Chitietbaotri.resources
 C:\Users\hau66\Downloads\csharp\Doanc-sharp\Doanc-sharp\obj\Debug\net8.0-windows\Doanc_sharp.ChiTietDatCho.resources
@@ -78,13 +77,10 @@ C:\Users\hau66\Downloads\csharp\Doanc-sharp\Doanc-sharp\obj\Debug\net8.0-windows
 C:\Users\hau66\Downloads\csharp\Doanc-sharp\Doanc-sharp\obj\Debug\net8.0-windows\Doanc_sharp.Loginform.resources
 C:\Users\hau66\Downloads\csharp\Doanc-sharp\Doanc-sharp\obj\Debug\net8.0-windows\Doanc_sharp.MainForm.resources
 C:\Users\hau66\Downloads\csharp\Doanc-sharp\Doanc-sharp\obj\Debug\net8.0-windows\Doanc_sharp.Nhanvien.resources
-C:\Users\hau66\Downloads\csharp\Doanc-sharp\Doanc-sharp\obj\Debug\net8.0-windows\Doanc_sharp.Suaban.resources
 C:\Users\hau66\Downloads\csharp\Doanc-sharp\Doanc-sharp\obj\Debug\net8.0-windows\Doanc_sharp.Suadanhmuc.resources
 C:\Users\hau66\Downloads\csharp\Doanc-sharp\Doanc-sharp\obj\Debug\net8.0-windows\Doanc_sharp.SuaNhanVien.resources
 C:\Users\hau66\Downloads\csharp\Doanc-sharp\Doanc-sharp\obj\Debug\net8.0-windows\Doanc_sharp.SuaThanhVien.resources
-C:\Users\hau66\Downloads\csharp\Doanc-sharp\Doanc-sharp\obj\Debug\net8.0-windows\Doanc_sharp.SuaThietBi.resources
 C:\Users\hau66\Downloads\csharp\Doanc-sharp\Doanc-sharp\obj\Debug\net8.0-windows\Doanc_sharp.Thanhvien.resources
-C:\Users\hau66\Downloads\csharp\Doanc-sharp\Doanc-sharp\obj\Debug\net8.0-windows\Doanc_sharp.Themban.resources
 C:\Users\hau66\Downloads\csharp\Doanc-sharp\Doanc-sharp\obj\Debug\net8.0-windows\Doanc_sharp.Themdanhmuc.resources
 C:\Users\hau66\Downloads\csharp\Doanc-sharp\Doanc-sharp\obj\Debug\net8.0-windows\Doanc_sharp.ThemNhanVien.resources
 C:\Users\hau66\Downloads\csharp\Doanc-sharp\Doanc-sharp\obj\Debug\net8.0-windows\Doanc_sharp.ThemThietBi.resources
@@ -105,3 +101,7 @@ C:\Users\hau66\Downloads\csharp\Doanc-sharp\Doanc-sharp\obj\Debug\net8.0-windows
 C:\Users\hau66\Downloads\csharp\Doanc-sharp\Doanc-sharp\obj\Debug\net8.0-windows\Doanc-sharp.pdb
 C:\Users\hau66\Downloads\csharp\Doanc-sharp\Doanc-sharp\obj\Debug\net8.0-windows\Doanc-sharp.genruntimeconfig.cache
 C:\Users\hau66\Downloads\csharp\Doanc-sharp\Doanc-sharp\obj\Debug\net8.0-windows\ref\Doanc-sharp.dll
+C:\Users\hau66\Downloads\csharp\Doanc-sharp\Doanc-sharp\obj\Debug\net8.0-windows\Doanc_sharp.Muontra.resources
+C:\Users\hau66\Downloads\csharp\Doanc-sharp\Doanc-sharp\obj\Debug\net8.0-windows\Doanc_sharp.chitietphieumuon.resources
+C:\Users\hau66\Downloads\csharp\Doanc-sharp\Doanc-sharp\obj\Debug\net8.0-windows\Doanc_sharp.Themphieumuon.resources
+C:\Users\hau66\Downloads\csharp\Doanc-sharp\Doanc-sharp\obj\Debug\net8.0-windows\Doanc_sharp.Xemchitietmuon.resources

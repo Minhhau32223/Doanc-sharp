@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Doanc_sharp
 {
-    public partial class Suaban : Form
+    public partial class Xemchitietmuon : Form
     {
-        public Suaban()
+        public Xemchitietmuon()
         {
             InitializeComponent();
         }
