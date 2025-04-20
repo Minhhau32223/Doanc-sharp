@@ -17,6 +17,7 @@ namespace Doanc_sharp
         public Lichsuhoatdong()
         {
             InitializeComponent();
+            cbxFilter.SelectedIndex = 0;
             LoadData();
         }
         public void LoadData()

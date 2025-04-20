@@ -124,7 +124,7 @@
             XacnhanBtn.Name = "XacnhanBtn";
             XacnhanBtn.Size = new Size(218, 52);
             XacnhanBtn.TabIndex = 21;
-            XacnhanBtn.Text = "Xác nhận";
+            XacnhanBtn.Text = "&Xác nhận";
             XacnhanBtn.UseVisualStyleBackColor = false;
             XacnhanBtn.Click += XacnhanBtn_Click;
             // 
@@ -138,7 +138,7 @@
             ThoatBtn.Name = "ThoatBtn";
             ThoatBtn.Size = new Size(218, 52);
             ThoatBtn.TabIndex = 22;
-            ThoatBtn.Text = "Thoát";
+            ThoatBtn.Text = "&Thoát";
             ThoatBtn.UseVisualStyleBackColor = false;
             ThoatBtn.Click += ThoatBtn_Click;
             // 

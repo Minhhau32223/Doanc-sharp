@@ -124,7 +124,7 @@
             XulyBtn.Name = "XulyBtn";
             XulyBtn.Size = new Size(218, 52);
             XulyBtn.TabIndex = 21;
-            XulyBtn.Text = "Xử lý";
+            XulyBtn.Text = "&Xử lý";
             XulyBtn.UseVisualStyleBackColor = false;
             XulyBtn.Click += XulyBtn_Click;
             // 
@@ -138,7 +138,7 @@
             ThoatBtn.Name = "ThoatBtn";
             ThoatBtn.Size = new Size(218, 52);
             ThoatBtn.TabIndex = 22;
-            ThoatBtn.Text = "Thoát";
+            ThoatBtn.Text = "&Thoát";
             ThoatBtn.UseVisualStyleBackColor = false;
             ThoatBtn.Click += ThoatBtn_Click;
             // 
