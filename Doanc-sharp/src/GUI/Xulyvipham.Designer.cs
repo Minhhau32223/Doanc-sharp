@@ -126,6 +126,7 @@
             XulyBtn.TabIndex = 21;
             XulyBtn.Text = "Xử lý";
             XulyBtn.UseVisualStyleBackColor = false;
+            XulyBtn.Click += XulyBtn_Click;
             // 
             // ThoatBtn
             // 

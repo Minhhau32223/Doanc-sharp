@@ -126,6 +126,7 @@
             XacnhanBtn.TabIndex = 21;
             XacnhanBtn.Text = "Xác nhận";
             XacnhanBtn.UseVisualStyleBackColor = false;
+            XacnhanBtn.Click += XacnhanBtn_Click;
             // 
             // ThoatBtn
             // 
@@ -139,6 +140,7 @@
             ThoatBtn.TabIndex = 22;
             ThoatBtn.Text = "Thoát";
             ThoatBtn.UseVisualStyleBackColor = false;
+            ThoatBtn.Click += ThoatBtn_Click;
             // 
             // MotaTbx
             // 

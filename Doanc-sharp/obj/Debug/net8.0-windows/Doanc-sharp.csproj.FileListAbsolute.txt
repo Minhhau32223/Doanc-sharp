@@ -105,3 +105,11 @@ C:\Users\hau66\Downloads\csharp\Doanc-sharp\Doanc-sharp\obj\Debug\net8.0-windows
 C:\Users\hau66\Downloads\csharp\Doanc-sharp\Doanc-sharp\obj\Debug\net8.0-windows\Doanc_sharp.chitietphieumuon.resources
 C:\Users\hau66\Downloads\csharp\Doanc-sharp\Doanc-sharp\obj\Debug\net8.0-windows\Doanc_sharp.Themphieumuon.resources
 C:\Users\hau66\Downloads\csharp\Doanc-sharp\Doanc-sharp\obj\Debug\net8.0-windows\Doanc_sharp.Xemchitietmuon.resources
+C:\Users\hau66\Downloads\csharp\Doanc-sharp\Doanc-sharp\bin\Debug\net8.0-windows\AForge.dll
+C:\Users\hau66\Downloads\csharp\Doanc-sharp\Doanc-sharp\bin\Debug\net8.0-windows\AForge.Video.dll
+C:\Users\hau66\Downloads\csharp\Doanc-sharp\Doanc-sharp\bin\Debug\net8.0-windows\AForge.Video.DirectShow.dll
+C:\Users\hau66\Downloads\csharp\Doanc-sharp\Doanc-sharp\bin\Debug\net8.0-windows\System.Drawing.Common.dll
+C:\Users\hau66\Downloads\csharp\Doanc-sharp\Doanc-sharp\bin\Debug\net8.0-windows\zxing.dll
+C:\Users\hau66\Downloads\csharp\Doanc-sharp\Doanc-sharp\bin\Debug\net8.0-windows\ZXing.Windows.Compatibility.dll
+C:\Users\hau66\Downloads\csharp\Doanc-sharp\Doanc-sharp\obj\Debug\net8.0-windows\Doanc_sharp.src.GUI.KiemTra.resources
+C:\Users\hau66\Downloads\csharp\Doanc-sharp\Doanc-sharp\obj\Debug\net8.0-windows\Doanc_sharp.src.GUI.QuetMaVach.resources

@@ -40,6 +40,18 @@ namespace Doanc_sharp.src.BUS
 
             return dsdc;
         }
+        public bool Add(DatChoDTO dc)
+        {
+            return dao.ADD(dc);
+        }
+        public bool Update(DatChoDTO dc)
+        {
+            return dao.Update(dc);
+        }
+        public bool Delete(int madatcho) {
+            return dao.Delete(madatcho);
+
+        }
 
 
 
