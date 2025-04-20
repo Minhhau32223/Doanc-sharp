@@ -177,7 +177,7 @@
             btnCheck.TabIndex = 2;
             btnCheck.Text = "Kiểm tra vào thư quán";
             btnCheck.UseVisualStyleBackColor = false;
-            btnCheck.Click += btn_thanhvien_Click;
+            btnCheck.Click += btn_check_Click;
             // 
             // label1
             // 

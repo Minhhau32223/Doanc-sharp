@@ -1,6 +1,7 @@
 ﻿using System.Runtime;
 using Doanc_sharp.src.DAO;
 using Doanc_sharp.src.DTO;
+using Doanc_sharp.src.GUI;
 
 namespace Doanc_sharp
 {
@@ -68,7 +69,9 @@ namespace Doanc_sharp
                 case "baocao":
                     ShowControlInRightPanel(new ThongKeBaoCao());
                     break;
-
+                case "check":
+                    ShowControlInRightPanel(new KiemTra());
+                    break;
 
             }
         }

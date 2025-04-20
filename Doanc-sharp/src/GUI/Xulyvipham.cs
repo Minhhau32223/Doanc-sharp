@@ -12,14 +12,28 @@ namespace Doanc_sharp
 {
     public partial class Xulyvipham : Form
     {
-        public Xulyvipham()
+        public Xulyvipham(string[] data)
         {
             InitializeComponent();
+            //TvvpCbx.SelectedIndex = TvvpCbx.FindStringExact(data[0]);
+            TenvpTbx.Text = data[1];
+            MotaTbx.Text = data[2];
+            TrangthaiCbx.SelectedIndex = data[3] == "chua xu ly" ? 0 : 1;
         }
 
         private void ThoatBtn_Click(object sender, EventArgs e)
         {
-            this.Dispose();
+            DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn thoát?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                this.Close();
+            }
+        }
+
+        private void XulyBtn_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Xử lý thành công(Thực ra chưa làm)");
         }
     }
 }

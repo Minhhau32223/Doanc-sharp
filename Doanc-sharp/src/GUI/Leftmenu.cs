@@ -27,6 +27,11 @@ namespace Doanc_sharp
             ButtonClicked?.Invoke(this, "baotri");
         }
 
+        private void btn_check_Click(object sender, EventArgs e)
+        {
+            ButtonClicked?.Invoke(this, "check");
+        }
+
         private void btn_thanhvien_Click(object sender, EventArgs e)
         {
             ButtonClicked?.Invoke(this, "thanhvien");
