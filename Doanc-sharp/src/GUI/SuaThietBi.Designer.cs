@@ -28,21 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            comboBox1 = new ComboBox();
             panel1 = new Panel();
             label1 = new Label();
             label5 = new Label();
             label4 = new Label();
             label3 = new Label();
             label2 = new Label();
-            button2 = new Button();
+            btnConfirm = new Button();
             button1 = new Button();
-            textBox3 = new TextBox();
-            textBox2 = new TextBox();
-            textBox1 = new TextBox();
+            txtRentPrize = new TextBox();
+            txtDeviceName = new TextBox();
+            txtDeviceID = new TextBox();
+            txtStatus = new TextBox();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
+<<<<<<< HEAD
             // comboBox1
             // 
             comboBox1.FormattingEnabled = true;
@@ -52,6 +53,8 @@
             comboBox1.Size = new Size(297, 23);
             comboBox1.TabIndex = 9;
             // 
+=======
+>>>>>>> 40df31548af632b16847f172cd5133b0c4335b1d
             // panel1
             // 
             panel1.BackColor = Color.NavajoWhite;
@@ -114,8 +117,9 @@
             label2.TabIndex = 15;
             label2.Text = "ID:";
             // 
-            // button2
+            // btnConfirm
             // 
+<<<<<<< HEAD
             button2.BackColor = Color.Green;
             button2.Font = new Font("Sitka Text", 16.1999989F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button2.ForeColor = SystemColors.ButtonHighlight;
@@ -126,6 +130,19 @@
             button2.TabIndex = 10;
             button2.Text = "Xác nhận";
             button2.UseVisualStyleBackColor = false;
+=======
+            btnConfirm.BackColor = Color.Green;
+            btnConfirm.Font = new Font("Sitka Text", 16.1999989F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnConfirm.ForeColor = SystemColors.ButtonHighlight;
+            btnConfirm.Location = new Point(396, 274);
+            btnConfirm.Margin = new Padding(3, 2, 3, 2);
+            btnConfirm.Name = "btnConfirm";
+            btnConfirm.Size = new Size(218, 52);
+            btnConfirm.TabIndex = 10;
+            btnConfirm.Text = "Xác nhận";
+            btnConfirm.UseVisualStyleBackColor = false;
+            btnConfirm.Click += btnConfirm_Click;
+>>>>>>> 40df31548af632b16847f172cd5133b0c4335b1d
             // 
             // button1
             // 
@@ -140,29 +157,61 @@
             button1.Text = "Thoát";
             button1.UseVisualStyleBackColor = false;
             // 
-            // textBox3
+            // txtRentPrize
             // 
+<<<<<<< HEAD
             textBox3.Location = new Point(353, 172);
             textBox3.Margin = new Padding(3, 2, 3, 2);
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(297, 23);
             textBox3.TabIndex = 6;
+=======
+            txtRentPrize.Location = new Point(353, 172);
+            txtRentPrize.Margin = new Padding(3, 2, 3, 2);
+            txtRentPrize.Name = "txtRentPrize";
+            txtRentPrize.Size = new Size(297, 23);
+            txtRentPrize.TabIndex = 6;
+>>>>>>> 40df31548af632b16847f172cd5133b0c4335b1d
             // 
-            // textBox2
+            // txtDeviceName
             // 
+<<<<<<< HEAD
             textBox2.Location = new Point(353, 135);
             textBox2.Margin = new Padding(3, 2, 3, 2);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(297, 23);
             textBox2.TabIndex = 7;
+=======
+            txtDeviceName.Location = new Point(353, 135);
+            txtDeviceName.Margin = new Padding(3, 2, 3, 2);
+            txtDeviceName.Name = "txtDeviceName";
+            txtDeviceName.Size = new Size(297, 23);
+            txtDeviceName.TabIndex = 7;
+>>>>>>> 40df31548af632b16847f172cd5133b0c4335b1d
             // 
-            // textBox1
+            // txtDeviceID
             // 
+<<<<<<< HEAD
             textBox1.Location = new Point(353, 95);
             textBox1.Margin = new Padding(3, 2, 3, 2);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(297, 23);
             textBox1.TabIndex = 8;
+=======
+            txtDeviceID.Location = new Point(353, 95);
+            txtDeviceID.Margin = new Padding(3, 2, 3, 2);
+            txtDeviceID.Name = "txtDeviceID";
+            txtDeviceID.Size = new Size(297, 23);
+            txtDeviceID.TabIndex = 8;
+            // 
+            // txtStatus
+            // 
+            txtStatus.Location = new Point(353, 214);
+            txtStatus.Margin = new Padding(3, 2, 3, 2);
+            txtStatus.Name = "txtStatus";
+            txtStatus.Size = new Size(297, 23);
+            txtStatus.TabIndex = 6;
+>>>>>>> 40df31548af632b16847f172cd5133b0c4335b1d
             // 
             // chitietphieumuon
             // 
@@ -170,19 +219,31 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Bisque;
             ClientSize = new Size(700, 377);
+<<<<<<< HEAD
             Controls.Add(comboBox1);
+=======
+>>>>>>> 40df31548af632b16847f172cd5133b0c4335b1d
             Controls.Add(panel1);
             Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
-            Controls.Add(button2);
+            Controls.Add(btnConfirm);
             Controls.Add(button1);
+<<<<<<< HEAD
             Controls.Add(textBox3);
             Controls.Add(textBox2);
             Controls.Add(textBox1);
             Margin = new Padding(3, 2, 3, 2);
             Name = "chitietphieumuon";
+=======
+            Controls.Add(txtStatus);
+            Controls.Add(txtRentPrize);
+            Controls.Add(txtDeviceName);
+            Controls.Add(txtDeviceID);
+            Margin = new Padding(3, 2, 3, 2);
+            Name = "SuaThietBi";
+>>>>>>> 40df31548af632b16847f172cd5133b0c4335b1d
             Text = "Sửa thiết bị";
             Load += SuaThietBi_Load;
             panel1.ResumeLayout(false);
@@ -200,10 +261,13 @@
         private Label label4;
         private Label label3;
         private Label label2;
-        private Button button2;
+        private Button btnConfirm;
         private Button button1;
+        private TextBox txtRentPrize;
         private TextBox textBox3;
         private TextBox textBox2;
-        private TextBox textBox1;
+        private TextBox txtDeviceName;
+        private TextBox txtDeviceID;
+        private TextBox txtStatus;
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Doanc_sharp.src.DTO
 {
-    internal class ThietBiDTO
+    public class ThietBiDTO
     {
         public int Mathietbi { get; set; }
         public string Tenthietbi { get; set; }

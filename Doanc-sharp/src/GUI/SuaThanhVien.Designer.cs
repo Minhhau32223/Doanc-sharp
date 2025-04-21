@@ -41,11 +41,11 @@
             nameTbox = new TextBox();
             phoneTbox = new TextBox();
             addressTbox = new TextBox();
-            dateTbox = new TextBox();
             emailTbox = new TextBox();
             statusTbox = new TextBox();
             btnExit = new Button();
             btnConfirm = new Button();
+            dtpNgaydangky = new DateTimePicker();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -176,15 +176,6 @@
             addressTbox.TabIndex = 28;
             addressTbox.TextChanged += textBox1_TextChanged;
             // 
-            // dateTbox
-            // 
-            dateTbox.Location = new Point(355, 269);
-            dateTbox.Margin = new Padding(3, 2, 3, 2);
-            dateTbox.Name = "dateTbox";
-            dateTbox.Size = new Size(297, 23);
-            dateTbox.TabIndex = 28;
-            dateTbox.TextChanged += textBox1_TextChanged;
-            // 
             // emailTbox
             // 
             emailTbox.Location = new Point(355, 313);
@@ -228,6 +219,15 @@
             btnConfirm.TabIndex = 30;
             btnConfirm.Text = "Xác nhận";
             btnConfirm.UseVisualStyleBackColor = false;
+            btnConfirm.Click += btnConfirm_Click;
+            // 
+            // dtpNgaydangky
+            // 
+            dtpNgaydangky.Location = new Point(352, 270);
+            dtpNgaydangky.Name = "dtpNgaydangky";
+            dtpNgaydangky.Size = new Size(301, 23);
+            dtpNgaydangky.TabIndex = 31;
+            dtpNgaydangky.ValueChanged += dateTimePicker1_ValueChanged;
             // 
             // SuaThanhVien
             // 
@@ -235,11 +235,11 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Bisque;
             ClientSize = new Size(880, 550);
+            Controls.Add(dtpNgaydangky);
             Controls.Add(btnConfirm);
             Controls.Add(btnExit);
             Controls.Add(statusTbox);
             Controls.Add(emailTbox);
-            Controls.Add(dateTbox);
             Controls.Add(addressTbox);
             Controls.Add(phoneTbox);
             Controls.Add(nameTbox);
@@ -254,6 +254,7 @@
             Controls.Add(panel1);
             Name = "SuaThanhVien";
             Text = "SuaThanhVien";
+            Load += SuaThanhVien_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);
@@ -275,10 +276,10 @@
         private TextBox nameTbox;
         private TextBox phoneTbox;
         private TextBox addressTbox;
-        private TextBox dateTbox;
         private TextBox emailTbox;
         private TextBox statusTbox;
         private Button btnExit;
         private Button btnConfirm;
+        private DateTimePicker dtpNgaydangky;
     }
 }

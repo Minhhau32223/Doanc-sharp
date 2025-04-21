@@ -15,6 +15,7 @@ namespace Doanc_sharp
         public Xulyvipham(string[] data)
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
             //TvvpCbx.SelectedIndex = TvvpCbx.FindStringExact(data[0]);
             TenvpTbx.Text = data[1];
             MotaTbx.Text = data[2];

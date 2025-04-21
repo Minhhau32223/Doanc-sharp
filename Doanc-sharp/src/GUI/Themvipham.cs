@@ -18,6 +18,7 @@ namespace Doanc_sharp
         public Themvipham()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void ThoatBtn_Click(object sender, EventArgs e)

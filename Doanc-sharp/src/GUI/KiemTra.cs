@@ -27,7 +27,13 @@ namespace Doanc_sharp.src.GUI
             var formQuet = new QuetMaVach();
             formQuet.MaVachQuetThanhCong += (maVach) =>
             {
-                kiemTraMaTV(int.Parse(maVach));
+                try
+                {
+                    kiemTraMaTV(int.Parse(maVach));
+                }
+                catch (Exception e)
+                {
+                }
             };
             formQuet.ShowDialog();
 

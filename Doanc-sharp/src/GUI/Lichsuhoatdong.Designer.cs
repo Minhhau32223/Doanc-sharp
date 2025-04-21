@@ -38,6 +38,7 @@
             FindTbx = new TextBox();
             FindBtn = new Button();
             flowLayoutPanel1 = new FlowLayoutPanel();
+            cbxFilter = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             flowLayoutPanel1.SuspendLayout();
             SuspendLayout();
@@ -108,7 +109,7 @@
             // 
             FindTbx.Font = new Font("Segoe UI", 14F);
             FindTbx.ForeColor = SystemColors.ScrollBar;
-            FindTbx.Location = new Point(3, 2);
+            FindTbx.Location = new Point(156, 2);
             FindTbx.Margin = new Padding(3, 2, 0, 2);
             FindTbx.Name = "FindTbx";
             FindTbx.Size = new Size(282, 32);
@@ -122,7 +123,7 @@
             // 
             FindBtn.Anchor = AnchorStyles.Right;
             FindBtn.BackgroundImage = Properties.Resources.findIcon;
-            FindBtn.Location = new Point(285, 2);
+            FindBtn.Location = new Point(438, 2);
             FindBtn.Margin = new Padding(0, 2, 0, 2);
             FindBtn.Name = "FindBtn";
             FindBtn.Size = new Size(32, 32);
@@ -132,12 +133,24 @@
             // 
             // flowLayoutPanel1
             // 
+            flowLayoutPanel1.Controls.Add(cbxFilter);
             flowLayoutPanel1.Controls.Add(FindTbx);
             flowLayoutPanel1.Controls.Add(FindBtn);
-            flowLayoutPanel1.Location = new Point(600, 22);
+            flowLayoutPanel1.Location = new Point(446, 22);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(318, 35);
+            flowLayoutPanel1.Size = new Size(472, 35);
             flowLayoutPanel1.TabIndex = 0;
+            // 
+            // cbxFilter
+            // 
+            cbxFilter.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbxFilter.Font = new Font("Segoe UI", 12F);
+            cbxFilter.FormattingEnabled = true;
+            cbxFilter.Items.AddRange(new object[] { "Tất cả", "Hôm nay", "Ba ngày trước", "Một tuần trước", "Một tháng trước", "Một năm trước" });
+            cbxFilter.Location = new Point(3, 3);
+            cbxFilter.Name = "cbxFilter";
+            cbxFilter.Size = new Size(147, 29);
+            cbxFilter.TabIndex = 6;
             // 
             // Lichsuhoatdong
             // 
@@ -169,5 +182,6 @@
         private DataGridViewTextBoxColumn Chitiet;
         private DataGridViewTextBoxColumn Thoigian;
         private FlowLayoutPanel flowLayoutPanel1;
+        private ComboBox cbxFilter;
     }
 }
