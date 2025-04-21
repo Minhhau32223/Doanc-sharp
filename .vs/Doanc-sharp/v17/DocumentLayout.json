@@ -3,7 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\hau66\\Downloads\\csharp\\Doanc-sharp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{94736A9F-C8A4-40BC-8E8E-54FBB45355FE}|Doanc-sharp\\Doanc-sharp.csproj|c:\\users\\hau66\\downloads\\csharp\\doanc-sharp\\doanc-sharp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94736A9F-C8A4-40BC-8E8E-54FBB45355FE}|Doanc-sharp\\Doanc-sharp.csproj|solutionrelative:doanc-sharp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{94736A9F-C8A4-40BC-8E8E-54FBB45355FE}|Doanc-sharp\\Doanc-sharp.csproj|c:\\users\\hau66\\downloads\\csharp\\doanc-sharp\\doanc-sharp\\src\\bus\\viphambus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -86,10 +87,6 @@
       "RelativeMoniker": "D:0:0:{94736A9F-C8A4-40BC-8E8E-54FBB45355FE}|Doanc-sharp\\Doanc-sharp.csproj|solutionrelative:doanc-sharp\\src\\gui\\datcho.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{94736A9F-C8A4-40BC-8E8E-54FBB45355FE}|Doanc-sharp\\Doanc-sharp.csproj|c:\\users\\hau66\\downloads\\csharp\\doanc-sharp\\doanc-sharp\\doanc-sharp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{94736A9F-C8A4-40BC-8E8E-54FBB45355FE}|Doanc-sharp\\Doanc-sharp.csproj|solutionrelative:doanc-sharp\\doanc-sharp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{94736A9F-C8A4-40BC-8E8E-54FBB45355FE}|Doanc-sharp\\Doanc-sharp.csproj|c:\\users\\hau66\\downloads\\csharp\\doanc-sharp\\doanc-sharp\\src\\dao\\chitietphieumuondao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{94736A9F-C8A4-40BC-8E8E-54FBB45355FE}|Doanc-sharp\\Doanc-sharp.csproj|solutionrelative:doanc-sharp\\src\\dao\\chitietphieumuondao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -166,10 +163,6 @@
       "RelativeMoniker": "D:0:0:{94736A9F-C8A4-40BC-8E8E-54FBB45355FE}|Doanc-sharp\\Doanc-sharp.csproj|solutionrelative:doanc-sharp\\src\\gui\\mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{94736A9F-C8A4-40BC-8E8E-54FBB45355FE}|Doanc-sharp\\Doanc-sharp.csproj|c:\\users\\hau66\\downloads\\csharp\\doanc-sharp\\doanc-sharp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{94736A9F-C8A4-40BC-8E8E-54FBB45355FE}|Doanc-sharp\\Doanc-sharp.csproj|solutionrelative:doanc-sharp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{94736A9F-C8A4-40BC-8E8E-54FBB45355FE}|Doanc-sharp\\Doanc-sharp.csproj|C:\\Users\\hau66\\Downloads\\csharp\\Doanc-sharp\\doanc-sharp\\src\\gui\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{94736A9F-C8A4-40BC-8E8E-54FBB45355FE}|Doanc-sharp\\Doanc-sharp.csproj|solutionrelative:doanc-sharp\\src\\gui\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
@@ -189,11 +182,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 26,
               "Title": "Nhanvien.cs [Design]",
               "DocumentMoniker": "C:\\Users\\hau66\\Downloads\\csharp\\Doanc-sharp\\Doanc-sharp\\src\\GUI\\Nhanvien.cs",
               "RelativeDocumentMoniker": "Doanc-sharp\\src\\GUI\\Nhanvien.cs",
@@ -205,7 +198,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 28,
               "Title": "NhanVienDTO.cs",
               "DocumentMoniker": "C:\\Users\\hau66\\Downloads\\csharp\\Doanc-sharp\\Doanc-sharp\\src\\DTO\\NhanVienDTO.cs",
               "RelativeDocumentMoniker": "Doanc-sharp\\src\\DTO\\NhanVienDTO.cs",
@@ -217,61 +210,12 @@
               "IsPinned": true
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Microsoft.Common.CurrentVersion.targets",
-              "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
-              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
-              "ViewState": "AgIAAO4VAAAAAAAAAAApwC0WAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
-              "WhenOpened": "2025-04-20T03:07:30.964Z",
-              "EditorCaption": ""
-            },
-            {
               "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
             },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "DatChoBUS.cs",
-              "DocumentMoniker": "C:\\Users\\hau66\\Downloads\\csharp\\Doanc-sharp\\Doanc-sharp\\src\\BUS\\DatChoBUS.cs",
-              "RelativeDocumentMoniker": "Doanc-sharp\\src\\BUS\\DatChoBUS.cs",
-              "ToolTip": "C:\\Users\\hau66\\Downloads\\csharp\\Doanc-sharp\\Doanc-sharp\\src\\BUS\\DatChoBUS.cs",
-              "RelativeToolTip": "Doanc-sharp\\src\\BUS\\DatChoBUS.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAIA1wC8AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-18T11:51:34.697Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "KiemTraBUS.cs",
-              "DocumentMoniker": "C:\\Users\\hau66\\Downloads\\csharp\\Doanc-sharp\\Doanc-sharp\\src\\BUS\\KiemTraBUS.cs",
-              "RelativeDocumentMoniker": "Doanc-sharp\\src\\BUS\\KiemTraBUS.cs",
-              "ToolTip": "C:\\Users\\hau66\\Downloads\\csharp\\Doanc-sharp\\Doanc-sharp\\src\\BUS\\KiemTraBUS.cs",
-              "RelativeToolTip": "Doanc-sharp\\src\\BUS\\KiemTraBUS.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-20T00:44:57.531Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "CtDatChoBUS.cs",
-              "DocumentMoniker": "C:\\Users\\hau66\\Downloads\\csharp\\Doanc-sharp\\Doanc-sharp\\src\\BUS\\CtDatChoBUS.cs",
-              "RelativeDocumentMoniker": "Doanc-sharp\\src\\BUS\\CtDatChoBUS.cs",
-              "ToolTip": "C:\\Users\\hau66\\Downloads\\csharp\\Doanc-sharp\\Doanc-sharp\\src\\BUS\\CtDatChoBUS.cs",
-              "RelativeToolTip": "Doanc-sharp\\src\\BUS\\CtDatChoBUS.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-18T11:52:12.594Z"
             },
             {
               "$type": "Document",
@@ -311,19 +255,64 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\hau66\\Downloads\\csharp\\Doanc-sharp\\Doanc-sharp\\Program.cs",
+              "RelativeDocumentMoniker": "Doanc-sharp\\Program.cs",
+              "ToolTip": "C:\\Users\\hau66\\Downloads\\csharp\\Doanc-sharp\\Doanc-sharp\\Program.cs",
+              "RelativeToolTip": "Doanc-sharp\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-15T15:08:02.716Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CtDatChoBUS.cs",
+              "DocumentMoniker": "C:\\Users\\hau66\\Downloads\\csharp\\Doanc-sharp\\Doanc-sharp\\src\\BUS\\CtDatChoBUS.cs",
+              "RelativeDocumentMoniker": "Doanc-sharp\\src\\BUS\\CtDatChoBUS.cs",
+              "ToolTip": "C:\\Users\\hau66\\Downloads\\csharp\\Doanc-sharp\\Doanc-sharp\\src\\BUS\\CtDatChoBUS.cs",
+              "RelativeToolTip": "Doanc-sharp\\src\\BUS\\CtDatChoBUS.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-18T11:52:12.594Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DatChoBUS.cs",
+              "DocumentMoniker": "C:\\Users\\hau66\\Downloads\\csharp\\Doanc-sharp\\Doanc-sharp\\src\\BUS\\DatChoBUS.cs",
+              "RelativeDocumentMoniker": "Doanc-sharp\\src\\BUS\\DatChoBUS.cs",
+              "ToolTip": "C:\\Users\\hau66\\Downloads\\csharp\\Doanc-sharp\\Doanc-sharp\\src\\BUS\\DatChoBUS.cs",
+              "RelativeToolTip": "Doanc-sharp\\src\\BUS\\DatChoBUS.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAIA1wC8AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-18T11:51:34.697Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
               "Title": "ViPhamBUS.cs",
               "DocumentMoniker": "C:\\Users\\hau66\\Downloads\\csharp\\Doanc-sharp\\Doanc-sharp\\src\\BUS\\ViPhamBUS.cs",
               "RelativeDocumentMoniker": "Doanc-sharp\\src\\BUS\\ViPhamBUS.cs",
               "ToolTip": "C:\\Users\\hau66\\Downloads\\csharp\\Doanc-sharp\\Doanc-sharp\\src\\BUS\\ViPhamBUS.cs",
               "RelativeToolTip": "Doanc-sharp\\src\\BUS\\ViPhamBUS.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-20T00:45:34.423Z"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "KiemTraBUS.cs",
+              "DocumentMoniker": "C:\\Users\\hau66\\Downloads\\csharp\\Doanc-sharp\\Doanc-sharp\\src\\BUS\\KiemTraBUS.cs",
+              "RelativeDocumentMoniker": "Doanc-sharp\\src\\BUS\\KiemTraBUS.cs",
+              "ToolTip": "C:\\Users\\hau66\\Downloads\\csharp\\Doanc-sharp\\Doanc-sharp\\src\\BUS\\KiemTraBUS.cs",
+              "RelativeToolTip": "Doanc-sharp\\src\\BUS\\KiemTraBUS.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-20T00:44:57.531Z"
             },
             {
               "$type": "Document",
@@ -437,19 +426,6 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "Doanc-sharp.csproj",
-              "DocumentMoniker": "C:\\Users\\hau66\\Downloads\\csharp\\Doanc-sharp\\Doanc-sharp\\Doanc-sharp.csproj",
-              "RelativeDocumentMoniker": "Doanc-sharp\\Doanc-sharp.csproj",
-              "ToolTip": "C:\\Users\\hau66\\Downloads\\csharp\\Doanc-sharp\\Doanc-sharp\\Doanc-sharp.csproj",
-              "RelativeToolTip": "Doanc-sharp\\Doanc-sharp.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-04-15T07:42:31.608Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 18,
               "Title": "ThietBiDTO.cs",
               "DocumentMoniker": "C:\\Users\\hau66\\Downloads\\csharp\\Doanc-sharp\\Doanc-sharp\\src\\DTO\\ThietBiDTO.cs",
@@ -462,7 +438,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 21,
               "Title": "ChiTietPhieuMuonDAO.cs",
               "DocumentMoniker": "C:\\Users\\hau66\\Downloads\\csharp\\Doanc-sharp\\Doanc-sharp\\src\\DAO\\ChiTietPhieuMuonDAO.cs",
               "RelativeDocumentMoniker": "Doanc-sharp\\src\\DAO\\ChiTietPhieuMuonDAO.cs",
@@ -474,7 +450,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 25,
               "Title": "ChiTietDatCho.Designer.cs",
               "DocumentMoniker": "C:\\Users\\hau66\\Downloads\\csharp\\Doanc-sharp\\Doanc-sharp\\src\\GUI\\ChiTietDatCho.Designer.cs",
               "RelativeDocumentMoniker": "Doanc-sharp\\src\\GUI\\ChiTietDatCho.Designer.cs",
@@ -486,7 +462,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 22,
               "Title": "Muontra.cs",
               "DocumentMoniker": "C:\\Users\\hau66\\Downloads\\csharp\\Doanc-sharp\\Doanc-sharp\\src\\GUI\\Muontra.cs",
               "RelativeDocumentMoniker": "Doanc-sharp\\src\\GUI\\Muontra.cs",
@@ -499,7 +475,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 27,
               "Title": "ChiTietDatCho.cs",
               "DocumentMoniker": "C:\\Users\\hau66\\Downloads\\csharp\\Doanc-sharp\\Doanc-sharp\\src\\GUI\\ChiTietDatCho.cs",
               "RelativeDocumentMoniker": "Doanc-sharp\\src\\GUI\\ChiTietDatCho.cs",
@@ -512,7 +488,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 29,
               "Title": "DatChoDTO.cs",
               "DocumentMoniker": "C:\\Users\\hau66\\Downloads\\csharp\\Doanc-sharp\\Doanc-sharp\\src\\DTO\\DatChoDTO.cs",
               "RelativeDocumentMoniker": "Doanc-sharp\\src\\DTO\\DatChoDTO.cs",
@@ -524,7 +500,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 30,
               "Title": "DatCho.cs",
               "DocumentMoniker": "C:\\Users\\hau66\\Downloads\\csharp\\Doanc-sharp\\Doanc-sharp\\src\\GUI\\DatCho.cs",
               "RelativeDocumentMoniker": "Doanc-sharp\\src\\GUI\\DatCho.cs",
@@ -537,7 +513,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 31,
               "Title": "Nhanvien.cs",
               "DocumentMoniker": "C:\\Users\\hau66\\Downloads\\csharp\\Doanc-sharp\\Doanc-sharp\\src\\GUI\\Nhanvien.cs",
               "RelativeDocumentMoniker": "Doanc-sharp\\src\\GUI\\Nhanvien.cs",
@@ -549,7 +525,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 32,
               "Title": "CtDatChoDAO.cs",
               "DocumentMoniker": "C:\\Users\\hau66\\Downloads\\csharp\\Doanc-sharp\\Doanc-sharp\\src\\DAO\\CtDatChoDAO.cs",
               "RelativeDocumentMoniker": "Doanc-sharp\\src\\DAO\\CtDatChoDAO.cs",
@@ -561,7 +537,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 34,
               "Title": "CtDatChoDTO.cs",
               "DocumentMoniker": "C:\\Users\\hau66\\Downloads\\csharp\\Doanc-sharp\\Doanc-sharp\\src\\DTO\\CtDatChoDTO.cs",
               "RelativeDocumentMoniker": "Doanc-sharp\\src\\DTO\\CtDatChoDTO.cs",
@@ -573,7 +549,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 33,
               "Title": "DanhMucDTO.cs",
               "DocumentMoniker": "C:\\Users\\hau66\\Downloads\\csharp\\Doanc-sharp\\Doanc-sharp\\src\\DTO\\DanhMucDTO.cs",
               "RelativeDocumentMoniker": "Doanc-sharp\\src\\DTO\\DanhMucDTO.cs",
@@ -585,7 +561,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 35,
               "Title": "NhanVienDAO.cs",
               "DocumentMoniker": "C:\\Users\\hau66\\Downloads\\csharp\\Doanc-sharp\\Doanc-sharp\\src\\DAO\\NhanVienDAO.cs",
               "RelativeDocumentMoniker": "Doanc-sharp\\src\\DAO\\NhanVienDAO.cs",
@@ -597,7 +573,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 37,
               "Title": "Leftmenu.cs",
               "DocumentMoniker": "C:\\Users\\hau66\\Downloads\\csharp\\Doanc-sharp\\Doanc-sharp\\src\\GUI\\Leftmenu.cs",
               "RelativeDocumentMoniker": "Doanc-sharp\\src\\GUI\\Leftmenu.cs",
@@ -610,7 +586,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 38,
               "Title": "MainForm.cs",
               "DocumentMoniker": "C:\\Users\\hau66\\Downloads\\csharp\\Doanc-sharp\\Doanc-sharp\\src\\GUI\\MainForm.cs",
               "RelativeDocumentMoniker": "Doanc-sharp\\src\\GUI\\MainForm.cs",
@@ -623,7 +599,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 39,
               "Title": "MainForm.Designer.cs",
               "DocumentMoniker": "C:\\Users\\hau66\\Downloads\\csharp\\Doanc-sharp\\Doanc-sharp\\src\\GUI\\MainForm.Designer.cs",
               "RelativeDocumentMoniker": "Doanc-sharp\\src\\GUI\\MainForm.Designer.cs",
@@ -635,19 +611,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\hau66\\Downloads\\csharp\\Doanc-sharp\\Doanc-sharp\\Program.cs",
-              "RelativeDocumentMoniker": "Doanc-sharp\\Program.cs",
-              "ToolTip": "C:\\Users\\hau66\\Downloads\\csharp\\Doanc-sharp\\Doanc-sharp\\Program.cs",
-              "RelativeToolTip": "Doanc-sharp\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-15T15:08:02.716Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 42,
               "Title": "Loginform.Designer.cs",
               "DocumentMoniker": "C:\\Users\\hau66\\Downloads\\csharp\\Doanc-sharp\\Doanc-sharp\\src\\GUI\\Loginform.Designer.cs",
               "RelativeDocumentMoniker": "Doanc-sharp\\src\\GUI\\Loginform.Designer.cs",
@@ -656,6 +620,10 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-15T15:06:37.598Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
             },
             {
               "$type": "Bookmark",
@@ -670,8 +638,7 @@
               "ToolTip": "C:\\Users\\hau66\\Downloads\\csharp\\Doanc-sharp\\Doanc-sharp\\src\\GUI\\SuaThietBi.cs [Design]",
               "RelativeToolTip": "Doanc-sharp\\src\\GUI\\SuaThietBi.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-19T14:58:57.625Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-04-19T14:58:57.625Z"
             },
             {
               "$type": "Document",
@@ -682,8 +649,7 @@
               "ToolTip": "C:\\Users\\hau66\\Downloads\\csharp\\Doanc-sharp\\Doanc-sharp\\src\\GUI\\Themphieumuon.cs [Design]",
               "RelativeToolTip": "Doanc-sharp\\src\\GUI\\Themphieumuon.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-19T13:54:17.958Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-04-19T13:54:17.958Z"
             },
             {
               "$type": "Document",
@@ -694,48 +660,44 @@
               "ToolTip": "C:\\Users\\hau66\\Downloads\\csharp\\Doanc-sharp\\Doanc-sharp\\src\\GUI\\DatCho.cs [Design]",
               "RelativeToolTip": "Doanc-sharp\\src\\GUI\\DatCho.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-18T11:43:20.409Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-04-18T11:43:20.409Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 24,
               "Title": "ChiTietDatCho.cs [Design]",
               "DocumentMoniker": "C:\\Users\\hau66\\Downloads\\csharp\\Doanc-sharp\\Doanc-sharp\\src\\GUI\\ChiTietDatCho.cs",
               "RelativeDocumentMoniker": "Doanc-sharp\\src\\GUI\\ChiTietDatCho.cs",
               "ToolTip": "C:\\Users\\hau66\\Downloads\\csharp\\Doanc-sharp\\Doanc-sharp\\src\\GUI\\ChiTietDatCho.cs [Design]",
               "RelativeToolTip": "Doanc-sharp\\src\\GUI\\ChiTietDatCho.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-18T14:23:30.161Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-04-18T14:23:30.161Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 23,
               "Title": "Muontra.cs [Design]",
               "DocumentMoniker": "C:\\Users\\hau66\\Downloads\\csharp\\Doanc-sharp\\Doanc-sharp\\src\\GUI\\Muontra.cs",
               "RelativeDocumentMoniker": "Doanc-sharp\\src\\GUI\\Muontra.cs",
               "ToolTip": "C:\\Users\\hau66\\Downloads\\csharp\\Doanc-sharp\\Doanc-sharp\\src\\GUI\\Muontra.cs [Design]",
               "RelativeToolTip": "Doanc-sharp\\src\\GUI\\Muontra.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-18T03:31:28.206Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-04-18T03:31:28.206Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 36,
               "Title": "Leftmenu.cs [Design]",
               "DocumentMoniker": "C:\\Users\\hau66\\Downloads\\csharp\\Doanc-sharp\\Doanc-sharp\\src\\GUI\\Leftmenu.cs",
               "RelativeDocumentMoniker": "Doanc-sharp\\src\\GUI\\Leftmenu.cs",
               "ToolTip": "C:\\Users\\hau66\\Downloads\\csharp\\Doanc-sharp\\Doanc-sharp\\src\\GUI\\Leftmenu.cs [Design]",
               "RelativeToolTip": "Doanc-sharp\\src\\GUI\\Leftmenu.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-17T09:53:30.362Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-04-17T09:53:30.362Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 41,
               "Title": "Loginform.cs [Design]",
               "DocumentMoniker": "C:\\Users\\hau66\\Downloads\\csharp\\Doanc-sharp\\Doanc-sharp\\src\\GUI\\Loginform.cs",
               "RelativeDocumentMoniker": "Doanc-sharp\\src\\GUI\\Loginform.cs",
@@ -746,15 +708,14 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 40,
               "Title": "MainForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\hau66\\Downloads\\csharp\\Doanc-sharp\\Doanc-sharp\\src\\GUI\\MainForm.cs",
               "RelativeDocumentMoniker": "Doanc-sharp\\src\\GUI\\MainForm.cs",
               "ToolTip": "C:\\Users\\hau66\\Downloads\\csharp\\Doanc-sharp\\Doanc-sharp\\src\\GUI\\MainForm.cs [Design]",
               "RelativeToolTip": "Doanc-sharp\\src\\GUI\\MainForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-15T07:39:20.181Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-04-15T07:39:20.181Z"
             }
           ]
         }
