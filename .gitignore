@@ -4,7 +4,9 @@
 # Thư mục biên dịch đầu ra
 /bin/
 /obj/
-
+.vs/
+obj/
+bin/
 # File tạm thời, cache
 *.user
 *.suo
@@ -14,18 +16,3 @@
 *.dll
 *.log
 
-<<<<<<< HEAD
-# VS Code settings (nếu dùng)
-.vscode/
-
-# File danh sách tuyệt đối khi biên dịch
-*.FileListAbsolute.txt
-*.Build.CppClean.log
-*.tlog/
-
-# Thư mục test results
-TestResults/
-=======
-# Thư mục tạm mới của VS
-/.vscode/
->>>>>>> 0c6632b0c513f1a2a799abc0c9b73d3595907dbf
