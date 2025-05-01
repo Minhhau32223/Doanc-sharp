@@ -118,19 +118,7 @@
             label2.Text = "ID:";
             // 
             // btnConfirm
-            // 
-<<<<<<< HEAD
-            button2.BackColor = Color.Green;
-            button2.Font = new Font("Sitka Text", 16.1999989F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button2.ForeColor = SystemColors.ButtonHighlight;
-            button2.Location = new Point(396, 274);
-            button2.Margin = new Padding(3, 2, 3, 2);
-            button2.Name = "button2";
-            button2.Size = new Size(218, 52);
-            button2.TabIndex = 10;
-            button2.Text = "Xác nhận";
-            button2.UseVisualStyleBackColor = false;
-=======
+            
             btnConfirm.BackColor = Color.Green;
             btnConfirm.Font = new Font("Sitka Text", 16.1999989F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnConfirm.ForeColor = SystemColors.ButtonHighlight;
@@ -142,8 +130,7 @@
             btnConfirm.Text = "Xác nhận";
             btnConfirm.UseVisualStyleBackColor = false;
             btnConfirm.Click += btnConfirm_Click;
->>>>>>> 40df31548af632b16847f172cd5133b0c4335b1d
-            // 
+            
             // button1
             // 
             button1.BackColor = Color.Red;
@@ -219,10 +206,6 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Bisque;
             ClientSize = new Size(700, 377);
-<<<<<<< HEAD
-            Controls.Add(comboBox1);
-=======
->>>>>>> 40df31548af632b16847f172cd5133b0c4335b1d
             Controls.Add(panel1);
             Controls.Add(label5);
             Controls.Add(label4);
@@ -230,20 +213,12 @@
             Controls.Add(label2);
             Controls.Add(btnConfirm);
             Controls.Add(button1);
-<<<<<<< HEAD
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
-            Margin = new Padding(3, 2, 3, 2);
-            Name = "chitietphieumuon";
-=======
             Controls.Add(txtStatus);
             Controls.Add(txtRentPrize);
             Controls.Add(txtDeviceName);
             Controls.Add(txtDeviceID);
             Margin = new Padding(3, 2, 3, 2);
             Name = "SuaThietBi";
->>>>>>> 40df31548af632b16847f172cd5133b0c4335b1d
             Text = "Sửa thiết bị";
             Load += SuaThietBi_Load;
             panel1.ResumeLayout(false);

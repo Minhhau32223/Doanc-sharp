@@ -12,17 +12,11 @@ using Doanc_sharp.src.DTO;
 
 namespace Doanc_sharp
 {
-<<<<<<< HEAD
-    public partial class chitietphieumuon : Form
-    {
-        public chitietphieumuon()
-=======
 
     public partial class SuaThietBi : Form
     {
         private ThietBiDTO thietbi;
         public SuaThietBi(ThietBiDTO tb)
->>>>>>> 40df31548af632b16847f172cd5133b0c4335b1d
         {
             InitializeComponent();
             thietbi = tb;
@@ -38,11 +32,6 @@ namespace Doanc_sharp
 
         }
 
-<<<<<<< HEAD
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-=======
         private void btnConfirm_Click(object sender, EventArgs e)
         {
             thietbi.Madanhmuc = txtDeviceID.Text;
@@ -60,7 +49,6 @@ namespace Doanc_sharp
             {
                 MessageBox.Show("Cập nhật thất bại!");
             }
->>>>>>> 40df31548af632b16847f172cd5133b0c4335b1d
         }
     }
 }
