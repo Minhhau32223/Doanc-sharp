@@ -10,13 +10,13 @@ namespace Doanc_sharp.src.DTO
     {
         public int Maphieumuon { get; set; }
         public DateTime Ngaymuon { get; set; }
-        public string Ngaytra { get; set; }
+        public DateTime Ngaytra { get; set; }
         public string Trangthai { get; set; }
         public int Mathanhvien { get; set; }
 
         public PhieuMuonDTO() { }
 
-        public PhieuMuonDTO(int maphieumuon, DateTime ngaymuon, string ngaytra, string trangthai, int mathanhvien)
+        public PhieuMuonDTO(int maphieumuon, DateTime ngaymuon, DateTime ngaytra, string trangthai, int mathanhvien)
         {
             Maphieumuon = maphieumuon;
             Ngaymuon = ngaymuon;

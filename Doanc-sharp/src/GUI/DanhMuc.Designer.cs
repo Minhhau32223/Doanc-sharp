@@ -49,6 +49,7 @@
             DataDanhMuc.RowHeadersWidth = 51;
             DataDanhMuc.Size = new Size(887, 560);
             DataDanhMuc.TabIndex = 5;
+            DataDanhMuc.CellContentClick += DataDanhMuc_CellContentClick;
             // 
             // panel1
             // 
@@ -86,30 +87,30 @@
             // 
             // ID
             // 
+            ID.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             ID.DataPropertyName = "Madanhmuc";
             ID.HeaderText = "ID";
             ID.MinimumWidth = 6;
             ID.Name = "ID";
             ID.ReadOnly = true;
-            ID.Width = 150;
             // 
             // Tendanhmuc
             // 
+            Tendanhmuc.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             Tendanhmuc.DataPropertyName = "Tendanhmuc";
             Tendanhmuc.HeaderText = "Tên danh mục";
             Tendanhmuc.MinimumWidth = 6;
             Tendanhmuc.Name = "Tendanhmuc";
             Tendanhmuc.ReadOnly = true;
-            Tendanhmuc.Width = 350;
             // 
             // Mota
             // 
+            Mota.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             Mota.DataPropertyName = "Mota";
             Mota.HeaderText = "Mô tả";
             Mota.MinimumWidth = 6;
             Mota.Name = "Mota";
             Mota.ReadOnly = true;
-            Mota.Width = 460;
             // 
             // DanhMuc
             // 

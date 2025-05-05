@@ -1,6 +1,6 @@
 ﻿namespace Doanc_sharp
 {
-    partial class chitietphieumuon
+    partial class SuaThietBi
     {
         /// <summary>
         /// Required designer variable.
@@ -43,18 +43,6 @@
             panel1.SuspendLayout();
             SuspendLayout();
             // 
-<<<<<<< HEAD
-            // comboBox1
-            // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(353, 210);
-            comboBox1.Margin = new Padding(3, 2, 3, 2);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(297, 23);
-            comboBox1.TabIndex = 9;
-            // 
-=======
->>>>>>> 40df31548af632b16847f172cd5133b0c4335b1d
             // panel1
             // 
             panel1.BackColor = Color.NavajoWhite;
@@ -75,7 +63,6 @@
             label1.Size = new Size(189, 40);
             label1.TabIndex = 0;
             label1.Text = "Sửa thiết bị";
-            label1.Click += label1_Click;
             // 
             // label5
             // 
@@ -118,7 +105,7 @@
             label2.Text = "ID:";
             // 
             // btnConfirm
-            
+            // 
             btnConfirm.BackColor = Color.Green;
             btnConfirm.Font = new Font("Sitka Text", 16.1999989F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnConfirm.ForeColor = SystemColors.ButtonHighlight;
@@ -130,7 +117,7 @@
             btnConfirm.Text = "Xác nhận";
             btnConfirm.UseVisualStyleBackColor = false;
             btnConfirm.Click += btnConfirm_Click;
-            
+            // 
             // button1
             // 
             button1.BackColor = Color.Red;
@@ -143,48 +130,26 @@
             button1.TabIndex = 11;
             button1.Text = "Thoát";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // txtRentPrize
             // 
-<<<<<<< HEAD
-            textBox3.Location = new Point(353, 172);
-            textBox3.Margin = new Padding(3, 2, 3, 2);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(297, 23);
-            textBox3.TabIndex = 6;
-=======
             txtRentPrize.Location = new Point(353, 172);
             txtRentPrize.Margin = new Padding(3, 2, 3, 2);
             txtRentPrize.Name = "txtRentPrize";
             txtRentPrize.Size = new Size(297, 23);
             txtRentPrize.TabIndex = 6;
->>>>>>> 40df31548af632b16847f172cd5133b0c4335b1d
             // 
             // txtDeviceName
             // 
-<<<<<<< HEAD
-            textBox2.Location = new Point(353, 135);
-            textBox2.Margin = new Padding(3, 2, 3, 2);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(297, 23);
-            textBox2.TabIndex = 7;
-=======
             txtDeviceName.Location = new Point(353, 135);
             txtDeviceName.Margin = new Padding(3, 2, 3, 2);
             txtDeviceName.Name = "txtDeviceName";
             txtDeviceName.Size = new Size(297, 23);
             txtDeviceName.TabIndex = 7;
->>>>>>> 40df31548af632b16847f172cd5133b0c4335b1d
             // 
             // txtDeviceID
             // 
-<<<<<<< HEAD
-            textBox1.Location = new Point(353, 95);
-            textBox1.Margin = new Padding(3, 2, 3, 2);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(297, 23);
-            textBox1.TabIndex = 8;
-=======
             txtDeviceID.Location = new Point(353, 95);
             txtDeviceID.Margin = new Padding(3, 2, 3, 2);
             txtDeviceID.Name = "txtDeviceID";
@@ -198,9 +163,8 @@
             txtStatus.Name = "txtStatus";
             txtStatus.Size = new Size(297, 23);
             txtStatus.TabIndex = 6;
->>>>>>> 40df31548af632b16847f172cd5133b0c4335b1d
             // 
-            // chitietphieumuon
+            // SuaThietBi
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;

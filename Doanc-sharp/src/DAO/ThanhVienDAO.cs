@@ -21,7 +21,7 @@ namespace Doanc_sharp.src.DAO
     public List<ThanhVienDTO> LayDanhSachThanhVien()
     {
         List<ThanhVienDTO> list = new List<ThanhVienDTO>();
-        string query = "SELECT * FROM thanhvien";
+        string query = "SELECT * FROM thanhvien WHERE is_delete=0";
 
         DataTable table = db.ExecuteQuery(query);
         foreach (DataRow row in table.Rows)
@@ -46,9 +46,9 @@ namespace Doanc_sharp.src.DAO
     {
         try
         {
-            string query = $"INSERT INTO thanhvien (Hoten, Taikhoan, Matkhau, Diachi, Sdt, Ngaydangky, Trangthai, Email) " +
-            $"VALUES (N'{thanhVien.Hoten}', '{thanhVien.Taikhoan}', '{thanhVien.Matkhau}', " +
-            $"N'{thanhVien.Diachi}', {thanhVien.Sdt}, '{thanhVien.Ngaydangky:yyyy-MM-dd}', " +
+            string query = $"INSERT INTO thanhvien (Mathanhvien, Hoten, Taikhoan, Matkhau, Diachi, Sdt, Ngaydangky, Trangthai, Email) " +
+            $"VALUES ('{thanhVien.Mathanhvien}',N'{thanhVien.Hoten}', '{thanhVien.Taikhoan}', '{thanhVien.Matkhau}', " +
+            $"N'{thanhVien.Diachi}', {thanhVien.Sdt}, '{thanhVien.Ngaydangky:yyyy-MM-dd HH:mm:ss}', " +
             $"'{thanhVien.Trangthai}', '{thanhVien.Email}')";
 
             int result = db.ExecuteNonQuery(query);
@@ -69,7 +69,7 @@ namespace Doanc_sharp.src.DAO
                          $"Matkhau = '{thanhVien.Matkhau}', " +
                          $"Diachi = N'{thanhVien.Diachi}', " +
                          $"Sdt = {thanhVien.Sdt}, " +
-                         $"Ngaydangky = '{thanhVien.Ngaydangky:yyyy-MM-dd}', " +
+                         $"Ngaydangky = '{thanhVien.Ngaydangky:yyyy-MM-dd HH:mm:ss}', " +
                          $"Trangthai = '{thanhVien.Trangthai}', " +
                          $"Email = '{thanhVien.Email}' " +
                          $"WHERE Mathanhvien = {thanhVien.Mathanhvien}";
@@ -130,5 +130,37 @@ namespace Doanc_sharp.src.DAO
                 throw new Exception("Lỗi khi xóa nhiều thành viên: " + ex.Message);
             }
         }
+        public ThanhVienDTO TimThanhVienTheoMa(int maThanhVien)
+        {
+            try
+            {
+                string query = $"SELECT * FROM thanhvien WHERE Mathanhvien = {maThanhVien} ";
+                DataTable table = db.ExecuteQuery(query);
+
+                if (table.Rows.Count == 0)
+                {
+                    return null; // Không tìm thấy
+                }
+
+                DataRow row = table.Rows[0];
+                return new ThanhVienDTO
+                {
+                    Mathanhvien = Convert.ToInt32(row["Mathanhvien"]),
+                    Hoten = row["Hoten"].ToString(),
+                    Taikhoan = row["Taikhoan"].ToString(),
+                    Matkhau = row["Matkhau"].ToString(),
+                    Diachi = row["Diachi"].ToString(),
+                    Sdt = Convert.ToInt32(row["Sdt"]),
+                    Ngaydangky = Convert.ToDateTime(row["Ngaydangky"]),
+                    Trangthai = row["Trangthai"].ToString(),
+                    Email = row["Email"].ToString()
+                };
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Lỗi khi tìm thành viên theo mã: " + ex.Message);
+            }
+        }
+
     }
 }

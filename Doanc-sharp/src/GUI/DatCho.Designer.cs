@@ -31,11 +31,11 @@
             tblDatCho = new DataGridView();
             pnThem = new Panel();
             lblDatCho = new Label();
-            ID = new DataGridViewTextBoxColumn();
-            Mathanhvien = new DataGridViewTextBoxColumn();
-            NgayDat = new DataGridViewTextBoxColumn();
-            Trangthai = new DataGridViewTextBoxColumn();
             btnXemct = new Button();
+            Madatcho = new DataGridViewTextBoxColumn();
+            Mathanhvien = new DataGridViewTextBoxColumn();
+            Thoigiandat = new DataGridViewTextBoxColumn();
+            Trangthai = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)tblDatCho).BeginInit();
             SuspendLayout();
             // 
@@ -43,7 +43,7 @@
             // 
             tblDatCho.BackgroundColor = SystemColors.ControlLightLight;
             tblDatCho.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            tblDatCho.Columns.AddRange(new DataGridViewColumn[] { ID, Mathanhvien, NgayDat, Trangthai });
+            tblDatCho.Columns.AddRange(new DataGridViewColumn[] { Madatcho, Mathanhvien, Thoigiandat, Trangthai });
             tblDatCho.Location = new Point(31, 62);
             tblDatCho.Margin = new Padding(3, 2, 3, 2);
             tblDatCho.Name = "tblDatCho";
@@ -73,40 +73,6 @@
             lblDatCho.TabIndex = 6;
             lblDatCho.Text = "Đặt chỗ";
             // 
-            // ID
-            // 
-            ID.DataPropertyName = "Madatcho";
-            ID.Frozen = true;
-            ID.HeaderText = "ID";
-            ID.MinimumWidth = 6;
-            ID.Name = "ID";
-            ID.Width = 150;
-            // 
-            // Mathanhvien
-            // 
-            Mathanhvien.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            Mathanhvien.DataPropertyName = "Mathanhvien";
-            Mathanhvien.HeaderText = "Mã thành viên";
-            Mathanhvien.MinimumWidth = 6;
-            Mathanhvien.Name = "Mathanhvien";
-            // 
-            // NgayDat
-            // 
-            NgayDat.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            NgayDat.DataPropertyName = "Thoidatcho";
-            NgayDat.HeaderText = "Ngày đặt";
-            NgayDat.MinimumWidth = 6;
-            NgayDat.Name = "NgayDat";
-            // 
-            // Trangthai
-            // 
-            Trangthai.AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
-            Trangthai.DataPropertyName = "Trangthai";
-            Trangthai.HeaderText = "Trạng thái";
-            Trangthai.MinimumWidth = 6;
-            Trangthai.Name = "Trangthai";
-            Trangthai.Width = 85;
-            // 
             // btnXemct
             // 
             btnXemct.Location = new Point(721, 16);
@@ -116,6 +82,44 @@
             btnXemct.Text = "Xem chi tiết";
             btnXemct.UseVisualStyleBackColor = true;
             btnXemct.Click += btnXemct_Click;
+            // 
+            // Madatcho
+            // 
+            Madatcho.DataPropertyName = "Madatcho";
+            Madatcho.Frozen = true;
+            Madatcho.HeaderText = "Mã đặt chỗ";
+            Madatcho.MinimumWidth = 6;
+            Madatcho.Name = "Madatcho";
+            Madatcho.Resizable = DataGridViewTriState.False;
+            Madatcho.Width = 150;
+            // 
+            // Mathanhvien
+            // 
+            Mathanhvien.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            Mathanhvien.DataPropertyName = "Mathanhvien";
+            Mathanhvien.HeaderText = "Mã thành viên";
+            Mathanhvien.MinimumWidth = 6;
+            Mathanhvien.Name = "Mathanhvien";
+            Mathanhvien.Resizable = DataGridViewTriState.False;
+            // 
+            // Thoigiandat
+            // 
+            Thoigiandat.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            Thoigiandat.DataPropertyName = "Thoigiandat";
+            Thoigiandat.HeaderText = "Ngày đặt";
+            Thoigiandat.MinimumWidth = 6;
+            Thoigiandat.Name = "Thoigiandat";
+            Thoigiandat.Resizable = DataGridViewTriState.False;
+            // 
+            // Trangthai
+            // 
+            Trangthai.AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+            Trangthai.DataPropertyName = "Trangthai";
+            Trangthai.HeaderText = "Trạng thái";
+            Trangthai.MinimumWidth = 6;
+            Trangthai.Name = "Trangthai";
+            Trangthai.Resizable = DataGridViewTriState.False;
+            Trangthai.Width = 85;
             // 
             // DatCho
             // 
@@ -140,10 +144,10 @@
         private DataGridView tblDatCho;
         private Panel pnThem;
         private Label lblDatCho;
-        private DataGridViewTextBoxColumn ID;
-        private DataGridViewTextBoxColumn Mathanhvien;
-        private DataGridViewTextBoxColumn NgayDat;
-        private DataGridViewTextBoxColumn Trangthai;
         private Button btnXemct;
+        private DataGridViewTextBoxColumn Madatcho;
+        private DataGridViewTextBoxColumn Mathanhvien;
+        private DataGridViewTextBoxColumn Thoigiandat;
+        private DataGridViewTextBoxColumn Trangthai;
     }
 }

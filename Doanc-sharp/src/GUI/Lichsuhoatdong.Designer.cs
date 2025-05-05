@@ -163,6 +163,7 @@
             Margin = new Padding(3, 2, 3, 2);
             Name = "Lichsuhoatdong";
             Size = new Size(945, 675);
+            Load += Lichsuhoatdong_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             flowLayoutPanel1.ResumeLayout(false);
             flowLayoutPanel1.PerformLayout();

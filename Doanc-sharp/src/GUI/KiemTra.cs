@@ -9,12 +9,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Doanc_sharp.src.Helpers;
 namespace Doanc_sharp.src.GUI
 {
     public partial class KiemTra : UserControl
     {
         private KiemTraBUS kiemTraBUS = new KiemTraBUS();
+        private ThanhVienBUS tvbus;
+        private Tools tools;
         public KiemTra()
         {
             InitializeComponent();
@@ -65,6 +67,16 @@ namespace Doanc_sharp.src.GUI
                 case 1:
                     MessageBox.Show("Kiểm tra thành công.");
                     themLichSuHD(matv, "Vào thư quán thành công");
+                    tvbus = new ThanhVienBUS();
+                    ThanhVienDTO temp = tvbus.TimThanhVienTheoMa(matv);
+                    textInforMa.Text = temp.Mathanhvien.ToString();
+                    textInforNgaydk.Text=temp.Ngaydangky.ToString();
+                    textInforEmail.Text=temp.Email.ToString();
+                    textInforDiachi.Text=temp.Diachi.ToString();
+                    textInforCheckin.Text=DateTime.Now.ToString();
+                    textInforTen.Text=temp.Hoten.ToString();
+                    textInforSdt.Text=temp.Sdt.ToString();
+
                     break;
                 case -1:
                     MessageBox.Show("Thành viên vi phạm!");
@@ -82,7 +94,9 @@ namespace Doanc_sharp.src.GUI
 
         public void themLichSuHD(int matv, string status)
         {
-            LSHoatDongDTO lichSuHD = new LSHoatDongDTO(matv, "Vào thư quán", status, DateTime.Now);
+            tools = new Tools();
+            int mahd = tools.GenerateUniqueNumber("lichsuhoatdong", "Mahoatdong");
+            LSHoatDongDTO lichSuHD = new LSHoatDongDTO(matv, mahd,"Vào thư quán", status, DateTime.Now);
             LSHoatDongBUS lichSuHD_BUS = new LSHoatDongBUS();
             lichSuHD_BUS.InsertLSHoatDong(lichSuHD);
         }
@@ -101,5 +115,29 @@ namespace Doanc_sharp.src.GUI
             }
         }
 
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void textBox7_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void KiemTra_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

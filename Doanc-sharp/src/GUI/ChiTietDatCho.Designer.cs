@@ -20,6 +20,7 @@
             base.Dispose(disposing);
         }
 
+
         #region Windows Form Designer generated code
 
         /// <summary>
@@ -41,12 +42,12 @@
             txtThoiGianDatCho = new TextBox();
             txtMaThanhVien = new TextBox();
             cmbTrangThai = new ComboBox();
-            dataGridView1 = new DataGridView();
+            dgvCTDC = new DataGridView();
             IDTB = new DataGridViewTextBoxColumn();
             Tentb = new DataGridViewTextBoxColumn();
             Soluong = new DataGridViewTextBoxColumn();
             pnTop.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvCTDC).BeginInit();
             SuspendLayout();
             // 
             // pnTop
@@ -58,6 +59,7 @@
             pnTop.Name = "pnTop";
             pnTop.Size = new Size(879, 71);
             pnTop.TabIndex = 17;
+            pnTop.Paint += pnTop_Paint;
             // 
             // lblChiTietDatCho
             // 
@@ -92,6 +94,7 @@
             btnXacNhan.TabIndex = 28;
             btnXacNhan.Text = "Xác nhận";
             btnXacNhan.UseVisualStyleBackColor = false;
+            btnXacNhan.Click += btnXacNhan_Click;
             // 
             // btnThoat
             // 
@@ -129,7 +132,7 @@
             // 
             lblThoiGianDatCho.AutoSize = true;
             lblThoiGianDatCho.Font = new Font("Times New Roman", 13.8F);
-            lblThoiGianDatCho.Location = new Point(193, 214);
+            lblThoiGianDatCho.Location = new Point(193, 285);
             lblThoiGianDatCho.Name = "lblThoiGianDatCho";
             lblThoiGianDatCho.Size = new Size(145, 21);
             lblThoiGianDatCho.TabIndex = 32;
@@ -139,17 +142,18 @@
             // 
             lblMaThanhVien.AutoSize = true;
             lblMaThanhVien.Font = new Font("Times New Roman", 13.8F);
-            lblMaThanhVien.Location = new Point(193, 264);
+            lblMaThanhVien.Location = new Point(193, 329);
             lblMaThanhVien.Name = "lblMaThanhVien";
             lblMaThanhVien.Size = new Size(118, 21);
             lblMaThanhVien.TabIndex = 34;
             lblMaThanhVien.Text = "Mã thành viên:";
+            lblMaThanhVien.Click += lblMaThanhVien_Click;
             // 
             // lblTrangThai
             // 
             lblTrangThai.AutoSize = true;
             lblTrangThai.Font = new Font("Times New Roman", 13.8F);
-            lblTrangThai.Location = new Point(193, 316);
+            lblTrangThai.Location = new Point(193, 367);
             lblTrangThai.Name = "lblTrangThai";
             lblTrangThai.Size = new Size(88, 21);
             lblTrangThai.TabIndex = 35;
@@ -157,7 +161,7 @@
             // 
             // txtThoiGianDatCho
             // 
-            txtThoiGianDatCho.Location = new Point(424, 214);
+            txtThoiGianDatCho.Location = new Point(422, 286);
             txtThoiGianDatCho.Margin = new Padding(3, 2, 3, 2);
             txtThoiGianDatCho.Name = "txtThoiGianDatCho";
             txtThoiGianDatCho.Size = new Size(297, 23);
@@ -165,7 +169,7 @@
             // 
             // txtMaThanhVien
             // 
-            txtMaThanhVien.Location = new Point(424, 262);
+            txtMaThanhVien.Location = new Point(424, 327);
             txtMaThanhVien.Margin = new Padding(3, 2, 3, 2);
             txtMaThanhVien.Name = "txtMaThanhVien";
             txtMaThanhVien.Size = new Size(297, 23);
@@ -175,27 +179,28 @@
             // cmbTrangThai
             // 
             cmbTrangThai.FormattingEnabled = true;
-            cmbTrangThai.Items.AddRange(new object[] { "Đang chờ", "Đã hủy", "Xác nhận mượn" });
-            cmbTrangThai.Location = new Point(424, 314);
+            cmbTrangThai.Location = new Point(424, 368);
             cmbTrangThai.Margin = new Padding(3, 2, 3, 2);
             cmbTrangThai.Name = "cmbTrangThai";
             cmbTrangThai.Size = new Size(297, 23);
             cmbTrangThai.TabIndex = 42;
             cmbTrangThai.SelectedIndexChanged += cmbTrangThai_SelectedIndexChanged;
             // 
-            // dataGridView1
+            // dgvCTDC
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { IDTB, Tentb, Soluong });
-            dataGridView1.Location = new Point(422, 131);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(303, 64);
-            dataGridView1.TabIndex = 43;
+            dgvCTDC.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvCTDC.Columns.AddRange(new DataGridViewColumn[] { IDTB, Tentb, Soluong });
+            dgvCTDC.Location = new Point(422, 131);
+            dgvCTDC.Name = "dgvCTDC";
+            dgvCTDC.Size = new Size(303, 128);
+            dgvCTDC.TabIndex = 43;
+            dgvCTDC.CellContentClick += dgvCTDC_CellContentClick;
             // 
             // IDTB
             // 
             IDTB.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             IDTB.DataPropertyName = "Mathietbi";
+            IDTB.FillWeight = 76.1421356F;
             IDTB.HeaderText = "ID Thiết bị";
             IDTB.Name = "IDTB";
             // 
@@ -203,6 +208,7 @@
             // 
             Tentb.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             Tentb.DataPropertyName = "Tenthietbi";
+            Tentb.FillWeight = 133.227142F;
             Tentb.HeaderText = "Tên thiết bị";
             Tentb.Name = "Tentb";
             // 
@@ -210,8 +216,10 @@
             // 
             Soluong.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             Soluong.DataPropertyName = "Soluong";
+            Soluong.FillWeight = 90.6307144F;
             Soluong.HeaderText = "Số lượng";
             Soluong.Name = "Soluong";
+            Soluong.Resizable = DataGridViewTriState.False;
             // 
             // ChiTietDatCho
             // 
@@ -219,7 +227,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Bisque;
             ClientSize = new Size(880, 550);
-            Controls.Add(dataGridView1);
+            Controls.Add(dgvCTDC);
             Controls.Add(cmbTrangThai);
             Controls.Add(txtMaThanhVien);
             Controls.Add(txtThoiGianDatCho);
@@ -235,9 +243,10 @@
             Margin = new Padding(3, 2, 3, 2);
             Name = "ChiTietDatCho";
             Text = "ChiTietDatCho";
+            Load += ChiTietDatCho_Load;
             pnTop.ResumeLayout(false);
             pnTop.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvCTDC).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -257,7 +266,7 @@
         private TextBox txtThoiGianDatCho;
         private TextBox txtMaThanhVien;
         private ComboBox cmbTrangThai;
-        private DataGridView dataGridView1;
+        private DataGridView dgvCTDC;
         private DataGridViewTextBoxColumn IDTB;
         private DataGridViewTextBoxColumn Tentb;
         private DataGridViewTextBoxColumn Soluong;

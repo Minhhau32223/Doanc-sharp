@@ -16,5 +16,10 @@ namespace Doanc_sharp
         {
             InitializeComponent();
         }
+
+        private void Baotri_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

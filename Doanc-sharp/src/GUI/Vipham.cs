@@ -55,5 +55,10 @@ namespace Doanc_sharp
                 MessageBox.Show("Vui lòng chọn một dòng để xử lý!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

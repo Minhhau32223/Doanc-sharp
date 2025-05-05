@@ -1,4 +1,4 @@
-﻿using System;
+﻿﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -34,21 +34,36 @@ namespace Doanc_sharp
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
-            thietbi.Madanhmuc = txtDeviceID.Text;
-            thietbi.Tenthietbi = txtDeviceName.Text;
-            thietbi.Giathue = int.Parse(txtRentPrize.Text);
-            thietbi.Trangthai = txtStatus.Text;
-
-            ThietBiBUS bus = new ThietBiBUS();
-            if (bus.CapNhatThietBi(thietbi))
+            DialogResult result = MessageBox.Show("Bạn đã chắc chắn xác nhận  không?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
             {
-                MessageBox.Show("Cập nhật thành công!");
-                this.DialogResult = DialogResult.OK;
+
+                thietbi.Madanhmuc = txtDeviceID.Text;
+                thietbi.Tenthietbi = txtDeviceName.Text;
+                thietbi.Giathue = int.Parse(txtRentPrize.Text);
+                thietbi.Trangthai = txtStatus.Text;
+
+                ThietBiBUS bus = new ThietBiBUS();
+                if (bus.CapNhatThietBi(thietbi))
+                {
+                    MessageBox.Show("Cập nhật thành công!");
+                    this.DialogResult = DialogResult.OK; 
+                    this.Dispose();
+                }
+                else
+                {
+                    MessageBox.Show("Cập nhật thất bại!");
+                }
             }
             else
             {
-                MessageBox.Show("Cập nhật thất bại!");
-            }
+                return;
+            }    
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
         }
     }
 }

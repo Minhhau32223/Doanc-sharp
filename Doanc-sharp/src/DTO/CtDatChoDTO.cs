@@ -10,6 +10,7 @@ namespace Doanc_sharp.src.DTO
     {
         public int Madatcho { get; set; }
         public int Mathanhvien { get; set; }
+        public int Masoluong {  get; set; }
        public int Soluong {  get; set; }
         public CtDatChoDTO() { }
         public CtDatChoDTO(int madatcho, int mathanhvien, int soluong)

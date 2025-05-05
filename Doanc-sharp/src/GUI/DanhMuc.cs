@@ -64,5 +64,10 @@ namespace Doanc_sharp
             themdanhmuc.ShowDialog();
             //LoadData();
         }
+
+        private void DataDanhMuc_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

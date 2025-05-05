@@ -76,5 +76,10 @@ namespace Doanc_sharp
                 }
             }
         }
+
+        private void Lichsuhoatdong_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

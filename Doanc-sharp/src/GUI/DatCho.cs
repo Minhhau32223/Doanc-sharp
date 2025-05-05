@@ -41,8 +41,18 @@ namespace Doanc_sharp
 
         private void btnXemct_Click(object sender, EventArgs e)
         {
-            ChiTietDatCho chiTietDatCho= new ChiTietDatCho();
-            chiTietDatCho.ShowDialog();
+            if (tblDatCho.CurrentRow != null)
+            {   
+                string madatcho = Convert.ToString(tblDatCho.CurrentRow.Cells["Madatcho"].Value.ToString());
+                string mathanhvien = Convert.ToString(tblDatCho.CurrentRow.Cells["Mathanhvien"].Value.ToString());
+                string ngaydat = Convert.ToString(tblDatCho.CurrentRow.Cells["Thoigiandat"].Value.ToString());
+                string trangthai = Convert.ToString(tblDatCho.CurrentRow.Cells["Trangthai"].Value.ToString());
+                ChiTietDatCho chiTietDatCho = new ChiTietDatCho();
+                chiTietDatCho.loadct(madatcho, mathanhvien, ngaydat, trangthai);
+
+                chiTietDatCho.ShowDialog();
+            }
+
 
         }
     }

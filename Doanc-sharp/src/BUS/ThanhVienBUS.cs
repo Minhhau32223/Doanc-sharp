@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Doanc_sharp.src.DTO;
 using Doanc_sharp.src.DAO;
 using Org.BouncyCastle.Asn1.Mozilla;
+using System.Windows.Forms;
 namespace Doanc_sharp.src.BUS
 {
     internal class ThanhVienBUS
@@ -54,6 +55,11 @@ namespace Doanc_sharp.src.BUS
                 throw new ArgumentException("Năm không hợp lệ.");
             }
             return thanhVienDAO.XoaNhieuThanhVienTheoNam(nam);
+
+        }
+        public ThanhVienDTO TimThanhVienTheoMa(int maThanhVien)
+        {
+            return thanhVienDAO.TimThanhVienTheoMa(maThanhVien);
         }
     }
 }

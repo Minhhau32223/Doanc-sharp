@@ -31,31 +31,31 @@
             label1 = new Label();
             tabControl1 = new TabControl();
             tabPage1 = new TabPage();
-            DataMuon = new DataGridView();
-            ID = new DataGridViewTextBoxColumn();
-            Ngaymuon = new DataGridViewTextBoxColumn();
-            Ngaytradukien = new DataGridViewTextBoxColumn();
-            Matv = new DataGridViewTextBoxColumn();
-            Trangthai = new DataGridViewTextBoxColumn();
-            tabPage2 = new TabPage();
-            dataGridView1 = new DataGridView();
-            dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn4 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn5 = new DataGridViewTextBoxColumn();
+            TextBoxTimkiem = new TextBox();
+            label3 = new Label();
             BtnDelete = new Button();
             btnCapnhat = new Button();
             button2 = new Button();
             BtnAdd = new Button();
+            DataMuon = new DataGridView();
+            Maphieumuon = new DataGridViewTextBoxColumn();
+            Ngaymuon = new DataGridViewTextBoxColumn();
+            Ngaytra = new DataGridViewTextBoxColumn();
+            Mathanhvien = new DataGridViewTextBoxColumn();
+            Trangthai = new DataGridViewTextBoxColumn();
+            tabPage2 = new TabPage();
             button1 = new Button();
-            label3 = new Label();
-            TextBoxTimkiem = new TextBox();
+            dataTra = new DataGridView();
+            Maphieumuon1 = new DataGridViewTextBoxColumn();
+            Ngaymuon1 = new DataGridViewTextBoxColumn();
+            Ngaytra1 = new DataGridViewTextBoxColumn();
+            Mathanhvien1 = new DataGridViewTextBoxColumn();
+            Trangthai1 = new DataGridViewTextBoxColumn();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)DataMuon).BeginInit();
             tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataTra).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -95,142 +95,12 @@
             tabPage1.Text = "Danh sách mượn";
             tabPage1.UseVisualStyleBackColor = true;
             // 
-            // DataMuon
+            // TextBoxTimkiem
             // 
-            DataMuon.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            DataMuon.Columns.AddRange(new DataGridViewColumn[] { ID, Ngaymuon, Ngaytradukien, Matv, Trangthai });
-            DataMuon.Location = new Point(3, 57);
-            DataMuon.Name = "DataMuon";
-            DataMuon.Size = new Size(831, 472);
-            DataMuon.TabIndex = 0;
-            DataMuon.CellContentClick += dataGridView1_CellContentClick;
-            // 
-            // ID
-            // 
-            ID.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            ID.HeaderText = "ID";
-            ID.Name = "ID";
-            // 
-            // Ngaymuon
-            // 
-            Ngaymuon.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            Ngaymuon.HeaderText = "Ngày mượn";
-            Ngaymuon.Name = "Ngaymuon";
-            // 
-            // Ngaytradukien
-            // 
-            Ngaytradukien.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            Ngaytradukien.HeaderText = "Ngày trả dự kiến";
-            Ngaytradukien.Name = "Ngaytradukien";
-            // 
-            // Matv
-            // 
-            Matv.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            Matv.HeaderText = "Mã thành vên";
-            Matv.Name = "Matv";
-            // 
-            // Trangthai
-            // 
-            Trangthai.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            Trangthai.HeaderText = "Trạng thái";
-            Trangthai.Name = "Trangthai";
-            // 
-            // tabPage2
-            // 
-            tabPage2.Controls.Add(button1);
-            tabPage2.Controls.Add(dataGridView1);
-            tabPage2.Location = new Point(4, 24);
-            tabPage2.Name = "tabPage2";
-            tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(837, 532);
-            tabPage2.TabIndex = 1;
-            tabPage2.Text = "Danh sách trả";
-            tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1, dataGridViewTextBoxColumn2, dataGridViewTextBoxColumn3, dataGridViewTextBoxColumn4, dataGridViewTextBoxColumn5 });
-            dataGridView1.Location = new Point(10, 51);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(831, 475);
-            dataGridView1.TabIndex = 1;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            dataGridViewTextBoxColumn1.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewTextBoxColumn1.HeaderText = "ID";
-            dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            dataGridViewTextBoxColumn2.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewTextBoxColumn2.HeaderText = "Ngày mượn";
-            dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            dataGridViewTextBoxColumn3.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewTextBoxColumn3.HeaderText = "Ngày trả dự kiến";
-            dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            dataGridViewTextBoxColumn4.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewTextBoxColumn4.HeaderText = "Mã thành vên";
-            dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            dataGridViewTextBoxColumn5.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewTextBoxColumn5.HeaderText = "Trạng thái";
-            dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // BtnDelete
-            // 
-            BtnDelete.Location = new Point(421, 6);
-            BtnDelete.Name = "BtnDelete";
-            BtnDelete.Size = new Size(98, 30);
-            BtnDelete.TabIndex = 9;
-            BtnDelete.Text = "Delete";
-            BtnDelete.UseVisualStyleBackColor = true;
-            // 
-            // btnCapnhat
-            // 
-            btnCapnhat.Location = new Point(525, 6);
-            btnCapnhat.Name = "btnCapnhat";
-            btnCapnhat.Size = new Size(98, 30);
-            btnCapnhat.TabIndex = 8;
-            btnCapnhat.Text = "Cập nhật ";
-            btnCapnhat.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            button2.Location = new Point(629, 6);
-            button2.Name = "button2";
-            button2.Size = new Size(98, 30);
-            button2.TabIndex = 7;
-            button2.Text = "Xem chi tiết";
-            button2.UseVisualStyleBackColor = true;
-            // 
-            // BtnAdd
-            // 
-            BtnAdd.Location = new Point(733, 6);
-            BtnAdd.Name = "BtnAdd";
-            BtnAdd.Size = new Size(98, 30);
-            BtnAdd.TabIndex = 6;
-            BtnAdd.Text = "Thêm";
-            BtnAdd.UseVisualStyleBackColor = true;
-            BtnAdd.Click += BtnAdd_Click;
-            // 
-            // button1
-            // 
-            button1.Location = new Point(733, 6);
-            button1.Name = "button1";
-            button1.Size = new Size(98, 30);
-            button1.TabIndex = 8;
-            button1.Text = "Xem chi tiết";
-            button1.UseVisualStyleBackColor = true;
+            TextBoxTimkiem.Location = new Point(135, 15);
+            TextBoxTimkiem.Name = "TextBoxTimkiem";
+            TextBoxTimkiem.Size = new Size(175, 23);
+            TextBoxTimkiem.TabIndex = 12;
             // 
             // label3
             // 
@@ -243,12 +113,172 @@
             label3.Text = "Tìm kiếm";
             label3.Click += label3_Click;
             // 
-            // TextBoxTimkiem
+            // BtnDelete
             // 
-            TextBoxTimkiem.Location = new Point(135, 15);
-            TextBoxTimkiem.Name = "TextBoxTimkiem";
-            TextBoxTimkiem.Size = new Size(175, 23);
-            TextBoxTimkiem.TabIndex = 12;
+            BtnDelete.Location = new Point(421, 6);
+            BtnDelete.Name = "BtnDelete";
+            BtnDelete.Size = new Size(98, 30);
+            BtnDelete.TabIndex = 9;
+            BtnDelete.Text = "Delete";
+            BtnDelete.UseVisualStyleBackColor = true;
+            BtnDelete.Click += BtnDelete_Click;
+            // 
+            // btnCapnhat
+            // 
+            btnCapnhat.Location = new Point(525, 6);
+            btnCapnhat.Name = "btnCapnhat";
+            btnCapnhat.Size = new Size(98, 30);
+            btnCapnhat.TabIndex = 8;
+            btnCapnhat.Text = "Cập nhật ";
+            btnCapnhat.UseVisualStyleBackColor = true;
+            btnCapnhat.Click += btnCapnhat_Click;
+            // 
+            // button2
+            // 
+            button2.Location = new Point(629, 6);
+            button2.Name = "button2";
+            button2.Size = new Size(98, 30);
+            button2.TabIndex = 7;
+            button2.Text = "Xem chi tiết";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
+            // BtnAdd
+            // 
+            BtnAdd.Location = new Point(733, 6);
+            BtnAdd.Name = "BtnAdd";
+            BtnAdd.Size = new Size(98, 30);
+            BtnAdd.TabIndex = 6;
+            BtnAdd.Text = "Thêm";
+            BtnAdd.UseVisualStyleBackColor = true;
+            BtnAdd.Click += BtnAdd_Click;
+            // 
+            // DataMuon
+            // 
+            DataMuon.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            DataMuon.Columns.AddRange(new DataGridViewColumn[] { Maphieumuon, Ngaymuon, Ngaytra, Mathanhvien, Trangthai });
+            DataMuon.Location = new Point(3, 57);
+            DataMuon.Name = "DataMuon";
+            DataMuon.Size = new Size(831, 472);
+            DataMuon.TabIndex = 0;
+            DataMuon.CellContentClick += dataGridView1_CellContentClick;
+            // 
+            // Maphieumuon
+            // 
+            Maphieumuon.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            Maphieumuon.DataPropertyName = "Maphieumuon";
+            Maphieumuon.FillWeight = 63.45178F;
+            Maphieumuon.HeaderText = "ID";
+            Maphieumuon.Name = "Maphieumuon";
+            Maphieumuon.ReadOnly = true;
+            Maphieumuon.Resizable = DataGridViewTriState.False;
+            // 
+            // Ngaymuon
+            // 
+            Ngaymuon.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            Ngaymuon.DataPropertyName = "Ngaymuon";
+            Ngaymuon.FillWeight = 109.137047F;
+            Ngaymuon.HeaderText = "Ngày mượn";
+            Ngaymuon.Name = "Ngaymuon";
+            Ngaymuon.ReadOnly = true;
+            Ngaymuon.Resizable = DataGridViewTriState.False;
+            // 
+            // Ngaytra
+            // 
+            Ngaytra.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            Ngaytra.DataPropertyName = "Ngaytra";
+            Ngaytra.FillWeight = 109.137047F;
+            Ngaytra.HeaderText = "Ngày trả dự kiến";
+            Ngaytra.Name = "Ngaytra";
+            Ngaytra.ReadOnly = true;
+            Ngaytra.Resizable = DataGridViewTriState.False;
+            // 
+            // Mathanhvien
+            // 
+            Mathanhvien.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            Mathanhvien.DataPropertyName = "Mathanhvien";
+            Mathanhvien.FillWeight = 109.137047F;
+            Mathanhvien.HeaderText = "Mã thành vên";
+            Mathanhvien.Name = "Mathanhvien";
+            Mathanhvien.ReadOnly = true;
+            Mathanhvien.Resizable = DataGridViewTriState.False;
+            // 
+            // Trangthai
+            // 
+            Trangthai.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            Trangthai.DataPropertyName = "Trangthai";
+            Trangthai.FillWeight = 109.137047F;
+            Trangthai.HeaderText = "Trạng thái";
+            Trangthai.Name = "Trangthai";
+            Trangthai.ReadOnly = true;
+            Trangthai.Resizable = DataGridViewTriState.False;
+            // 
+            // tabPage2
+            // 
+            tabPage2.Controls.Add(button1);
+            tabPage2.Controls.Add(dataTra);
+            tabPage2.Location = new Point(4, 24);
+            tabPage2.Name = "tabPage2";
+            tabPage2.Padding = new Padding(3);
+            tabPage2.Size = new Size(837, 532);
+            tabPage2.TabIndex = 1;
+            tabPage2.Text = "Danh sách trả";
+            tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            button1.Location = new Point(733, 6);
+            button1.Name = "button1";
+            button1.Size = new Size(98, 30);
+            button1.TabIndex = 8;
+            button1.Text = "Xem chi tiết";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
+            // dataTra
+            // 
+            dataTra.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataTra.Columns.AddRange(new DataGridViewColumn[] { Maphieumuon1, Ngaymuon1, Ngaytra1, Mathanhvien1, Trangthai1 });
+            dataTra.Location = new Point(3, 42);
+            dataTra.Name = "dataTra";
+            dataTra.Size = new Size(831, 475);
+            dataTra.TabIndex = 1;
+            dataTra.CellContentClick += dataTra_CellContentClick;
+            // 
+            // Maphieumuon1
+            // 
+            Maphieumuon1.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            Maphieumuon1.DataPropertyName = "Maphieumuon";
+            Maphieumuon1.HeaderText = "ID";
+            Maphieumuon1.Name = "Maphieumuon1";
+            // 
+            // Ngaymuon1
+            // 
+            Ngaymuon1.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            Ngaymuon1.DataPropertyName = "Ngaymuon";
+            Ngaymuon1.HeaderText = "Ngày mượn";
+            Ngaymuon1.Name = "Ngaymuon1";
+            // 
+            // Ngaytra1
+            // 
+            Ngaytra1.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            Ngaytra1.DataPropertyName = "Ngaytra";
+            Ngaytra1.HeaderText = "Ngày trả dự kiến";
+            Ngaytra1.Name = "Ngaytra1";
+            // 
+            // Mathanhvien1
+            // 
+            Mathanhvien1.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            Mathanhvien1.DataPropertyName = "Mathanhvien";
+            Mathanhvien1.HeaderText = "Mã thành vên";
+            Mathanhvien1.Name = "Mathanhvien1";
+            // 
+            // Trangthai1
+            // 
+            Trangthai1.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            Trangthai1.DataPropertyName = "Trangthai";
+            Trangthai1.HeaderText = "Trạng thái";
+            Trangthai1.Name = "Trangthai1";
             // 
             // Muontra
             // 
@@ -260,12 +290,13 @@
             Margin = new Padding(3, 2, 3, 2);
             Name = "Muontra";
             Size = new Size(945, 675);
+            Load += Muontra_Load;
             tabControl1.ResumeLayout(false);
             tabPage1.ResumeLayout(false);
             tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)DataMuon).EndInit();
             tabPage2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataTra).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -276,17 +307,7 @@
         private TabPage tabPage1;
         private DataGridView DataMuon;
         private TabPage tabPage2;
-        private DataGridViewTextBoxColumn ID;
-        private DataGridViewTextBoxColumn Ngaymuon;
-        private DataGridViewTextBoxColumn Ngaytradukien;
-        private DataGridViewTextBoxColumn Matv;
-        private DataGridViewTextBoxColumn Trangthai;
-        private DataGridView dataGridView1;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private DataGridView dataTra;
         private Button BtnDelete;
         private Button btnCapnhat;
         private Button button2;
@@ -294,5 +315,15 @@
         private Label label3;
         private Button button1;
         private TextBox TextBoxTimkiem;
+        private DataGridViewTextBoxColumn Maphieumuon;
+        private DataGridViewTextBoxColumn Ngaymuon;
+        private DataGridViewTextBoxColumn Ngaytra;
+        private DataGridViewTextBoxColumn Mathanhvien;
+        private DataGridViewTextBoxColumn Trangthai;
+        private DataGridViewTextBoxColumn Maphieumuon1;
+        private DataGridViewTextBoxColumn Ngaymuon1;
+        private DataGridViewTextBoxColumn Ngaytra1;
+        private DataGridViewTextBoxColumn Mathanhvien1;
+        private DataGridViewTextBoxColumn Trangthai1;
     }
 }

@@ -52,7 +52,11 @@ namespace Doanc_sharp.src.BUS
             return dao.Delete(madatcho);
 
         }
-
+        public DatChoDTO Timkiemtheoma(int madatcho)
+        {
+            dao = new DatChoDAO();
+            return dao.Timkiemtheoma(madatcho);
+        }
 
 
     }

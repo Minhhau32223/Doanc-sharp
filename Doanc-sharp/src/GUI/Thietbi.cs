@@ -11,6 +11,7 @@ using Doanc_sharp.src.BUS;
 using Doanc_sharp.src.DAO;
 using Doanc_sharp.src.DTO;
 using MySqlX.XDevAPI.Common;
+using Doanc_sharp.src.GUI;
 namespace Doanc_sharp
 {
     public partial class Thietbi : UserControl
@@ -57,13 +58,14 @@ namespace Doanc_sharp
             {
                 ThietBiDTO selected = new ThietBiDTO()
                 {
-                    Mathietbi = Convert.ToInt32(dgvThietbi.CurrentRow.Cells["Mathietbi"]),
-                    Tenthietbi = dgvThietbi.CurrentRow.Cells["Tenthietbi"].ToString(),
-                    Madanhmuc = dgvThietbi.CurrentRow.Cells["Madanhmuc"].ToString(),
-                    Giathue = Convert.ToInt32(dgvThietbi.CurrentRow.Cells["Giathue"]),
-                    Trangthai = dgvThietbi.CurrentRow.Cells["Trangthai"].ToString(),
+                    Mathietbi = Convert.ToInt32(dgvThietbi.CurrentRow.Cells["Mathietbi"].Value.ToString()),
+                    Tenthietbi = dgvThietbi.CurrentRow.Cells["TenThietBi"].Value.ToString(),
+                    Madanhmuc = dgvThietbi.CurrentRow.Cells["Madanhmuc"].Value.ToString(),
+                    Giathue = Convert.ToInt32(dgvThietbi.CurrentRow.Cells["Giathue"].Value.ToString()),
+                    Trangthai = dgvThietbi.CurrentRow.Cells["Trangthai"].Value.ToString(),
                 };
-                SuaThietBi formThem = new SuaThietBi();
+                SuaThietBi formThem = new SuaThietBi (selected);
+
                 if (formThem.ShowDialog() == DialogResult.OK)
                 {
                     LoadData();

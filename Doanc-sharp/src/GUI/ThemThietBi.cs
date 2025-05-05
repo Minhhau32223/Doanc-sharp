@@ -40,5 +40,15 @@ namespace Doanc_sharp
                 MessageBox.Show("Thêm thất bại!");
             }
         }
+
+        private void ThemThietBi_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

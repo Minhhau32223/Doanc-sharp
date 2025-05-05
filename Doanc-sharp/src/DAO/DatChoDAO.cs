@@ -31,16 +31,16 @@ namespace Doanc_sharp.src.DAO
         {
             string query = $"UPDATE datcho SET " +
                            $"Mathanhvien = {datCho.Mathanhvien}, " +
-                           $"Mhoigiandat = '{datCho.Thoigiandat:yyyy-MM-dd HH:mm:ss}', " +
+                           $"Thoigiandat = '{datCho.Thoigiandat:yyyy-MM-dd HH:mm:ss}', " +
                            $"Trangthai = '{datCho.Trangthai}' " +
-                           $"WHERE madatcho = {datCho.Madatcho}";
+                           $"WHERE Madatcho = {datCho.Madatcho}";
             return db.ExecuteNonQuery(query) > 0;
         }
 
         // Xóa đặt chỗ theo mã
         public bool Delete(int madatcho)
         {
-            string query = $"DELETE FROM datcho WHERE madatcho = {madatcho}";
+            string query = $"DELETE FROM datcho WHERE Madatcho = {madatcho}";
             return db.ExecuteNonQuery(query) > 0;
         }
 
@@ -61,6 +61,27 @@ namespace Doanc_sharp.src.DAO
                 ));
             }
             return danhSach;
+        }
+        public DatChoDTO Timkiemtheoma(int madatcho)
+        {
+            string query = $"SELECT * FROM datcho WHERE Madatcho = {madatcho}";
+            DataTable dt = db.ExecuteQuery(query);
+
+            if (dt.Rows.Count > 0)
+            {
+                DataRow row = dt.Rows[0];
+                DatChoDTO datCho = new DatChoDTO(Convert.ToInt32(row["Mathanhvien"]),
+                    Convert.ToInt32(row["Madatcho"]),
+                    Convert.ToDateTime(row["Thoigiandat"]),
+                    row["Trangthai"].ToString()
+                );
+                return datCho;
+            }
+            else
+            {
+                // Không tìm thấy => trả về null
+                return null;
+            }
         }
     }
 }

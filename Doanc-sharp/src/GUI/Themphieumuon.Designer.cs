@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
-            label1 = new Label();
+            labelTitle = new Label();
             BtnXacnhan = new Button();
             BtnThoat = new Button();
             label2 = new Label();
@@ -40,54 +40,64 @@
             label8 = new Label();
             CbbTrangthai = new ComboBox();
             textBoxMaphieumuon = new TextBox();
-            Mathanhvien = new TextBox();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            listView1 = new ListView();
-            button1 = new Button();
+            txtMathanhvien = new TextBox();
+            textNgaytra = new TextBox();
+            btnThem = new Button();
+            Datatbmuon = new DataGridView();
+            Mathietbi = new DataGridViewTextBoxColumn();
+            Tenthietbi = new DataGridViewTextBoxColumn();
+            Soluong = new DataGridViewTextBoxColumn();
+            label6 = new Label();
+            txtSoluong = new TextBox();
+            txtMatb = new TextBox();
+            txtNgayMuon = new TextBox();
+            label9 = new Label();
+            Btnbo = new Button();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)Datatbmuon).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = Color.NavajoWhite;
-            panel1.Controls.Add(label1);
+            panel1.Controls.Add(labelTitle);
             panel1.Location = new Point(-1, -1);
             panel1.Margin = new Padding(3, 2, 3, 2);
             panel1.Name = "panel1";
             panel1.Size = new Size(702, 71);
             panel1.TabIndex = 16;
             // 
-            // label1
+            // labelTitle
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Times New Roman", 25.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.Red;
-            label1.Location = new Point(27, 16);
-            label1.Name = "label1";
-            label1.Size = new Size(288, 40);
-            label1.TabIndex = 0;
-            label1.Text = "Thêm phiếu mượn";
+            labelTitle.AutoSize = true;
+            labelTitle.Font = new Font("Times New Roman", 25.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelTitle.ForeColor = Color.Red;
+            labelTitle.Location = new Point(27, 16);
+            labelTitle.Name = "labelTitle";
+            labelTitle.Size = new Size(288, 40);
+            labelTitle.TabIndex = 0;
+            labelTitle.Text = "Thêm phiếu mượn";
             // 
             // BtnXacnhan
             // 
             BtnXacnhan.BackColor = Color.Green;
             BtnXacnhan.Font = new Font("Sitka Text", 16.1999989F, FontStyle.Bold, GraphicsUnit.Point, 0);
             BtnXacnhan.ForeColor = SystemColors.ButtonHighlight;
-            BtnXacnhan.Location = new Point(410, 423);
+            BtnXacnhan.Location = new Point(402, 572);
             BtnXacnhan.Margin = new Padding(3, 2, 3, 2);
             BtnXacnhan.Name = "BtnXacnhan";
             BtnXacnhan.Size = new Size(218, 52);
             BtnXacnhan.TabIndex = 21;
             BtnXacnhan.Text = "Xác nhận";
             BtnXacnhan.UseVisualStyleBackColor = false;
+            BtnXacnhan.Click += BtnXacnhan_Click;
             // 
             // BtnThoat
             // 
             BtnThoat.BackColor = Color.Red;
             BtnThoat.Font = new Font("Sitka Text", 16.1999989F, FontStyle.Bold, GraphicsUnit.Point, 0);
             BtnThoat.ForeColor = SystemColors.ButtonHighlight;
-            BtnThoat.Location = new Point(77, 423);
+            BtnThoat.Location = new Point(69, 572);
             BtnThoat.Margin = new Padding(3, 2, 3, 2);
             BtnThoat.Name = "BtnThoat";
             BtnThoat.Size = new Size(218, 52);
@@ -132,11 +142,11 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Roboto", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.Location = new Point(77, 176);
+            label5.Location = new Point(551, 271);
             label5.Name = "label5";
-            label5.Size = new Size(109, 23);
+            label5.Size = new Size(150, 23);
             label5.TabIndex = 25;
-            label5.Text = "Ngày mượn";
+            label5.Text = "Nhập mã thiết bị";
             // 
             // label7
             // 
@@ -152,7 +162,7 @@
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Roboto", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label8.Location = new Point(77, 367);
+            label8.Location = new Point(77, 479);
             label8.Name = "label8";
             label8.Size = new Size(93, 23);
             label8.TabIndex = 28;
@@ -163,9 +173,9 @@
             // 
             CbbTrangthai.FormattingEnabled = true;
             CbbTrangthai.Items.AddRange(new object[] { "Đang mượn" });
-            CbbTrangthai.Location = new Point(260, 370);
+            CbbTrangthai.Location = new Point(261, 482);
             CbbTrangthai.Name = "CbbTrangthai";
-            CbbTrangthai.Size = new Size(277, 23);
+            CbbTrangthai.Size = new Size(290, 23);
             CbbTrangthai.TabIndex = 29;
             CbbTrangthai.SelectedIndexChanged += CbbTrangthai_SelectedIndexChanged;
             // 
@@ -173,64 +183,143 @@
             // 
             textBoxMaphieumuon.Location = new Point(260, 89);
             textBoxMaphieumuon.Name = "textBoxMaphieumuon";
-            textBoxMaphieumuon.Size = new Size(277, 23);
+            textBoxMaphieumuon.Size = new Size(291, 23);
             textBoxMaphieumuon.TabIndex = 30;
             // 
-            // Mathanhvien
+            // txtMathanhvien
             // 
-            Mathanhvien.Location = new Point(260, 136);
-            Mathanhvien.Name = "Mathanhvien";
-            Mathanhvien.Size = new Size(277, 23);
-            Mathanhvien.TabIndex = 31;
+            txtMathanhvien.Location = new Point(260, 136);
+            txtMathanhvien.Name = "txtMathanhvien";
+            txtMathanhvien.Size = new Size(291, 23);
+            txtMathanhvien.TabIndex = 31;
             // 
-            // textBox1
+            // textNgaytra
             // 
-            textBox1.Location = new Point(260, 179);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(277, 23);
-            textBox1.TabIndex = 32;
+            textNgaytra.Location = new Point(260, 221);
+            textNgaytra.Name = "textNgaytra";
+            textNgaytra.Size = new Size(291, 23);
+            textNgaytra.TabIndex = 33;
+            textNgaytra.Text = "null";
+            textNgaytra.TextChanged += textBox2_TextChanged;
             // 
-            // textBox2
+            // btnThem
             // 
-            textBox2.Location = new Point(260, 221);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(277, 23);
-            textBox2.TabIndex = 33;
-            textBox2.Text = "null";
-            textBox2.TextChanged += textBox2_TextChanged;
+            btnThem.Location = new Point(551, 439);
+            btnThem.Name = "btnThem";
+            btnThem.Size = new Size(76, 23);
+            btnThem.TabIndex = 35;
+            btnThem.Text = "Thêm";
+            btnThem.UseVisualStyleBackColor = true;
+            btnThem.Click += btnThem_Click;
             // 
-            // listView1
+            // Datatbmuon
             // 
-            listView1.Location = new Point(260, 255);
-            listView1.Name = "listView1";
-            listView1.Size = new Size(277, 95);
-            listView1.TabIndex = 34;
-            listView1.UseCompatibleStateImageBehavior = false;
+            Datatbmuon.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            Datatbmuon.Columns.AddRange(new DataGridViewColumn[] { Mathietbi, Tenthietbi, Soluong });
+            Datatbmuon.Location = new Point(261, 271);
+            Datatbmuon.Name = "Datatbmuon";
+            Datatbmuon.Size = new Size(290, 191);
+            Datatbmuon.TabIndex = 36;
             // 
-            // button1
+            // Mathietbi
             // 
-            button1.Location = new Point(543, 255);
-            button1.Name = "button1";
-            button1.Size = new Size(85, 23);
-            button1.TabIndex = 35;
-            button1.Text = "Chọn thiết bị";
-            button1.UseVisualStyleBackColor = true;
+            Mathietbi.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            Mathietbi.DataPropertyName = "Mathietbi";
+            Mathietbi.HeaderText = "Mã thiết bị";
+            Mathietbi.Name = "Mathietbi";
+            Mathietbi.ReadOnly = true;
+            Mathietbi.Resizable = DataGridViewTriState.False;
+            // 
+            // Tenthietbi
+            // 
+            Tenthietbi.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            Tenthietbi.DataPropertyName = "Tenthietbi";
+            Tenthietbi.HeaderText = "Tên thiết bị";
+            Tenthietbi.Name = "Tenthietbi";
+            Tenthietbi.ReadOnly = true;
+            Tenthietbi.Resizable = DataGridViewTriState.False;
+            // 
+            // Soluong
+            // 
+            Soluong.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            Soluong.DataPropertyName = "Soluong";
+            Soluong.HeaderText = "Soluong";
+            Soluong.Name = "Soluong";
+            Soluong.ReadOnly = true;
+            Soluong.Resizable = DataGridViewTriState.False;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Roboto", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label6.Location = new Point(576, 345);
+            label6.Name = "label6";
+            label6.Size = new Size(86, 23);
+            label6.TabIndex = 25;
+            label6.Text = "Số lượng";
+            // 
+            // txtSoluong
+            // 
+            txtSoluong.Location = new Point(563, 385);
+            txtSoluong.Name = "txtSoluong";
+            txtSoluong.Size = new Size(125, 23);
+            txtSoluong.TabIndex = 32;
+            // 
+            // txtMatb
+            // 
+            txtMatb.Location = new Point(563, 308);
+            txtMatb.Name = "txtMatb";
+            txtMatb.Size = new Size(125, 23);
+            txtMatb.TabIndex = 32;
+            // 
+            // txtNgayMuon
+            // 
+            txtNgayMuon.Location = new Point(260, 177);
+            txtNgayMuon.Name = "txtNgayMuon";
+            txtNgayMuon.Size = new Size(291, 23);
+            txtNgayMuon.TabIndex = 32;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new Font("Roboto", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label9.Location = new Point(77, 177);
+            label9.Name = "label9";
+            label9.Size = new Size(109, 23);
+            label9.TabIndex = 25;
+            label9.Text = "Ngày mượn";
+            label9.Click += label9_Click;
+            // 
+            // Btnbo
+            // 
+            Btnbo.Location = new Point(633, 439);
+            Btnbo.Name = "Btnbo";
+            Btnbo.Size = new Size(55, 23);
+            Btnbo.TabIndex = 38;
+            Btnbo.Text = "Bỏ";
+            Btnbo.UseVisualStyleBackColor = true;
+            Btnbo.Click += Btnbo_Click;
             // 
             // Themphieumuon
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Bisque;
-            ClientSize = new Size(700, 495);
-            Controls.Add(button1);
-            Controls.Add(listView1);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
-            Controls.Add(Mathanhvien);
+            ClientSize = new Size(700, 671);
+            Controls.Add(Btnbo);
+            Controls.Add(Datatbmuon);
+            Controls.Add(btnThem);
+            Controls.Add(textNgaytra);
+            Controls.Add(txtMatb);
+            Controls.Add(txtSoluong);
+            Controls.Add(txtNgayMuon);
+            Controls.Add(txtMathanhvien);
             Controls.Add(textBoxMaphieumuon);
             Controls.Add(CbbTrangthai);
             Controls.Add(label8);
             Controls.Add(label7);
+            Controls.Add(label6);
+            Controls.Add(label9);
             Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(label3);
@@ -241,15 +330,17 @@
             Margin = new Padding(3, 2, 3, 2);
             Name = "Themphieumuon";
             Text = "Form3";
+            Load += Themphieumuon_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)Datatbmuon).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
         private Panel panel1;
-        private Label label1;
+        private Label labelTitle;
         private Button BtnXacnhan;
         private Button BtnThoat;
         private Label label2;
@@ -260,10 +351,19 @@
         private Label label8;
         private ComboBox CbbTrangthai;
         private TextBox textBoxMaphieumuon;
-        private TextBox Mathanhvien;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private TextBox txtMathanhvien;
+        private TextBox textNgaytra;
         private ListView listView1;
-        private Button button1;
+        private Button btnThem;
+        private DataGridView Datatbmuon;
+        private DataGridViewTextBoxColumn Mathietbi;
+        private DataGridViewTextBoxColumn Tenthietbi;
+        private DataGridViewTextBoxColumn Soluong;
+        private Label label6;
+        private TextBox txtSoluong;
+        private TextBox txtMatb;
+        private TextBox txtNgayMuon;
+        private Label label9;
+        private Button Btnbo;
     }
 }

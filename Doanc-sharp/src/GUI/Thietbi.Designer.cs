@@ -30,15 +30,16 @@
         {
             label1 = new Label();
             dgvThietbi = new DataGridView();
-            ID = new DataGridViewTextBoxColumn();
-            Ten_ThietBi = new DataGridViewTextBoxColumn();
-            Gia = new DataGridViewTextBoxColumn();
-            Trangthai = new DataGridViewTextBoxColumn();
             btnCapnhat = new Button();
             btnXoa = new Button();
             btnExcel = new Button();
             btnReset = new Button();
             btnThem = new Button();
+            Mathietbi = new DataGridViewTextBoxColumn();
+            TenThietBi = new DataGridViewTextBoxColumn();
+            Giathue = new DataGridViewTextBoxColumn();
+            Madanhmuc = new DataGridViewTextBoxColumn();
+            Trangthai = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dgvThietbi).BeginInit();
             SuspendLayout();
             // 
@@ -57,42 +58,14 @@
             // 
             dgvThietbi.BackgroundColor = SystemColors.ControlLightLight;
             dgvThietbi.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvThietbi.Columns.AddRange(new DataGridViewColumn[] { ID, Ten_ThietBi, Gia, Trangthai });
-            dgvThietbi.Location = new Point(31, 55);
+            dgvThietbi.Columns.AddRange(new DataGridViewColumn[] { Mathietbi, TenThietBi, Giathue, Madanhmuc, Trangthai });
+            dgvThietbi.Location = new Point(19, 56);
             dgvThietbi.Margin = new Padding(3, 2, 3, 2);
             dgvThietbi.Name = "dgvThietbi";
             dgvThietbi.RowHeadersWidth = 51;
             dgvThietbi.Size = new Size(887, 598);
             dgvThietbi.TabIndex = 2;
             dgvThietbi.CellContentClick += dataGridView1_CellContentClick;
-            // 
-            // ID
-            // 
-            ID.HeaderText = "ID";
-            ID.MinimumWidth = 6;
-            ID.Name = "ID";
-            ID.Width = 150;
-            // 
-            // Ten_ThietBi
-            // 
-            Ten_ThietBi.HeaderText = "Tên thiết bị";
-            Ten_ThietBi.MinimumWidth = 6;
-            Ten_ThietBi.Name = "Ten_ThietBi";
-            Ten_ThietBi.Width = 350;
-            // 
-            // Gia
-            // 
-            Gia.HeaderText = "GIá";
-            Gia.MinimumWidth = 6;
-            Gia.Name = "Gia";
-            Gia.Width = 250;
-            // 
-            // Trangthai
-            // 
-            Trangthai.HeaderText = "Trạng thái";
-            Trangthai.MinimumWidth = 6;
-            Trangthai.Name = "Trangthai";
-            Trangthai.Width = 250;
             // 
             // btnCapnhat
             // 
@@ -163,6 +136,49 @@
             btnThem.UseVisualStyleBackColor = false;
             btnThem.Click += btnThem_Click;
             // 
+            // Mathietbi
+            // 
+            Mathietbi.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            Mathietbi.DataPropertyName = "Mathietbi";
+            Mathietbi.HeaderText = "ID";
+            Mathietbi.MinimumWidth = 6;
+            Mathietbi.Name = "Mathietbi";
+            Mathietbi.Resizable = DataGridViewTriState.False;
+            // 
+            // TenThietBi
+            // 
+            TenThietBi.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            TenThietBi.DataPropertyName = "Tenthietbi";
+            TenThietBi.HeaderText = "Tên thiết bị";
+            TenThietBi.MinimumWidth = 6;
+            TenThietBi.Name = "TenThietBi";
+            // 
+            // Giathue
+            // 
+            Giathue.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            Giathue.DataPropertyName = "Giathue";
+            Giathue.HeaderText = "GIá";
+            Giathue.MinimumWidth = 6;
+            Giathue.Name = "Giathue";
+            Giathue.Resizable = DataGridViewTriState.False;
+            // 
+            // Madanhmuc
+            // 
+            Madanhmuc.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            Madanhmuc.DataPropertyName = "Madanhmuc";
+            Madanhmuc.HeaderText = "Mã danh mục";
+            Madanhmuc.Name = "Madanhmuc";
+            Madanhmuc.Resizable = DataGridViewTriState.False;
+            // 
+            // Trangthai
+            // 
+            Trangthai.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            Trangthai.DataPropertyName = "Trangthai";
+            Trangthai.HeaderText = "Trạng thái";
+            Trangthai.MinimumWidth = 6;
+            Trangthai.Name = "Trangthai";
+            Trangthai.Resizable = DataGridViewTriState.False;
+            // 
             // Thietbi
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -188,14 +204,15 @@
 
         private Label label1;
         private DataGridView dgvThietbi;
-        private DataGridViewTextBoxColumn ID;
-        private DataGridViewTextBoxColumn Ten_ThietBi;
-        private DataGridViewTextBoxColumn Gia;
-        private DataGridViewTextBoxColumn Trangthai;
         private Button btnCapnhat;
         private Button btnXoa;
         private Button btnExcel;
         private Button btnReset;
         private Button btnThem;
+        private DataGridViewTextBoxColumn Mathietbi;
+        private DataGridViewTextBoxColumn TenThietBi;
+        private DataGridViewTextBoxColumn Giathue;
+        private DataGridViewTextBoxColumn Madanhmuc;
+        private DataGridViewTextBoxColumn Trangthai;
     }
 }

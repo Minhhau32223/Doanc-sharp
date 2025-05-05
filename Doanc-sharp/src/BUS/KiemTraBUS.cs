@@ -12,7 +12,7 @@ namespace Doanc_sharp.src.BUS
     internal class KiemTraBUS
     {
         private KiemTraDAO kiemTraDAO = new KiemTraDAO();
-
+        private ThanhVienBUS tvBUS = new ThanhVienBUS();
 
         public int KiemTraTruocKhiVao(int MaThanhVien)
         {
@@ -29,9 +29,10 @@ namespace Doanc_sharp.src.BUS
             // xu ly kiem tra thanh vien vi pham
             DataTable dt = kiemTraDAO.GetViPhamByThanhVien(MaThanhVien);
             List<ThanhVienViPhamDTO> viPhamList = new List<ThanhVienViPhamDTO>();
+            if (tvBUS.TimThanhVienTheoMa(MaThanhVien) == null) return -2;
             foreach (DataRow row in dt.Rows)
             {
-                if (row["trangthai"].ToString().Equals("chua xu ly")) return -1;
+                if (row["trangthai"].ToString().Equals("Chua xử lý")) return -1;
             }
             return 1;
         }

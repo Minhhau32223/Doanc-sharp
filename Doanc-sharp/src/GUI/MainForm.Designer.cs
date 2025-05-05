@@ -71,7 +71,6 @@
             headerpanel.Name = "headerpanel";
             headerpanel.Size = new Size(1124, 122);
             headerpanel.TabIndex = 2;
-         
             // 
             // youraccount
             // 
@@ -92,7 +91,10 @@
             Controls.Add(Rightpanel);
             Controls.Add(Leftpanel);
             Font = new Font("Segoe UI", 9F);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            MaximizeBox = false;
             Name = "MainForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Thư quán";
             Load += Form1_Load;
             Leftpanel.ResumeLayout(false);

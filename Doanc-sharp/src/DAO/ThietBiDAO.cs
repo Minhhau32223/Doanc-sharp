@@ -71,5 +71,12 @@ namespace Doanc_sharp.src.DAO
             string query = $"DELETE FROM thietbi WHERE Madanhmuc = N'{madanhmuc}'";
             return db.ExecuteNonQuery(query)>0;
         }
+        public DataTable TimKiemTheoMa(int mathietbi)
+        {
+          
+            string query = $"SELECT * FROM thietbi WHERE Mathietbi={mathietbi}";
+
+            return db.ExecuteQuery(query);
+        }
     }
 }

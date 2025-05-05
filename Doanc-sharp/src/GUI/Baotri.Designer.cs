@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             dataGridView1 = new DataGridView();
-            panel1 = new Panel();
-            label1 = new Label();
             ID = new DataGridViewTextBoxColumn();
             Ten_ThietBi = new DataGridViewTextBoxColumn();
             Nhanvien = new DataGridViewTextBoxColumn();
             Trangthai = new DataGridViewTextBoxColumn();
             Ngayyeucau = new DataGridViewTextBoxColumn();
+            panel1 = new Panel();
+            label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -44,33 +44,12 @@
             dataGridView1.BackgroundColor = SystemColors.ControlLightLight;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { ID, Ten_ThietBi, Nhanvien, Trangthai, Ngayyeucau });
-            dataGridView1.Location = new Point(35, 82);
+            dataGridView1.Location = new Point(31, 62);
+            dataGridView1.Margin = new Padding(3, 2, 3, 2);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(1014, 798);
+            dataGridView1.Size = new Size(887, 598);
             dataGridView1.TabIndex = 5;
-            
-            // 
-            // panel1
-            // 
-            panel1.BackColor = Color.Green;
-            panel1.BackgroundImage = Properties.Resources.plus_icon;
-            panel1.BackgroundImageLayout = ImageLayout.Stretch;
-            panel1.Location = new Point(1009, 21);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(50, 50);
-            panel1.TabIndex = 4;
-           
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Times New Roman", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(22, 21);
-            label1.Name = "label1";
-            label1.Size = new Size(128, 46);
-            label1.TabIndex = 3;
-            label1.Text = "Bảo trì";
-            
             // 
             // ID
             // 
@@ -107,16 +86,39 @@
             Ngayyeucau.Name = "Ngayyeucau";
             Ngayyeucau.Width = 200;
             // 
+            // panel1
+            // 
+            panel1.BackColor = Color.Green;
+            panel1.BackgroundImage = Properties.Resources.plus_icon;
+            panel1.BackgroundImageLayout = ImageLayout.Stretch;
+            panel1.Location = new Point(883, 16);
+            panel1.Margin = new Padding(3, 2, 3, 2);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(44, 38);
+            panel1.TabIndex = 4;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Times New Roman", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(19, 16);
+            label1.Name = "label1";
+            label1.Size = new Size(103, 36);
+            label1.TabIndex = 3;
+            label1.Text = "Bảo trì";
+            // 
             // Baotri
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Bisque;
             Controls.Add(dataGridView1);
             Controls.Add(panel1);
             Controls.Add(label1);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "Baotri";
-            Size = new Size(1080, 900);
+            Size = new Size(945, 675);
+            Load += Baotri_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();

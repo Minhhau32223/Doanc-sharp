@@ -20,8 +20,8 @@ namespace Doanc_sharp.src.DAO
 
         public bool Add(PhieuMuonDTO pm)
         {
-            string query = $"INSERT INTO phieumuon (Ngaymuon, Ngaytra, Trangthai, Mathanhvien) VALUES " +
-                           $"('{pm.Ngaymuon:yyyy-MM-dd HH:mm:ss}', '{pm.Ngaytra}', '{pm.Trangthai}', {pm.Mathanhvien})";
+            string query = $"INSERT INTO phieumuon (Maphieumuon,Ngaymuon, Ngaytra, Trangthai, Mathanhvien) VALUES " +
+                           $"('{pm.Maphieumuon}','{pm.Ngaymuon:yyyy-MM-dd HH:mm:ss}', '{pm.Ngaytra}', '{pm.Trangthai}', {pm.Mathanhvien})";
             return db.ExecuteNonQuery(query) > 0;
         }
 
@@ -29,7 +29,7 @@ namespace Doanc_sharp.src.DAO
         {
             string query = $"UPDATE phieumuon SET " +
                            $"Ngaymuon = '{pm.Ngaymuon:yyyy-MM-dd HH:mm:ss}', " +
-                           $"Ngaytra = '{pm.Ngaytra}', " +
+                           $"Ngaytra = '{pm.Ngaytra:yyyy-MM-dd HH:mm:ss}', " +
                            $"Trangthai = '{pm.Trangthai}', " +
                            $"Mathanhvien = {pm.Mathanhvien} " +
                            $"WHERE Maphieumuon = {pm.Maphieumuon}";
@@ -53,7 +53,51 @@ namespace Doanc_sharp.src.DAO
                 list.Add(new PhieuMuonDTO(
                     Convert.ToInt32(row["Maphieumuon"]),
                     Convert.ToDateTime(row["Ngaymuon"]),
-                    row["Ngaytra"].ToString(),
+                    Convert.ToDateTime(row["Ngaytra"]),
+                    row["Trangthai"].ToString(),
+                    Convert.ToInt32(row["Mathanhvien"])
+                ));
+            }
+
+            return list;
+        }
+        public PhieuMuonDTO Timkiemtheoma(int maphieumuon)
+        {
+            string query = $"SELECT * FROM phieumuon WHERE Maphieumuon = {maphieumuon}";
+            DataTable dt = db.ExecuteQuery(query);
+
+            if (dt.Rows.Count > 0)
+            {
+                DataRow row = dt.Rows[0];
+                PhieuMuonDTO pm = new PhieuMuonDTO(
+                    Convert.ToInt32(row["Maphieumuon"]),
+                    Convert.ToDateTime(row["Ngaymuon"]),
+                    Convert.ToDateTime(row["Ngaytra"]),
+                    row["Trangthai"].ToString(),
+                    Convert.ToInt32(row["Mathanhvien"])
+                    );
+                return pm;
+            }
+            else
+            {
+                // Không tìm thấy => trả về null
+                return null;
+            }
+        }
+
+
+        public List<PhieuMuonDTO> LayDanhSachPhieuTra()
+        {
+            string query = "SELECT * FROM phieumuon WHERE Trangthai='Đã trả'";
+            DataTable dt = db.ExecuteQuery(query);
+            List<PhieuMuonDTO> list = new List<PhieuMuonDTO>();
+
+            foreach (DataRow row in dt.Rows)
+            {
+                list.Add(new PhieuMuonDTO(
+                    Convert.ToInt32(row["Maphieumuon"]),
+                    Convert.ToDateTime(row["Ngaymuon"]),
+                    Convert.ToDateTime(row["Ngaytra"]),
                     row["Trangthai"].ToString(),
                     Convert.ToInt32(row["Mathanhvien"])
                 ));

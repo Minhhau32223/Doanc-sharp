@@ -11,16 +11,15 @@ namespace Doanc_sharp.src.DTO
         public int Maphieumuon { get; set; }
         public int Mathietbi { get; set; }
         public int Soluong { get; set; }
-        public string Trangthai { get; set; }
-
+  
         public ChiTietPhieuMuonDTO() { }
 
-        public ChiTietPhieuMuonDTO(int maphieumuon, int mathietbi, int soluong, string trangthai)
+        public ChiTietPhieuMuonDTO(int maphieumuon, int mathietbi, int soluong)
         {
             Maphieumuon = maphieumuon;
             Mathietbi = mathietbi;
             Soluong = soluong;
-            Trangthai = trangthai;
+       
         }
     }
 }

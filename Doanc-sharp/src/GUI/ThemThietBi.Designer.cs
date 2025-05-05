@@ -33,7 +33,6 @@
             txtDeviceID = new TextBox();
             txtDeviceName = new TextBox();
             txtRentPrice = new TextBox();
-            this.btnClose = new Button();
             btnConfirm = new Button();
             label2 = new Label();
             label3 = new Label();
@@ -63,6 +62,7 @@
             label1.Size = new Size(216, 40);
             label1.TabIndex = 0;
             label1.Text = "Thêm thiết bị";
+            label1.Click += label1_Click;
             // 
             // txtDeviceID
             // 
@@ -87,19 +87,6 @@
             txtRentPrice.Name = "txtRentPrice";
             txtRentPrice.Size = new Size(297, 23);
             txtRentPrice.TabIndex = 1;
-            // 
-            // btnClose
-            // 
-            this.btnClose.BackColor = Color.Red;
-            this.btnClose.Font = new Font("Sitka Text", 16.1999989F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            this.btnClose.ForeColor = SystemColors.ButtonHighlight;
-            this.btnClose.Location = new Point(90, 270);
-            this.btnClose.Margin = new Padding(3, 2, 3, 2);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new Size(218, 52);
-            this.btnClose.TabIndex = 3;
-            this.btnClose.Text = "Thoát";
-            this.btnClose.UseVisualStyleBackColor = false;
             // 
             // btnConfirm
             // 
@@ -174,7 +161,6 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(btnConfirm);
-            Controls.Add(this.btnClose);
             Controls.Add(txtStatus);
             Controls.Add(txtRentPrice);
             Controls.Add(txtDeviceName);
@@ -183,6 +169,7 @@
             Margin = new Padding(3, 2, 3, 2);
             Name = "ThemThietBi";
             Text = "Thêm thiết bị";
+            Load += ThemThietBi_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);
@@ -196,6 +183,9 @@
         private TextBox txtDeviceID;
         private TextBox txtDeviceName;
         private TextBox txtRentPrice;
+
+        public Button btnClose { get; private set; }
+
         private ComboBox comboBox1;
         private Button button1;
         private Button btnConfirm;

@@ -62,7 +62,7 @@
             DataThanhvien.BackgroundColor = SystemColors.ControlLightLight;
             DataThanhvien.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             DataThanhvien.Columns.AddRange(new DataGridViewColumn[] { ID, Ten, phone, Address, Account, Password, Email, Ngay, Trangthai });
-            DataThanhvien.Location = new Point(18, 65);
+            DataThanhvien.Location = new Point(3, 59);
             DataThanhvien.Margin = new Padding(3, 2, 3, 2);
             DataThanhvien.Name = "DataThanhvien";
             DataThanhvien.RowHeadersWidth = 51;
@@ -72,60 +72,79 @@
             // 
             // ID
             // 
+            ID.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            ID.DataPropertyName = "Mathanhvien";
             ID.HeaderText = "ID";
             ID.MinimumWidth = 6;
             ID.Name = "ID";
-            ID.Width = 80;
+            ID.Resizable = DataGridViewTriState.False;
             // 
             // Ten
             // 
+            Ten.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            Ten.DataPropertyName = "Hoten";
             Ten.HeaderText = "Họ tên";
             Ten.MinimumWidth = 6;
             Ten.Name = "Ten";
-            Ten.Width = 130;
+            Ten.Resizable = DataGridViewTriState.False;
             // 
             // phone
             // 
+            phone.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            phone.DataPropertyName = "Sdt";
             phone.HeaderText = "SDT";
             phone.MinimumWidth = 6;
             phone.Name = "phone";
-            phone.Width = 80;
+            phone.Resizable = DataGridViewTriState.False;
             // 
             // Address
             // 
+            Address.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            Address.DataPropertyName = "Diachi";
             Address.HeaderText = "Địa chỉ";
             Address.Name = "Address";
-            Address.Width = 150;
+            Address.Resizable = DataGridViewTriState.False;
             // 
             // Account
             // 
+            Account.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            Account.DataPropertyName = "Taikhoan";
             Account.HeaderText = "Tài khoản";
             Account.Name = "Account";
-            Account.Width = 80;
+            Account.Resizable = DataGridViewTriState.False;
             // 
             // Password
             // 
+            Password.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            Password.DataPropertyName = "Matkhau";
             Password.HeaderText = "Mật khẩu";
             Password.Name = "Password";
-            Password.Width = 80;
+            Password.Resizable = DataGridViewTriState.False;
             // 
             // Email
             // 
+            Email.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            Email.DataPropertyName = "Email";
             Email.HeaderText = "Email";
             Email.Name = "Email";
+            Email.Resizable = DataGridViewTriState.False;
             // 
             // Ngay
             // 
+            Ngay.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            Ngay.DataPropertyName = "Ngaydangky";
             Ngay.HeaderText = "Ngày tạo";
             Ngay.Name = "Ngay";
-            Ngay.Width = 80;
+            Ngay.Resizable = DataGridViewTriState.False;
             // 
             // Trangthai
             // 
+            Trangthai.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            Trangthai.DataPropertyName = "Trangthai";
             Trangthai.HeaderText = "Trạng thái";
             Trangthai.MinimumWidth = 6;
             Trangthai.Name = "Trangthai";
-            Trangthai.Width = 80;
+            Trangthai.Resizable = DataGridViewTriState.False;
             // 
             // btnXoa
             // 
@@ -153,6 +172,7 @@
             btnExcel.TabIndex = 11;
             btnExcel.Text = "Excel";
             btnExcel.UseVisualStyleBackColor = false;
+            btnExcel.Click += btnExcel_Click;
             // 
             // btnCapnhat
             // 
@@ -160,12 +180,13 @@
             btnCapnhat.BackgroundImageLayout = ImageLayout.Zoom;
             btnCapnhat.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnCapnhat.ForeColor = SystemColors.ControlLightLight;
-            btnCapnhat.Location = new Point(610, 12);
+            btnCapnhat.Location = new Point(612, 14);
             btnCapnhat.Name = "btnCapnhat";
             btnCapnhat.Size = new Size(81, 40);
             btnCapnhat.TabIndex = 11;
             btnCapnhat.Text = "Cập nhật";
             btnCapnhat.UseVisualStyleBackColor = false;
+            btnCapnhat.Click += btnCapnhat_Click;
             // 
             // btnReset
             // 
@@ -203,6 +224,10 @@
         #endregion
 
         private DataGridView DataThanhvien;
+        private Button btnXoa;
+        private Button btnExcel;
+        private Button btnCapnhat;
+        private Button btnReset;
         private DataGridViewTextBoxColumn ID;
         private DataGridViewTextBoxColumn Ten;
         private DataGridViewTextBoxColumn phone;
@@ -212,9 +237,5 @@
         private DataGridViewTextBoxColumn Email;
         private DataGridViewTextBoxColumn Ngay;
         private DataGridViewTextBoxColumn Trangthai;
-        private Button btnXoa;
-        private Button btnExcel;
-        private Button btnCapnhat;
-        private Button btnReset;
     }
 }
