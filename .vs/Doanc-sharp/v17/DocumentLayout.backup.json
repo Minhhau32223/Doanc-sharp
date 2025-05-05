@@ -342,7 +342,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Document",
@@ -367,6 +367,10 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
             },
             {
               "$type": "Document",
@@ -426,7 +430,7 @@
               "RelativeDocumentMoniker": "Doanc-sharp\\src\\GUI\\Muontra.cs",
               "ToolTip": "C:\\Users\\hau66\\Downloads\\csharp\\Doanc-sharp\\Doanc-sharp\\src\\GUI\\Muontra.cs",
               "RelativeToolTip": "Doanc-sharp\\src\\GUI\\Muontra.cs",
-              "ViewState": "AgIAADwAAAAAAAAAAAAAwJEAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAAwJEAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-28T13:23:47.421Z",
               "EditorCaption": ""
@@ -477,7 +481,8 @@
               "RelativeToolTip": "Doanc-sharp\\src\\GUI\\SuaThietBi.cs",
               "ViewState": "AgIAACcAAAAAAAAAAAAwwDIAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-21T13:45:47.557Z"
+              "WhenOpened": "2025-04-21T13:45:47.557Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -489,7 +494,8 @@
               "RelativeToolTip": "Doanc-sharp\\src\\GUI\\DanhMuc.cs",
               "ViewState": "AgIAAAQAAAAAAAAAAAAAABgAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-01T12:59:35.709Z"
+              "WhenOpened": "2025-05-01T12:59:35.709Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -514,7 +520,8 @@
               "RelativeToolTip": "Doanc-sharp\\src\\GUI\\ThemThietBi.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-01T12:52:43.987Z"
+              "WhenOpened": "2025-05-01T12:52:43.987Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -586,7 +593,8 @@
               "RelativeToolTip": "Doanc-sharp\\src\\GUI\\KiemTra.cs",
               "ViewState": "AgIAAC4AAAAAAAAAAAAwwFIAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-28T12:10:30.825Z"
+              "WhenOpened": "2025-04-28T12:10:30.825Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -1040,10 +1048,6 @@
               "WhenOpened": "2025-04-21T13:52:20.864Z"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
-            },
-            {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "DanhMuc.cs [Design]",
@@ -1063,8 +1067,7 @@
               "ToolTip": "C:\\Users\\hau66\\Downloads\\csharp\\Doanc-sharp\\Doanc-sharp\\src\\GUI\\Muontra.cs [Design]",
               "RelativeToolTip": "Doanc-sharp\\src\\GUI\\Muontra.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-21T14:01:36.979Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-04-21T14:01:36.979Z"
             },
             {
               "$type": "Document",

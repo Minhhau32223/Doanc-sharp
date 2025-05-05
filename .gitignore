@@ -1,0 +1,41 @@
+## Build results
+bin/
+obj/
+[Bb]uild/
+[Bb]uild[Ll]og.*
+
+## User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## VS Code settings
+.vscode/
+
+## Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+## NuGet
+*.nupkg
+packages/
+project.lock.json
+project.fragment.lock.json
+
+## Rider / JetBrains
+.idea/
+*.sln.iml
+
+## Auto-generated files
+*.Designer.cs
+
+## Backup & temporary files
+*.bak
+*.tmp
+
+# Logs
+*.log
+
+## Publish folders
+Publish/
