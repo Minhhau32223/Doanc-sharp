@@ -163,7 +163,7 @@ namespace Doanc_sharp
             txtMathanhvien.Text = mathanhvien.ToString();
             Datatbmuon.DataSource= ctPhieuMuonbus.LayDanhSachChiTiet(mapm);
             txtNgayMuon.Text= ngaymuon.ToString();
-            textNgaytra.Text = "";
+            textNgaytra.Text = DateTime.MinValue.ToString();
             textBoxMaphieumuon.ReadOnly = true;
             txtMathanhvien.ReadOnly = true;
             textBoxMaphieumuon.ReadOnly = true;

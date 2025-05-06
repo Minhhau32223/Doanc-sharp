@@ -144,5 +144,30 @@ namespace Doanc_sharp
                 xct.ShowDialog();
             }
         }
+
+        private void TextBoxTimkiem_TextChanged(object sender, EventArgs e)
+        {
+            string keyword = TextBoxTimkiem.Text.Trim().ToLower();
+
+            // Lấy toàn bộ danh sách gốc
+            List<PhieuMuonDTO> danhSachGoc = pmbus.LayDanhSachPhieuMuon();
+
+            if (string.IsNullOrEmpty(keyword))
+            {
+                // Nếu không có từ khóa, hiển thị toàn bộ
+                DataMuon.DataSource = danhSachGoc;
+            }
+            else
+            {
+                // Lọc theo Maphieumuon, Mathanhvien, hoặc Trangthai (tuỳ bạn thêm cột nào)
+                var danhSachLoc = danhSachGoc.Where(pm =>
+                    pm.Maphieumuon.ToString().Contains(keyword) ||
+                    pm.Mathanhvien.ToString().Contains(keyword) ||
+                    (!string.IsNullOrEmpty(pm.Trangthai) && pm.Trangthai.ToLower().Contains(keyword))
+                ).ToList();
+
+                DataMuon.DataSource = danhSachLoc;
+            }
+        }
     }
 }
