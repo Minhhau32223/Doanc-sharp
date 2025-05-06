@@ -20,6 +20,7 @@ namespace Doanc_sharp
         private ThietBiBUS tbbus;
         private PhieuMuonBUS phieuMuonbus;
         private CtPhieuMuonBUS ctPhieuMuonbus;
+        private LSHoatDongBUS lshdBUS;
         public Themphieumuon()
         {
             InitializeComponent();
@@ -237,6 +238,7 @@ namespace Doanc_sharp
                 {
                     phieuMuonbus = new PhieuMuonBUS();
                     ctPhieuMuonbus = new CtPhieuMuonBUS();
+                    lshdBUS = new LSHoatDongBUS();
 
                     int maphieumuon = Convert.ToInt32(textBoxMaphieumuon.Text);
                     int matv = Convert.ToInt32(txtMathanhvien.Text);
@@ -255,6 +257,9 @@ namespace Doanc_sharp
                             ctPhieuMuonbus.ThemChiTiet(temp);
                         }
                     }
+                  
+                    LSHoatDongDTO  templshd = new LSHoatDongDTO(matv,tools.GenerateUniqueNumber("lichsuhoatdong","Mahoatdong"),"Mượn thiết bị ","Mượn thành công",DateTime.Now);
+                    lshdBUS.InsertLSHoatDong(templshd);
 
                     MessageBox.Show("Thêm phiếu mượn thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Dispose();
@@ -263,12 +268,16 @@ namespace Doanc_sharp
                 {
                     phieuMuonbus = new PhieuMuonBUS();
                     ctPhieuMuonbus = new CtPhieuMuonBUS();
+                    lshdBUS = new LSHoatDongBUS();
 
                     int maphieumuon = Convert.ToInt32(textBoxMaphieumuon.Text);
                     int matv = Convert.ToInt32(txtMathanhvien.Text);
                     string trangthai = CbbTrangthai.SelectedItem.ToString();
                     phieuMuonbus.CapNhatPhieuMuon(new PhieuMuonDTO(maphieumuon, nm, ntr, trangthai, matv));
                     MessageBox.Show("Xác nhận trả thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                 
+                    LSHoatDongDTO templshd = new LSHoatDongDTO(matv, tools.GenerateUniqueNumber("lichsuhoatdong", "Mahoatdong"), "Trả thiết bị ", "Trảthành công", DateTime.Now);
+                    lshdBUS.InsertLSHoatDong(templshd);
                     this.Dispose();
                 }
             }
