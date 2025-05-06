@@ -101,6 +101,7 @@
             TextBoxTimkiem.Name = "TextBoxTimkiem";
             TextBoxTimkiem.Size = new Size(175, 23);
             TextBoxTimkiem.TabIndex = 12;
+            TextBoxTimkiem.TextChanged += TextBoxTimkiem_TextChanged;
             // 
             // label3
             // 
