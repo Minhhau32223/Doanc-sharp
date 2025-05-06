@@ -38,13 +38,16 @@
             XulyBtn = new Button();
             ThoatBtn = new Button();
             MotaTbx = new TextBox();
+            comboBox1 = new ComboBox();
+            label6 = new Label();
             TenvpTbx = new TextBox();
-            TvvpCbx = new ComboBox();
+            TvvpTbx = new TextBox();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
             // TrangthaiCbx
             // 
+            TrangthaiCbx.Enabled = false;
             TrangthaiCbx.FormattingEnabled = true;
             TrangthaiCbx.Items.AddRange(new object[] { "Chưa xử lý", "Đã xử lý" });
             TrangthaiCbx.Location = new Point(317, 207);
@@ -119,7 +122,7 @@
             XulyBtn.BackColor = Color.Green;
             XulyBtn.Font = new Font("Sitka Text", 16.1999989F, FontStyle.Bold, GraphicsUnit.Point, 0);
             XulyBtn.ForeColor = SystemColors.ButtonHighlight;
-            XulyBtn.Location = new Point(396, 272);
+            XulyBtn.Location = new Point(396, 291);
             XulyBtn.Margin = new Padding(3, 2, 3, 2);
             XulyBtn.Name = "XulyBtn";
             XulyBtn.Size = new Size(218, 52);
@@ -133,7 +136,7 @@
             ThoatBtn.BackColor = Color.Red;
             ThoatBtn.Font = new Font("Sitka Text", 16.1999989F, FontStyle.Bold, GraphicsUnit.Point, 0);
             ThoatBtn.ForeColor = SystemColors.ButtonHighlight;
-            ThoatBtn.Location = new Point(91, 272);
+            ThoatBtn.Location = new Point(91, 291);
             ThoatBtn.Margin = new Padding(3, 2, 3, 2);
             ThoatBtn.Name = "ThoatBtn";
             ThoatBtn.Size = new Size(218, 52);
@@ -144,28 +147,50 @@
             // 
             // MotaTbx
             // 
+            MotaTbx.Enabled = false;
             MotaTbx.Location = new Point(317, 170);
             MotaTbx.Margin = new Padding(3, 2, 3, 2);
             MotaTbx.Name = "MotaTbx";
             MotaTbx.Size = new Size(297, 23);
             MotaTbx.TabIndex = 17;
             // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "Cảnh cáo", "Khóa thẻ 1 ngày", "Khóa thẻ 3 ngày", "Khóa thẻ 7 ngày", "Khóa thẻ 1 tháng", "Khóa thẻ 1 năm", "Khóa thẻ vĩnh viễn" });
+            comboBox1.Location = new Point(317, 245);
+            comboBox1.Margin = new Padding(3, 2, 3, 2);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(297, 23);
+            comboBox1.TabIndex = 28;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Times New Roman", 13.8F);
+            label6.Location = new Point(91, 247);
+            label6.Name = "label6";
+            label6.Size = new Size(127, 21);
+            label6.TabIndex = 29;
+            label6.Text = "Hình thức xử lý";
+            // 
             // TenvpTbx
             // 
+            TenvpTbx.Enabled = false;
             TenvpTbx.Location = new Point(317, 134);
             TenvpTbx.Margin = new Padding(3, 2, 3, 2);
             TenvpTbx.Name = "TenvpTbx";
             TenvpTbx.Size = new Size(297, 23);
             TenvpTbx.TabIndex = 18;
             // 
-            // TvvpCbx
+            // TvvpTbx
             // 
-            TvvpCbx.FormattingEnabled = true;
-            TvvpCbx.Location = new Point(317, 98);
-            TvvpCbx.Margin = new Padding(3, 2, 3, 2);
-            TvvpCbx.Name = "TvvpCbx";
-            TvvpCbx.Size = new Size(297, 23);
-            TvvpCbx.TabIndex = 27;
+            TvvpTbx.Enabled = false;
+            TvvpTbx.Location = new Point(317, 95);
+            TvvpTbx.Margin = new Padding(3, 2, 3, 2);
+            TvvpTbx.Name = "TvvpTbx";
+            TvvpTbx.Size = new Size(297, 23);
+            TvvpTbx.TabIndex = 30;
             // 
             // Xulyvipham
             // 
@@ -173,7 +198,9 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Bisque;
             ClientSize = new Size(700, 377);
-            Controls.Add(TvvpCbx);
+            Controls.Add(TvvpTbx);
+            Controls.Add(label6);
+            Controls.Add(comboBox1);
             Controls.Add(TrangthaiCbx);
             Controls.Add(panel1);
             Controls.Add(label5);
@@ -205,7 +232,9 @@
         private Button XulyBtn;
         private Button ThoatBtn;
         private TextBox MotaTbx;
+        private ComboBox comboBox1;
+        private Label label6;
         private TextBox TenvpTbx;
-        private ComboBox TvvpCbx;
+        private TextBox TvvpTbx;
     }
 }

@@ -1,4 +1,5 @@
 ﻿using Doanc_sharp.src.BUS;
+using Doanc_sharp.src.DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -25,6 +26,7 @@ namespace Doanc_sharp
             DataTable dt = lshdBUS.GetAllLSHoatDong();
             dataGridView1.DataSource = dt;
         }
+
 
         private void onFocus(object sender, EventArgs e)
         {
@@ -85,6 +87,41 @@ namespace Doanc_sharp
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void onChange(object sender, EventArgs e)
+        {
+            //new object[] { "Tất cả", "Hôm nay", "Ba ngày trước", "Một tuần trước", "Một tháng trước", "Một năm trước" }
+            Object time = cbxFilter.Items;
+            DateTime timeNow = DateTime.Now;
+            DateTime timeFilter = timeNow;
+            switch (cbxFilter.SelectedIndex)
+            {
+                case 0:
+                    LoadData();
+                    return;
+                case 1:
+                    timeFilter = timeNow.AddDays(-1);
+                    break;
+                case 2:
+                    timeFilter = timeNow.AddDays(-3);
+                    break;
+                case 3:
+                    timeFilter = timeNow.AddDays(-7);
+                    break;
+                case 4:
+                    timeFilter = timeNow.AddMonths(-1);
+                    break;
+                case 5:
+                    timeFilter = timeNow.AddYears(-1);
+                    break;
+            }
+            if(timeFilter == timeNow) { 
+                LoadData();
+                return;
+            }
+            DataTable dt = lshdBUS.filterLSHDByTime(timeFilter);
+            dataGridView1.DataSource = dt;
         }
     }
 }

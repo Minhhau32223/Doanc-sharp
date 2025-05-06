@@ -30,7 +30,8 @@
         {
             dataGridView1 = new DataGridView();
             ID = new DataGridViewTextBoxColumn();
-            Thanhvien = new DataGridViewTextBoxColumn();
+            Mathanhvien = new DataGridViewTextBoxColumn();
+            Tenthanhvien = new DataGridViewTextBoxColumn();
             Loai = new DataGridViewTextBoxColumn();
             Chitiet = new DataGridViewTextBoxColumn();
             Thoigian = new DataGridViewTextBoxColumn();
@@ -47,7 +48,7 @@
             // 
             dataGridView1.BackgroundColor = SystemColors.ControlLightLight;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { ID, Thanhvien, Loai, Chitiet, Thoigian });
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { ID, Mathanhvien, Tenthanhvien, Loai, Chitiet, Thoigian });
             dataGridView1.Location = new Point(31, 62);
             dataGridView1.Margin = new Padding(3, 2, 3, 2);
             dataGridView1.Name = "dataGridView1";
@@ -62,15 +63,22 @@
             ID.HeaderText = "ID";
             ID.MinimumWidth = 6;
             ID.Name = "ID";
-            ID.Width = 125;
+            ID.Width = 50;
             // 
-            // Thanhvien
+            // Mathanhvien
             // 
-            Thanhvien.DataPropertyName = "Mathanhvien";
-            Thanhvien.HeaderText = "Thành viên";
-            Thanhvien.MinimumWidth = 6;
-            Thanhvien.Name = "Thanhvien";
-            Thanhvien.Width = 185;
+            Mathanhvien.DataPropertyName = "Mathanhvien";
+            Mathanhvien.HeaderText = "Mã thành viên";
+            Mathanhvien.MinimumWidth = 6;
+            Mathanhvien.Name = "Mathanhvien";
+            Mathanhvien.Width = 75;
+            // 
+            // Tenthanhvien
+            // 
+            Tenthanhvien.DataPropertyName = "Tenthanhvien";
+            Tenthanhvien.HeaderText = "Tên thành viên";
+            Tenthanhvien.Name = "Tenthanhvien";
+            Tenthanhvien.Width = 150;
             // 
             // Loai
             // 
@@ -86,7 +94,7 @@
             Chitiet.HeaderText = "Chi tiết";
             Chitiet.MinimumWidth = 6;
             Chitiet.Name = "Chitiet";
-            Chitiet.Width = 250;
+            Chitiet.Width = 215;
             // 
             // Thoigian
             // 
@@ -152,6 +160,7 @@
             cbxFilter.Name = "cbxFilter";
             cbxFilter.Size = new Size(147, 29);
             cbxFilter.TabIndex = 6;
+            cbxFilter.SelectedIndexChanged += onChange;
             // 
             // Lichsuhoatdong
             // 
@@ -178,12 +187,13 @@
         private Label label1;
         private TextBox FindTbx;
         private Button FindBtn;
+        private FlowLayoutPanel flowLayoutPanel1;
+        private ComboBox cbxFilter;
         private DataGridViewTextBoxColumn ID;
-        private DataGridViewTextBoxColumn Thanhvien;
+        private DataGridViewTextBoxColumn Mathanhvien;
+        private DataGridViewTextBoxColumn Tenthanhvien;
         private DataGridViewTextBoxColumn Loai;
         private DataGridViewTextBoxColumn Chitiet;
         private DataGridViewTextBoxColumn Thoigian;
-        private FlowLayoutPanel flowLayoutPanel1;
-        private ComboBox cbxFilter;
     }
 }

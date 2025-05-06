@@ -37,5 +37,11 @@ namespace Doanc_sharp.src.BUS
         {
             viPhamDAO.DeleteViPham(maViPham);
         }
+        public Boolean XulyViPham(string maViPham)
+        {
+            if (maViPham == null)
+                return false;
+            return viPhamDAO.XulyViPham(maViPham);
+        }
     }
 }

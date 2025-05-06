@@ -7,7 +7,7 @@ namespace Doanc_sharp.src.DAO
     internal class ViPhamDAO
     {
         private DbConnection dbConnection;
-        public ViPhamDAO() 
+        public ViPhamDAO()
         {
             dbConnection = new DbConnection();
         }
@@ -48,6 +48,12 @@ namespace Doanc_sharp.src.DAO
         public Boolean DeleteViPham(string MaViPham)
         {
             string query = $"DELETE FROM vipham WHERE Mavipham = '{MaViPham}'";
+            return dbConnection.ExecuteNonQuery(query) > 0;
+        }
+
+        public Boolean XulyViPham(string MaViPham)
+        {
+            string query = $"UPDATE thanhvienvipham SET Trangthai = 'Đã xử lý' WHERE Mavipham = '{MaViPham}'";
             return dbConnection.ExecuteNonQuery(query) > 0;
         }
     }

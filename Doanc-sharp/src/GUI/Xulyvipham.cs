@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Doanc_sharp.src.BUS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,14 +13,17 @@ namespace Doanc_sharp
 {
     public partial class Xulyvipham : Form
     {
+        ViPhamBUS viPhamBUS = new ViPhamBUS();
+        String Mavp;
         public Xulyvipham(string[] data)
         {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
-            //TvvpCbx.SelectedIndex = TvvpCbx.FindStringExact(data[0]);
+            TvvpTbx.Text = data[0];
             TenvpTbx.Text = data[1];
             MotaTbx.Text = data[2];
             TrangthaiCbx.SelectedIndex = data[3] == "chua xu ly" ? 0 : 1;
+            Mavp = data[4];
         }
 
         private void ThoatBtn_Click(object sender, EventArgs e)
@@ -34,7 +38,11 @@ namespace Doanc_sharp
 
         private void XulyBtn_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Xử lý thành công(Thực ra chưa làm)");
+            if (viPhamBUS.XulyViPham(Mavp))
+                MessageBox.Show("Xử lý thành công");
+            else
+                MessageBox.Show("Xử lý thất bại");
+            this.Close();
         }
     }
 }

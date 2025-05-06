@@ -1,3 +1,5 @@
+using Doanc_sharp.src.BUS;
+using Doanc_sharp.src.DAO;
 using System;
 
 namespace Doanc_sharp.src.DTO
@@ -5,6 +7,7 @@ namespace Doanc_sharp.src.DTO
     internal class LSHoatDongDTO
     {
         public int MaThanhVien { get; set; }
+        public ThanhVienDTO thanhVienDTO { get; set; }
         public int MaHoatDong { get; set; }
         public string? Loai { get; set; }
         public string? ChiTiet { get; set; }

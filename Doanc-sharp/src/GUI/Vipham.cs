@@ -41,11 +41,17 @@ namespace Doanc_sharp
                 DataGridViewRow selectedRow = dataGridView1.SelectedRows[0]; // Lấy dòng đầu tiên được chọn
                                                                              // Bạn có thể lấy dữ liệu từ dòng nếu cần, ví dụ:
                                                                              // string maViPham = selectedRow.Cells["ma_vipham"].Value.ToString();
-                string[] data = new string[4];
+                if (selectedRow.Cells["trangthai"].Value.ToString().ToLower().Equals("Đã xử lý"))
+                {
+                    MessageBox.Show("Vi phạm này đã được xử lý. Vui lòng chọn vi phạm khác");
+                    return;
+                }
+                string[] data = new string[5];
                 data[0] = selectedRow.Cells["thanhvien"].Value.ToString();
                 data[1] = selectedRow.Cells["tenvipham"].Value.ToString();
                 data[2] = selectedRow.Cells["mota"].Value.ToString();
                 data[3] = selectedRow.Cells["trangthai"].Value.ToString();
+                data[4] = selectedRow.Cells["ID"].Value.ToString();
 
                 Xulyvipham xulyViPhamForm = new Xulyvipham(data);
                 xulyViPhamForm.ShowDialog();
