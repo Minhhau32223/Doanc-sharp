@@ -43,6 +43,13 @@ namespace Doanc_sharp.src.BUS
         public PhieuMuonDTO Timkiemtheoma(int maphieumuon) {
             return phieuMuonDAO.Timkiemtheoma(maphieumuon);
         }
-        
+        public List<Tuple<DateTime, int>> LayDuLieuLuotMuon(DateTime tuNgay, DateTime denNgay)
+        {
+            return phieuMuonDAO.LayDuLieuLuotMuon(tuNgay, denNgay);
+        }
+        public List<Tuple<DateTime, decimal>>LayDuLieuDoanhThu(DateTime tuNgay, DateTime denNgay)
+        {
+            return phieuMuonDAO.LayDuLieuDoanhThu(tuNgay, denNgay) ;
+        }
     }
 }

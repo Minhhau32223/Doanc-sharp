@@ -47,5 +47,10 @@ namespace Doanc_sharp.src.BUS
             return lsHoatDongDAO.customExecuteQuery(query);
         }
 
+        public List<Tuple<DateTime, int>> LayDuLieuLuotVao(DateTime tuNgay, DateTime denNgay)
+        {
+            return lsHoatDongDAO.LayDuLieuLuotVao(tuNgay, denNgay);
+        }
+
     }
 }

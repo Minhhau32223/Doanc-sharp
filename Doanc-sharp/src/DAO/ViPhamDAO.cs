@@ -50,5 +50,12 @@ namespace Doanc_sharp.src.DAO
             string query = $"DELETE FROM vipham WHERE Mavipham = '{MaViPham}'";
             return dbConnection.ExecuteNonQuery(query) > 0;
         }
+        public int countViPham()
+        {
+            int count = 0;
+            string query = "SELECT COUNT(tv.Mathanhvien) from thanhvien tv, thanhvienvipham tvvp WHERE tv.Mathanhvien=tvvp.Mathanhvien AND tv.is_delete=0 AND tvvp.is_delete=0";
+            count = Convert.ToInt32 (dbConnection.ExecuteScalar(query));
+            return count;
+        }
     }
 }

@@ -47,6 +47,13 @@ namespace Doanc_sharp.src.BUS
         {
             return thietBiDAO.TimKiemTheoMa(mathietbi);
         }
-        
+        public int countThietBi()
+        {
+            return thietBiDAO.count();
+        }
+        public int countThietBiDaThue()
+        {
+            return thietBiDAO.countDaThue();
+        }
     }
 }

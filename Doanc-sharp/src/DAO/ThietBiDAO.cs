@@ -78,5 +78,20 @@ namespace Doanc_sharp.src.DAO
 
             return db.ExecuteQuery(query);
         }
+
+        public int countDaThue()
+        {
+            int count = 0;
+            string query = "SELECT COUNT(Mathietbi) from thietbi WHERE is_delete=0 AND Trangthai='Đang thuê'";
+            count = Convert.ToInt32(db.ExecuteScalar(query));
+            return count;
+        }
+        public int count()
+        {
+            int count = 0;
+            string query = "SELECT COUNT(Mathietbi) from thietbi WHERE is_delete=0";
+            count = Convert.ToInt32(db.ExecuteScalar(query));
+            return count;
+        }
     }
 }

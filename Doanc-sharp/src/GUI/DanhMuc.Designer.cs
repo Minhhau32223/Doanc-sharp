@@ -106,7 +106,7 @@
             // Mota
             // 
             Mota.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            Mota.DataPropertyName = "Mota";
+            Mota.DataPropertyName = "Danhmuc";
             Mota.HeaderText = "Mô tả";
             Mota.MinimumWidth = 6;
             Mota.Name = "Mota";

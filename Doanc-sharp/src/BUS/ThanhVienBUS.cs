@@ -61,5 +61,9 @@ namespace Doanc_sharp.src.BUS
         {
             return thanhVienDAO.TimThanhVienTheoMa(maThanhVien);
         }
+        public int countThanhVien()
+        {
+            return thanhVienDAO.count();
+        }
     }
 }

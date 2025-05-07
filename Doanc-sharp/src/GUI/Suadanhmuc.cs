@@ -35,7 +35,7 @@ namespace Doanc_sharp
             DanhMucDTO dm = new DanhMucDTO();
             dm.Madanhmuc = MaDM;
             dm.Tendanhmuc = TenTbx.Text;
-            dm.Mota = MotaTbx.Text;
+            dm.Danhmuc = MotaTbx.Text;
 
             MessageBox.Show(dm.Madanhmuc);
             DanhMucBus = new DanhMucBUS();

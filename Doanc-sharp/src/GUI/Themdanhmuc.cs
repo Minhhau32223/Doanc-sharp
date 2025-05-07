@@ -29,7 +29,7 @@ namespace Doanc_sharp
         {
             DanhMucDTO dm = new DanhMucDTO();
             dm.Tendanhmuc = TenTbx.Text;
-            dm.Mota = MotaTbx.Text;
+            dm.Danhmuc = MotaTbx.Text;
 
             DanhMucBus = new DanhMucBUS();
             Boolean temp = DanhMucBus.ThemDanhMuc(dm);

@@ -10,15 +10,15 @@ namespace Doanc_sharp.src.DTO
     {
         public string Madanhmuc { get; set; }
         public string Tendanhmuc { get; set; }
-        public string Mota { get; set; }
+        public string Danhmuc { get; set; }
 
         public DanhMucDTO() { }
 
-        public DanhMucDTO(string madm, string tendm, string mota)
+        public DanhMucDTO(string madm, string tendm, string danhmuc)
         {
             Madanhmuc = madm;
             Tendanhmuc = tendm;
-            Mota = mota;
+            Danhmuc = danhmuc;
         }
     }
 }

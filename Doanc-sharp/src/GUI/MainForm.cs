@@ -75,7 +75,10 @@ namespace Doanc_sharp
 
             }
         }
+        public void FakeMenuClick(string action)
+        {
+            Leftmenu1_ButtonClicked(this, action);
+        }
 
-        
     }
 }

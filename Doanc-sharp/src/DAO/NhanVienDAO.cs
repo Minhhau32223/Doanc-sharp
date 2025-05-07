@@ -47,6 +47,14 @@ namespace Doanc_sharp.src.DAO
             return list;
         }
 
+        public int count()
+        {
+            int count = 0;
+            string query = "SELECT COUNT(Manhanvien) FROM nhanvien WHERE is_delete=0";
+            count = Convert.ToInt32( db.ExecuteScalar(query));
+            return count;
+        }
+
         
     }
 

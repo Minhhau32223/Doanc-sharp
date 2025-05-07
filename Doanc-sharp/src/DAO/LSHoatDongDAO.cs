@@ -1,5 +1,6 @@
 ﻿using Doanc_sharp.src.DTO;
 using Doanc_sharp.src.Helpers;
+using MySql.Data.MySqlClient;
 using System.Data;
 
 namespace Doanc_sharp.src.DAO
@@ -52,6 +53,27 @@ namespace Doanc_sharp.src.DAO
         {
             string query = $"DELETE FROM lichsuhoatdong WHERE MaThanhVien = {maThanhVien} AND MaHoatDong = {maHoatDong}";
             return dbConnection.ExecuteNonQuery(query);
+        }
+
+        // Lấy dữ liệu để thống kê lượt vào
+        public List<Tuple<DateTime, int>> LayDuLieuLuotVao(DateTime tuNgay, DateTime denNgay)
+        {
+            List<Tuple<DateTime, int>> data = new List<Tuple<DateTime, int>>();
+            string query = "SELECT Thoigian, COUNT(*) as SoLuot from lichsuhoatdong WHERE Loai='Vào thư quán' AND is_delete=0 AND Thoigian BETWEEN @tuNgay AND @denNgay GROUP BY Thoigian ORDER BY Thoigian";
+            MySqlConnection conn = dbConnection.GetConnection();    
+            conn.Open();
+            MySqlCommand cmd = new MySqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("@tuNgay", tuNgay.ToString("yyyy-MM-dd"));
+            cmd.Parameters.AddWithValue("@denNgay", denNgay.ToString("yyyy-MM-dd"));
+            MySqlDataReader reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                DateTime ngay = reader.GetDateTime("Thoigian");
+                int soLuot = reader.GetInt32("SoLuot");
+                data.Add(Tuple.Create(ngay, soLuot));
+            }
+            conn.Close();
+            return data;
         }
     }
 }

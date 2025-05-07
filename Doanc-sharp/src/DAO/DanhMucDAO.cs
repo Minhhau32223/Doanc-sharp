@@ -32,7 +32,7 @@ namespace Doanc_sharp.src.DAO
                 {
                     Madanhmuc = row["Madanhmuc"].ToString(),
                     Tendanhmuc = row["Tendanhmuc"].ToString(),
-                    Mota = row["Mota"].ToString()
+                    Danhmuc = row["Danhmuc"].ToString()
                 };
 
                 list.Add(dm);
@@ -50,7 +50,7 @@ namespace Doanc_sharp.src.DAO
             conn.Open();
             MySqlCommand cmd = new MySqlCommand(query, conn);
             cmd.Parameters.AddWithValue("@ten", dm.Tendanhmuc);
-            cmd.Parameters.AddWithValue("@mota", dm.Mota);
+            cmd.Parameters.AddWithValue("@mota", dm.Danhmuc);
             cmd.Parameters.AddWithValue("@maDM", MaDM);
             int result = cmd.ExecuteNonQuery();
 
@@ -74,7 +74,7 @@ namespace Doanc_sharp.src.DAO
             conn.Open();
             MySqlCommand cmd = new MySqlCommand(query,conn);
             cmd.Parameters.AddWithValue("@ten", dm.Tendanhmuc);
-            cmd.Parameters.AddWithValue("@mota", dm.Mota);
+            cmd.Parameters.AddWithValue("@mota", dm.Danhmuc);
             cmd.Parameters.AddWithValue("@maDM", dm.Madanhmuc);
             int result = cmd.ExecuteNonQuery();
 

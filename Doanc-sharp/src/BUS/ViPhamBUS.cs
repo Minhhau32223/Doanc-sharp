@@ -37,5 +37,9 @@ namespace Doanc_sharp.src.BUS
         {
             viPhamDAO.DeleteViPham(maViPham);
         }
+        public int countViPham()
+        {
+            return viPhamDAO.countViPham();
+        }
     }
 }

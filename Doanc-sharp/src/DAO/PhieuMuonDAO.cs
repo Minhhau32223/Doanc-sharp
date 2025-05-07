@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Doanc_sharp.src.DTO;
 using Doanc_sharp.src.Helpers;
+using MySql.Data.MySqlClient;
 
 namespace Doanc_sharp.src.DAO
 {
@@ -104,6 +105,55 @@ namespace Doanc_sharp.src.DAO
             }
 
             return list;
+        }
+
+        public List<Tuple<DateTime, int>> LayDuLieuLuotMuon(DateTime tuNgay, DateTime denNgay)
+        {
+            List<Tuple<DateTime, int>> data = new List<Tuple<DateTime, int>>();
+            string query = "SELECT DATE(Ngaymuon) AS Ngaymuon, COUNT(*) as SoLuot FROM phieumuon WHERE is_delete=0 AND Ngaymuon >= @tuNgay AND Ngaymuon <= @denNgay GROUP BY DATE(Ngaymuon) ORDER BY Ngaymuon";
+            MySqlConnection conn = db.GetConnection();
+            conn.Open();
+            MySqlCommand cmd = new MySqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("@tuNgay", tuNgay);
+            cmd.Parameters.AddWithValue("@denNgay", denNgay.AddDays(1).AddSeconds(-1));
+            MySqlDataReader reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                DateTime ngay = reader.GetDateTime("Ngaymuon");
+                int soLuot = reader.GetInt32("SoLuot");
+                data.Add(Tuple.Create(ngay, soLuot));
+            }
+            conn.Close();   
+            return data;
+        }
+
+        public List<Tuple<DateTime,decimal>>LayDuLieuDoanhThu(DateTime tuNgay, DateTime denNgay)
+        {
+            List<Tuple<DateTime, decimal>> data = new List<Tuple<DateTime, decimal>>();
+            string query = "SELECT pm.Ngaymuon, SUM(tb.Giathue * ct.Soluong * " +
+                "CASE WHEN DATEDIFF(pm.Ngaytra, pm.Ngaymuon) <= 0 THEN 1 " +
+                "     ELSE DATEDIFF(pm.Ngaytra, pm.Ngaymuon) " +
+                "END) AS DoanhThu  " +
+                "FROM phieumuon pm " +
+                "JOIN chitietphieumuon ct ON ct.Maphieumuon=pm.Maphieumuon " +
+                "JOIN thietbi tb ON tb.Mathietbi=ct.Mathietbi " +
+                "WHERE pm.Ngaymuon BETWEEN @tuNgay AND @denNgay " +
+                "AND pm.is_delete=0 AND tb.is_delete=0 " +
+                "GROUP BY pm.Ngaymuon " +
+                "ORDER BY pm.Ngaymuon";
+            MySqlConnection conn = db.GetConnection(); conn.Open();
+            MySqlCommand cmd = new MySqlCommand( query, conn);
+            cmd.Parameters.AddWithValue("@tuNgay", tuNgay);
+            cmd.Parameters.AddWithValue("@denNgay", denNgay.AddDays(1).AddSeconds(-1));
+            MySqlDataReader reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                DateTime ngay = reader.GetDateTime("Ngaymuon");
+                decimal doanhThu = reader.GetDecimal("DoanhThu");
+                data.Add(Tuple.Create(ngay, doanhThu));
+            }
+            conn.Close();
+            return data;
         }
     }
 }

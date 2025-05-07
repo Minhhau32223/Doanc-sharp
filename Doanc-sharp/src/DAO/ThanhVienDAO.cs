@@ -161,6 +161,13 @@ namespace Doanc_sharp.src.DAO
                 throw new Exception("Lỗi khi tìm thành viên theo mã: " + ex.Message);
             }
         }
+        public int count()
+        {
+            int count = 0;
+            string query = "SELECT COUNT(Mathanhvien) FROM thanhvien WHERE is_delete=0";
+            count = Convert.ToInt32(db.ExecuteScalar(query));
+            return count;
+        }
 
     }
 }

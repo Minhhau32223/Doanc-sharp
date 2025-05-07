@@ -31,7 +31,7 @@ namespace Doanc_sharp.src.BUS
             }
             catch (Exception ex)
             {
-
+                MessageBox.Show("Lỗi: " + ex.Message);
             }
             return dsdm;
         }

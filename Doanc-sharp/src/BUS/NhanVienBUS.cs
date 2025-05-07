@@ -39,7 +39,11 @@ namespace Doanc_sharp.src.BUS
 
             return dsnv;
         }
-        
+        public int countNhanVien()
+        {
+            dao = new NhanVienDAO();
+            return dao.count();
+        }
 
     }
 }
