@@ -18,22 +18,18 @@ namespace Doanc_sharp
         public Xulyvipham(string[] data)
         {
             InitializeComponent();
+            comboBox1.SelectedIndex = 0;
             this.StartPosition = FormStartPosition.CenterScreen;
             TvvpTbx.Text = data[0];
             TenvpTbx.Text = data[1];
             MotaTbx.Text = data[2];
-            TrangthaiCbx.SelectedIndex = data[3] == "chua xu ly" ? 0 : 1;
+            TrangthaiCbx.SelectedIndex = data[3] == "Chua xu ly" ? 0 : 1;
             Mavp = data[4];
         }
 
         private void ThoatBtn_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn thoát?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-            if (result == DialogResult.Yes)
-            {
-                this.Close();
-            }
+            this.Close();
         }
 
         private void XulyBtn_Click(object sender, EventArgs e)

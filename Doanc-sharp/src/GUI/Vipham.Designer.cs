@@ -36,6 +36,7 @@
             Thanhvien = new DataGridViewTextBoxColumn();
             Tenvipham = new DataGridViewTextBoxColumn();
             Mota = new DataGridViewTextBoxColumn();
+            Ngayvp = new DataGridViewTextBoxColumn();
             Trangthai = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -44,7 +45,7 @@
             // 
             dataGridView1.BackgroundColor = SystemColors.ControlLightLight;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { ID, Thanhvien, Tenvipham, Mota, Trangthai });
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { ID, Thanhvien, Tenvipham, Mota, Ngayvp, Trangthai });
             dataGridView1.Location = new Point(31, 62);
             dataGridView1.Margin = new Padding(3, 2, 3, 2);
             dataGridView1.Name = "dataGridView1";
@@ -89,52 +90,66 @@
             // 
             // ID
             // 
-            ID.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            ID.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             ID.DataPropertyName = "Mavipham";
-            ID.FillWeight = 25.3807087F;
+            ID.FillWeight = 376.2886F;
             ID.HeaderText = "ID";
-            ID.MinimumWidth = 6;
+            ID.MinimumWidth = 100;
             ID.Name = "ID";
-            ID.Resizable = DataGridViewTriState.False;
+            ID.ReadOnly = true;
+            ID.Resizable = DataGridViewTriState.True;
             // 
             // Thanhvien
             // 
-            Thanhvien.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            Thanhvien.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             Thanhvien.DataPropertyName = "Hoten";
-            Thanhvien.FillWeight = 118.654808F;
+            Thanhvien.FillWeight = 30.92784F;
             Thanhvien.HeaderText = "Thành viên";
-            Thanhvien.MinimumWidth = 6;
+            Thanhvien.MinimumWidth = 150;
             Thanhvien.Name = "Thanhvien";
             Thanhvien.Resizable = DataGridViewTriState.False;
+            Thanhvien.Width = 150;
             // 
             // Tenvipham
             // 
-            Tenvipham.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            Tenvipham.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             Tenvipham.DataPropertyName = "Tenvipham";
-            Tenvipham.FillWeight = 118.654808F;
+            Tenvipham.FillWeight = 30.92784F;
             Tenvipham.HeaderText = "Tên vi phạm";
-            Tenvipham.MinimumWidth = 6;
+            Tenvipham.MinimumWidth = 150;
             Tenvipham.Name = "Tenvipham";
             Tenvipham.Resizable = DataGridViewTriState.False;
+            Tenvipham.Width = 150;
             // 
             // Mota
             // 
-            Mota.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            Mota.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             Mota.DataPropertyName = "Mota";
-            Mota.FillWeight = 118.654808F;
+            Mota.FillWeight = 30.92784F;
             Mota.HeaderText = "Mô tả";
-            Mota.MinimumWidth = 6;
+            Mota.MinimumWidth = 200;
             Mota.Name = "Mota";
+            Mota.Width = 200;
+            // 
+            // Ngayvp
+            // 
+            Ngayvp.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            Ngayvp.DataPropertyName = "Ngayvp";
+            Ngayvp.HeaderText = "Ngày vi phạm";
+            Ngayvp.MinimumWidth = 100;
+            Ngayvp.Name = "Ngayvp";
+            Ngayvp.Width = 106;
             // 
             // Trangthai
             // 
-            Trangthai.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            Trangthai.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             Trangthai.DataPropertyName = "Trangthai";
-            Trangthai.FillWeight = 118.654808F;
+            Trangthai.FillWeight = 30.92784F;
             Trangthai.HeaderText = "Trạng thái";
-            Trangthai.MinimumWidth = 6;
+            Trangthai.MinimumWidth = 85;
             Trangthai.Name = "Trangthai";
             Trangthai.Resizable = DataGridViewTriState.False;
+            Trangthai.Width = 85;
             // 
             // Vipham
             // 
@@ -163,6 +178,7 @@
         private DataGridViewTextBoxColumn Thanhvien;
         private DataGridViewTextBoxColumn Tenvipham;
         private DataGridViewTextBoxColumn Mota;
+        private DataGridViewTextBoxColumn Ngayvp;
         private DataGridViewTextBoxColumn Trangthai;
     }
 }

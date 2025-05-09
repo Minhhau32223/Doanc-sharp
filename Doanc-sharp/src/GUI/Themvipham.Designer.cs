@@ -28,39 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
-            TrangthaiCbx = new ComboBox();
             panel1 = new Panel();
             label1 = new Label();
-            label5 = new Label();
-            label4 = new Label();
             label3 = new Label();
             label2 = new Label();
             XacnhanBtn = new Button();
             ThoatBtn = new Button();
-            MotaTbx = new TextBox();
-            TenvpTbx = new TextBox();
             TvvpCbx = new ComboBox();
+            ViPhamCbx = new ComboBox();
+            label4 = new Label();
+            label5 = new Label();
+            tenVPTbx = new TextBox();
+            moTaTbx = new TextBox();
+            TVPChb = new CheckBox();
             panel1.SuspendLayout();
             SuspendLayout();
-            // 
-            // TrangthaiCbx
-            // 
-            TrangthaiCbx.FormattingEnabled = true;
-            TrangthaiCbx.Items.AddRange(new object[] { "Chưa xử lý", "Đã xử lý" });
-            TrangthaiCbx.Location = new Point(317, 207);
-            TrangthaiCbx.Margin = new Padding(3, 2, 3, 2);
-            TrangthaiCbx.Name = "TrangthaiCbx";
-            TrangthaiCbx.Size = new Size(297, 23);
-            TrangthaiCbx.TabIndex = 20;
             // 
             // panel1
             // 
             panel1.BackColor = Color.NavajoWhite;
             panel1.Controls.Add(label1);
             panel1.Location = new Point(-1, -1);
-            panel1.Margin = new Padding(3, 2, 3, 2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(702, 71);
+            panel1.Size = new Size(802, 95);
             panel1.TabIndex = 16;
             // 
             // label1
@@ -68,49 +58,29 @@
             label1.AutoSize = true;
             label1.Font = new Font("Times New Roman", 25.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.Red;
-            label1.Location = new Point(27, 16);
+            label1.Location = new Point(31, 21);
             label1.Name = "label1";
-            label1.Size = new Size(229, 40);
+            label1.Size = new Size(291, 51);
             label1.TabIndex = 0;
             label1.Text = "Thêm vi phạm";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Times New Roman", 13.8F);
-            label5.Location = new Point(91, 208);
-            label5.Name = "label5";
-            label5.Size = new Size(88, 21);
-            label5.TabIndex = 23;
-            label5.Text = "Trạng thái:";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Times New Roman", 13.8F);
-            label4.Location = new Point(91, 170);
-            label4.Name = "label4";
-            label4.Size = new Size(58, 21);
-            label4.TabIndex = 24;
-            label4.Text = "Mô tả:";
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Times New Roman", 13.8F);
-            label3.Location = new Point(91, 134);
+            label3.Location = new Point(104, 179);
             label3.Name = "label3";
-            label3.Size = new Size(107, 21);
+            label3.Size = new Size(97, 26);
             label3.TabIndex = 25;
-            label3.Text = "Tên vi phạm:";
+            label3.Text = "Vi phạm:";
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Times New Roman", 13.8F);
-            label2.Location = new Point(91, 97);
+            label2.Location = new Point(104, 129);
             label2.Name = "label2";
-            label2.Size = new Size(160, 21);
+            label2.Size = new Size(206, 26);
             label2.TabIndex = 26;
             label2.Text = "Thành viên vi phạm:";
             // 
@@ -119,10 +89,9 @@
             XacnhanBtn.BackColor = Color.Green;
             XacnhanBtn.Font = new Font("Sitka Text", 16.1999989F, FontStyle.Bold, GraphicsUnit.Point, 0);
             XacnhanBtn.ForeColor = SystemColors.ButtonHighlight;
-            XacnhanBtn.Location = new Point(396, 272);
-            XacnhanBtn.Margin = new Padding(3, 2, 3, 2);
+            XacnhanBtn.Location = new Point(453, 363);
             XacnhanBtn.Name = "XacnhanBtn";
-            XacnhanBtn.Size = new Size(218, 52);
+            XacnhanBtn.Size = new Size(249, 69);
             XacnhanBtn.TabIndex = 21;
             XacnhanBtn.Text = "&Xác nhận";
             XacnhanBtn.UseVisualStyleBackColor = false;
@@ -133,58 +102,98 @@
             ThoatBtn.BackColor = Color.Red;
             ThoatBtn.Font = new Font("Sitka Text", 16.1999989F, FontStyle.Bold, GraphicsUnit.Point, 0);
             ThoatBtn.ForeColor = SystemColors.ButtonHighlight;
-            ThoatBtn.Location = new Point(91, 272);
-            ThoatBtn.Margin = new Padding(3, 2, 3, 2);
+            ThoatBtn.Location = new Point(104, 363);
             ThoatBtn.Name = "ThoatBtn";
-            ThoatBtn.Size = new Size(218, 52);
+            ThoatBtn.Size = new Size(249, 69);
             ThoatBtn.TabIndex = 22;
             ThoatBtn.Text = "&Thoát";
             ThoatBtn.UseVisualStyleBackColor = false;
             ThoatBtn.Click += ThoatBtn_Click;
             // 
-            // MotaTbx
-            // 
-            MotaTbx.Location = new Point(317, 170);
-            MotaTbx.Margin = new Padding(3, 2, 3, 2);
-            MotaTbx.Name = "MotaTbx";
-            MotaTbx.Size = new Size(297, 23);
-            MotaTbx.TabIndex = 17;
-            // 
-            // TenvpTbx
-            // 
-            TenvpTbx.Location = new Point(317, 134);
-            TenvpTbx.Margin = new Padding(3, 2, 3, 2);
-            TenvpTbx.Name = "TenvpTbx";
-            TenvpTbx.Size = new Size(297, 23);
-            TenvpTbx.TabIndex = 18;
-            // 
             // TvvpCbx
             // 
             TvvpCbx.FormattingEnabled = true;
-            TvvpCbx.Location = new Point(317, 98);
-            TvvpCbx.Margin = new Padding(3, 2, 3, 2);
+            TvvpCbx.Location = new Point(362, 131);
             TvvpCbx.Name = "TvvpCbx";
-            TvvpCbx.Size = new Size(297, 23);
+            TvvpCbx.Size = new Size(339, 28);
             TvvpCbx.TabIndex = 27;
+            // 
+            // ViPhamCbx
+            // 
+            ViPhamCbx.FormattingEnabled = true;
+            ViPhamCbx.Location = new Point(362, 180);
+            ViPhamCbx.Name = "ViPhamCbx";
+            ViPhamCbx.Size = new Size(339, 28);
+            ViPhamCbx.TabIndex = 28;
+            ViPhamCbx.SelectedIndexChanged += onChange;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Times New Roman", 13.8F);
+            label4.Location = new Point(104, 249);
+            label4.Name = "label4";
+            label4.Size = new Size(136, 26);
+            label4.TabIndex = 29;
+            label4.Text = "Tên vi phạm:";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Times New Roman", 13.8F);
+            label5.Location = new Point(104, 299);
+            label5.Name = "label5";
+            label5.Size = new Size(71, 26);
+            label5.TabIndex = 30;
+            label5.Text = "Mô tả:";
+            // 
+            // tenVPTbx
+            // 
+            tenVPTbx.Enabled = false;
+            tenVPTbx.Location = new Point(362, 251);
+            tenVPTbx.Margin = new Padding(3, 4, 3, 4);
+            tenVPTbx.Name = "tenVPTbx";
+            tenVPTbx.Size = new Size(339, 27);
+            tenVPTbx.TabIndex = 31;
+            // 
+            // moTaTbx
+            // 
+            moTaTbx.Enabled = false;
+            moTaTbx.Location = new Point(362, 300);
+            moTaTbx.Margin = new Padding(3, 4, 3, 4);
+            moTaTbx.Name = "moTaTbx";
+            moTaTbx.Size = new Size(339, 27);
+            moTaTbx.TabIndex = 32;
+            // 
+            // TVPChb
+            // 
+            TVPChb.AutoSize = true;
+            TVPChb.Location = new Point(104, 222);
+            TVPChb.Name = "TVPChb";
+            TVPChb.Size = new Size(191, 24);
+            TVPChb.TabIndex = 33;
+            TVPChb.Text = "Hoặc thêm vi phạm mới";
+            TVPChb.UseVisualStyleBackColor = true;
+            TVPChb.CheckedChanged += onCheck;
             // 
             // Themvipham
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Bisque;
-            ClientSize = new Size(700, 377);
-            Controls.Add(TvvpCbx);
-            Controls.Add(TrangthaiCbx);
-            Controls.Add(panel1);
+            ClientSize = new Size(800, 503);
+            Controls.Add(TVPChb);
+            Controls.Add(moTaTbx);
+            Controls.Add(tenVPTbx);
             Controls.Add(label5);
             Controls.Add(label4);
+            Controls.Add(ViPhamCbx);
+            Controls.Add(TvvpCbx);
+            Controls.Add(panel1);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(XacnhanBtn);
             Controls.Add(ThoatBtn);
-            Controls.Add(MotaTbx);
-            Controls.Add(TenvpTbx);
-            Margin = new Padding(3, 2, 3, 2);
             Name = "Themvipham";
             Text = "Thêm vi phạm";
             panel1.ResumeLayout(false);
@@ -194,18 +203,18 @@
         }
 
         #endregion
-
-        private ComboBox TrangthaiCbx;
         private Panel panel1;
         private Label label1;
-        private Label label5;
-        private Label label4;
         private Label label3;
         private Label label2;
         private Button XacnhanBtn;
         private Button ThoatBtn;
-        private TextBox MotaTbx;
-        private TextBox TenvpTbx;
         private ComboBox TvvpCbx;
+        private ComboBox ViPhamCbx;
+        private Label label4;
+        private Label label5;
+        private TextBox tenVPTbx;
+        private TextBox moTaTbx;
+        private CheckBox TVPChb;
     }
 }

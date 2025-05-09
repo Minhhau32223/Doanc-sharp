@@ -156,6 +156,7 @@
             // 
             // comboBox1
             // 
+            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBox1.FormattingEnabled = true;
             comboBox1.Items.AddRange(new object[] { "Cảnh cáo", "Khóa thẻ 1 ngày", "Khóa thẻ 3 ngày", "Khóa thẻ 7 ngày", "Khóa thẻ 1 tháng", "Khóa thẻ 1 năm", "Khóa thẻ vĩnh viễn" });
             comboBox1.Location = new Point(317, 245);

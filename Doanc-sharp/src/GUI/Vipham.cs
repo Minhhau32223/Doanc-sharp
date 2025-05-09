@@ -19,6 +19,8 @@ namespace Doanc_sharp
         public Vipham()
         {
             InitializeComponent();
+
+
             LoadData();
         }
 
@@ -32,6 +34,7 @@ namespace Doanc_sharp
         {
             Themvipham addViPhamForm = new Themvipham();
             addViPhamForm.ShowDialog();
+            LoadData();
         }
 
         private void XulyBtn_Click(object sender, EventArgs e)
@@ -41,7 +44,7 @@ namespace Doanc_sharp
                 DataGridViewRow selectedRow = dataGridView1.SelectedRows[0]; // Lấy dòng đầu tiên được chọn
                                                                              // Bạn có thể lấy dữ liệu từ dòng nếu cần, ví dụ:
                                                                              // string maViPham = selectedRow.Cells["ma_vipham"].Value.ToString();
-                if (selectedRow.Cells["trangthai"].Value.ToString().ToLower().Equals("Đã xử lý"))
+                if (selectedRow.Cells["Trangthai"].Value.ToString() == "Da xu ly")
                 {
                     MessageBox.Show("Vi phạm này đã được xử lý. Vui lòng chọn vi phạm khác");
                     return;
@@ -55,6 +58,7 @@ namespace Doanc_sharp
 
                 Xulyvipham xulyViPhamForm = new Xulyvipham(data);
                 xulyViPhamForm.ShowDialog();
+                LoadData(); // Tải lại dữ liệu sau khi xử lý
             }
             else
             {

@@ -14,11 +14,31 @@ namespace Doanc_sharp.src.DAO
 
         public DataTable GetAllViPham()
         {
-            string query = "SELECT tvvp.Mavipham, tv.HoTen, vp.Tenvipham, vp.Mota, tvvp.Trangthai " +
+            string query = "SELECT tvvp.Mavipham, tv.HoTen, vp.Tenvipham, vp.Mota, tvvp.Ngayvp, tvvp.Trangthai " +
                           "FROM Thanhvienvipham tvvp " +
                           "LEFT JOIN thanhvien tv ON tvvp.MaThanhVien = tv.Mathanhvien " +
                           "LEFT JOIN vipham vp ON tvvp.Mavipham = vp.Mavipham";
             return dbConnection.ExecuteQuery(query);
+        }
+
+        public List<ViPhamDTO> GetAllViPhamNotTvvp()
+        {
+            string query = "SELECT * FROM vipham WHERE is_delete=0";
+            DataTable dataTable = dbConnection.ExecuteQuery(query);
+
+            List<ViPhamDTO> viPhamList = new List<ViPhamDTO>();
+            foreach (DataRow row in dataTable.Rows)
+            {
+                ViPhamDTO viPham = new ViPhamDTO
+                {
+                    MaViPham = row["Mavipham"].ToString(),
+                    TenViPham = row["Tenvipham"].ToString(),
+                    MoTa = row["Mota"].ToString()
+                };
+                viPhamList.Add(viPham);
+            }
+
+            return viPhamList;
         }
 
         public ViPhamDTO GetViPhamById(int id)
@@ -33,9 +53,17 @@ namespace Doanc_sharp.src.DAO
             };
         }
 
-        public Boolean InsertViPham(ViPhamDTO viPham)
+        public Boolean InsertViPham(NhanVienDTO nv, ViPhamDTO viPham)
         {
-            string query = $"INSERT INTO vipham (Mavipham, Tenvipham, Mota) VALUES ('{viPham.MaViPham}', '{viPham.TenViPham}', '{viPham.MoTa}')";
+            string query = $"INSERT INTO vipham (Manhanvien, Mavipham, Tenvipham, Mota, is_delete) VALUES ('{nv.Manhanvien}' ,'{viPham.MaViPham}', '{viPham.TenViPham}', '{viPham.MoTa}', '0')";
+            return dbConnection.ExecuteNonQuery(query) > 0;
+        }
+
+        public Boolean InsertTVVP(ThanhVienDTO tv, ViPhamDTO viPham, DateTime time)
+        {
+            string formattedTime = time.ToString("yyyy-MM-dd HH:mm:ss"); // Định dạng chuẩn cho MariaDB
+            string query = $"INSERT INTO thanhvienvipham (Mathanhvien, Mavipham, Ngayvp, Trangthai, is_delete) " +
+                           $"VALUES ('{tv.Mathanhvien}', '{viPham.MaViPham}', '{formattedTime}', 'Chua xu ly', '0')";
             return dbConnection.ExecuteNonQuery(query) > 0;
         }
 
@@ -53,7 +81,7 @@ namespace Doanc_sharp.src.DAO
 
         public Boolean XulyViPham(string MaViPham)
         {
-            string query = $"UPDATE thanhvienvipham SET Trangthai = 'Đã xử lý' WHERE Mavipham = '{MaViPham}'";
+            string query = $"UPDATE thanhvienvipham SET Trangthai = 'Da xu ly' WHERE Mavipham = '{MaViPham}'";
             return dbConnection.ExecuteNonQuery(query) > 0;
         }
     }

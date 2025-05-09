@@ -18,14 +18,24 @@ namespace Doanc_sharp.src.BUS
             return viPhamDAO.GetAllViPham();
         }
 
+        public List<ViPhamDTO> GetAllViPhamNotTvvp()
+        {
+            return viPhamDAO.GetAllViPhamNotTvvp();
+        }
+
         public ViPhamDTO GetViPhamById(int id)
         {
             return viPhamDAO.GetViPhamById(id);
         }
 
-        public void InsertViPham(ViPhamDTO viPham)
+        public Boolean InsertViPham(NhanVienDTO nv, ViPhamDTO viPham)
         {
-            viPhamDAO.InsertViPham(viPham);
+            return viPhamDAO.InsertViPham(nv, viPham);
+        }
+
+        public Boolean InsertTVVP(ThanhVienDTO tv, ViPhamDTO viPham, DateTime time)
+        {
+            return viPhamDAO.InsertTVVP(tv, viPham, time);
         }
 
         public void UpdateViPham(ViPhamDTO viPham)

@@ -32,7 +32,7 @@ namespace Doanc_sharp.src.BUS
             if (tvBUS.TimThanhVienTheoMa(MaThanhVien) == null) return -2;
             foreach (DataRow row in dt.Rows)
             {
-                if (row["trangthai"].ToString().Equals("Chua xử lý")) return -1;
+                if (row["trangthai"].ToString().Equals("Chua xử lý") || row["trangthai"].ToString().Equals("Chua xu ly")) return -1;
             }
             return 1;
         }
