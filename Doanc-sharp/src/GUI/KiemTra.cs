@@ -61,33 +61,20 @@ namespace Doanc_sharp.src.GUI
 
         public void kiemTraMaTV(int matv)
         {
-            int kiemtra = kiemTraBUS.KiemTraTruocKhiVao(matv);
-            switch (kiemtra)
+            Dictionary<int, string> kiemtra = kiemTraBUS.KiemTraTruocKhiVao(matv);
+            var result = kiemtra.First(); // result.Key, result.Value
+            MessageBox.Show(result.Value);
+            if(result.Key==200)
             {
-                case 1:
-                    MessageBox.Show("Kiểm tra thành công.");
-                    themLichSuHD(matv, "Vào thư quán thành công");
-                    tvbus = new ThanhVienBUS();
-                    ThanhVienDTO temp = tvbus.TimThanhVienTheoMa(matv);
-                    textInforMa.Text = temp.Mathanhvien.ToString();
-                    textInforNgaydk.Text=temp.Ngaydangky.ToString();
-                    textInforEmail.Text=temp.Email.ToString();
-                    textInforDiachi.Text=temp.Diachi.ToString();
-                    textInforCheckin.Text=DateTime.Now.ToString();
-                    textInforTen.Text=temp.Hoten.ToString();
-                    textInforSdt.Text=temp.Sdt.ToString();
-
-                    break;
-                case -1:
-                    MessageBox.Show("Thành viên vi phạm!");
-                    themLichSuHD(matv, "Vào thư quán thất bại do thành viên vi phạm");
-                    break;
-                case -2:
-                    MessageBox.Show("Mã thành viên không hợp lệ.");
-                    break;
-                default:
-                    MessageBox.Show("Có lỗi xảy ra trong quá trình kiểm tra.");
-                    break;
+                tvbus = new ThanhVienBUS();
+                ThanhVienDTO temp = tvbus.TimThanhVienTheoMa(matv);
+                textInforMa.Text = temp.Mathanhvien.ToString();
+                textInforNgaydk.Text = temp.Ngaydangky.ToString();
+                textInforEmail.Text = temp.Email.ToString();
+                textInforDiachi.Text = temp.Diachi.ToString();
+                textInforCheckin.Text = DateTime.Now.ToString();
+                textInforTen.Text = temp.Hoten.ToString();
+                textInforSdt.Text = temp.Sdt.ToString();
             }
         }
 

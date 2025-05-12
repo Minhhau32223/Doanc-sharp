@@ -49,12 +49,13 @@ namespace Doanc_sharp
                     MessageBox.Show("Vi phạm này đã được xử lý. Vui lòng chọn vi phạm khác");
                     return;
                 }
-                string[] data = new string[5];
+                string[] data = new string[6];
                 data[0] = selectedRow.Cells["thanhvien"].Value.ToString();
                 data[1] = selectedRow.Cells["tenvipham"].Value.ToString();
                 data[2] = selectedRow.Cells["mota"].Value.ToString();
                 data[3] = selectedRow.Cells["trangthai"].Value.ToString();
                 data[4] = selectedRow.Cells["ID"].Value.ToString();
+                data[5] = selectedRow.Cells["Mathanhvien"].Value.ToString();
 
                 Xulyvipham xulyViPhamForm = new Xulyvipham(data);
                 xulyViPhamForm.ShowDialog();

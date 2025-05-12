@@ -12,6 +12,7 @@ namespace Doanc_sharp.src.BUS
     internal class ViPhamBUS
     {
         private ViPhamDAO viPhamDAO = new ViPhamDAO();
+        private KhoaTheBUS khoaTheBUS = new KhoaTheBUS();
 
         public DataTable GetAllViPham()
         {
@@ -47,11 +48,15 @@ namespace Doanc_sharp.src.BUS
         {
             viPhamDAO.DeleteViPham(maViPham);
         }
-        public Boolean XulyViPham(string maViPham)
+        public Boolean XulyViPham(string maViPham, int maThanhVien, DateTime thoiGianKhoa)
         {
             if (maViPham == null)
                 return false;
-            return viPhamDAO.XulyViPham(maViPham);
+            KhoaTheDTO khoaThe = new KhoaTheDTO() {
+                MaThanhVien = maThanhVien,
+                ThoiGianMoKhoa = thoiGianKhoa
+            };
+            return khoaTheBUS.Insert(khoaThe) && viPhamDAO.XulyViPham(maViPham);
         }
     }
 }
