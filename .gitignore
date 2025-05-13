@@ -12,6 +12,7 @@ obj/
 
 ## VS Code settings
 .vscode/
+.vs/
 
 ## Windows image file caches
 Thumbs.db
@@ -39,3 +40,12 @@ project.fragment.lock.json
 
 ## Publish folders
 Publish/
+
+# Bỏ qua file cache và dự án build tạm thời
+*.cache
+*.suo
+*.pdb
+*.exe
+*.dll
+*.json
+

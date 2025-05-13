@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             DataDanhMuc = new DataGridView();
-            panel1 = new Panel();
-            label1 = new Label();
-            EditBtn = new Button();
             ID = new DataGridViewTextBoxColumn();
             Tendanhmuc = new DataGridViewTextBoxColumn();
             Mota = new DataGridViewTextBoxColumn();
+            panel1 = new Panel();
+            label1 = new Label();
+            EditBtn = new Button();
             ((System.ComponentModel.ISupportInitialize)DataDanhMuc).BeginInit();
             SuspendLayout();
             // 
@@ -43,6 +43,7 @@
             DataDanhMuc.BackgroundColor = SystemColors.ControlLightLight;
             DataDanhMuc.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             DataDanhMuc.Columns.AddRange(new DataGridViewColumn[] { ID, Tendanhmuc, Mota });
+            DataDanhMuc.Enabled = false;
             DataDanhMuc.Location = new Point(31, 62);
             DataDanhMuc.Margin = new Padding(3, 2, 3, 2);
             DataDanhMuc.Name = "DataDanhMuc";
@@ -50,6 +51,33 @@
             DataDanhMuc.Size = new Size(887, 560);
             DataDanhMuc.TabIndex = 5;
             DataDanhMuc.CellContentClick += DataDanhMuc_CellContentClick;
+            // 
+            // ID
+            // 
+            ID.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            ID.DataPropertyName = "Madanhmuc";
+            ID.HeaderText = "ID";
+            ID.MinimumWidth = 6;
+            ID.Name = "ID";
+            ID.ReadOnly = true;
+            // 
+            // Tendanhmuc
+            // 
+            Tendanhmuc.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            Tendanhmuc.DataPropertyName = "Tendanhmuc";
+            Tendanhmuc.HeaderText = "Tên danh mục";
+            Tendanhmuc.MinimumWidth = 6;
+            Tendanhmuc.Name = "Tendanhmuc";
+            Tendanhmuc.ReadOnly = true;
+            // 
+            // Mota
+            // 
+            Mota.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            Mota.DataPropertyName = "Danhmuc";
+            Mota.HeaderText = "Mô tả";
+            Mota.MinimumWidth = 6;
+            Mota.Name = "Mota";
+            Mota.ReadOnly = true;
             // 
             // panel1
             // 
@@ -84,33 +112,6 @@
             EditBtn.Text = "Edit";
             EditBtn.UseVisualStyleBackColor = true;
             EditBtn.Click += EditBtn_Click;
-            // 
-            // ID
-            // 
-            ID.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            ID.DataPropertyName = "Madanhmuc";
-            ID.HeaderText = "ID";
-            ID.MinimumWidth = 6;
-            ID.Name = "ID";
-            ID.ReadOnly = true;
-            // 
-            // Tendanhmuc
-            // 
-            Tendanhmuc.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            Tendanhmuc.DataPropertyName = "Tendanhmuc";
-            Tendanhmuc.HeaderText = "Tên danh mục";
-            Tendanhmuc.MinimumWidth = 6;
-            Tendanhmuc.Name = "Tendanhmuc";
-            Tendanhmuc.ReadOnly = true;
-            // 
-            // Mota
-            // 
-            Mota.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            Mota.DataPropertyName = "Mota";
-            Mota.HeaderText = "Mô tả";
-            Mota.MinimumWidth = 6;
-            Mota.Name = "Mota";
-            Mota.ReadOnly = true;
             // 
             // DanhMuc
             // 

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -43,6 +44,15 @@ namespace Doanc_sharp.src.BUS
         public PhieuMuonDTO Timkiemtheoma(int maphieumuon) {
             return phieuMuonDAO.Timkiemtheoma(maphieumuon);
         }
-        
+
+        public DataTable layDuLieuThietBiDuocMuon(DateTime tuNgay, DateTime denNgay, string tuKhoa)
+        {
+            return phieuMuonDAO.layDuLieuThietBiDuocMuon(tuNgay, denNgay, tuKhoa);
+        }
+
+        public DataTable layDuLieuThietBiDangDuocMuon(DateTime tuNgay, DateTime denNgay, string tuKhoa)
+        {
+            return phieuMuonDAO.layDuLieuThietBiDangDuocMuon(tuNgay, denNgay, tuKhoa);
+        }
     }
 }
