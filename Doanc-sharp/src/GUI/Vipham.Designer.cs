@@ -91,56 +91,54 @@
             // 
             // ID
             // 
-            ID.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            ID.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             ID.DataPropertyName = "Mavipham";
             ID.FillWeight = 376.2886F;
             ID.HeaderText = "Mã vi phạm";
             ID.MinimumWidth = 100;
             ID.Name = "ID";
             ID.ReadOnly = true;
-            ID.Resizable = DataGridViewTriState.True;
+            ID.Resizable = DataGridViewTriState.False;
             // 
             // Mathanhvien
             // 
+            Mathanhvien.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             Mathanhvien.DataPropertyName = "Mathanhvien";
             Mathanhvien.HeaderText = "Mã thành viên";
             Mathanhvien.Name = "Mathanhvien";
             // 
             // Thanhvien
             // 
-            Thanhvien.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            Thanhvien.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             Thanhvien.DataPropertyName = "Hoten";
             Thanhvien.FillWeight = 30.92784F;
             Thanhvien.HeaderText = "Tên thành viên";
             Thanhvien.MinimumWidth = 150;
             Thanhvien.Name = "Thanhvien";
             Thanhvien.Resizable = DataGridViewTriState.False;
-            Thanhvien.Width = 150;
             // 
             // Tenvipham
             // 
-            Tenvipham.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            Tenvipham.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             Tenvipham.DataPropertyName = "Tenvipham";
             Tenvipham.FillWeight = 30.92784F;
             Tenvipham.HeaderText = "Tên vi phạm";
             Tenvipham.MinimumWidth = 150;
             Tenvipham.Name = "Tenvipham";
             Tenvipham.Resizable = DataGridViewTriState.False;
-            Tenvipham.Width = 150;
             // 
             // Mota
             // 
-            Mota.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            Mota.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             Mota.DataPropertyName = "Mota";
             Mota.FillWeight = 30.92784F;
             Mota.HeaderText = "Mô tả";
             Mota.MinimumWidth = 150;
             Mota.Name = "Mota";
-            Mota.Width = 150;
             // 
             // Ngayvp
             // 
-            Ngayvp.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            Ngayvp.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             Ngayvp.DataPropertyName = "Ngayvp";
             Ngayvp.HeaderText = "Ngày vi phạm";
             Ngayvp.MinimumWidth = 100;
@@ -148,14 +146,13 @@
             // 
             // Trangthai
             // 
-            Trangthai.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            Trangthai.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             Trangthai.DataPropertyName = "Trangthai";
             Trangthai.FillWeight = 30.92784F;
             Trangthai.HeaderText = "Trạng thái";
             Trangthai.MinimumWidth = 85;
             Trangthai.Name = "Trangthai";
             Trangthai.Resizable = DataGridViewTriState.False;
-            Trangthai.Width = 85;
             // 
             // Vipham
             // 

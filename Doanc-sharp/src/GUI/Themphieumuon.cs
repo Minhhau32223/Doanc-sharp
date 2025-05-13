@@ -21,6 +21,7 @@ namespace Doanc_sharp
         private PhieuMuonBUS phieuMuonbus;
         private CtPhieuMuonBUS ctPhieuMuonbus;
         private LSHoatDongBUS lshdBUS;
+        private ThanhVienBUS tvbus;
         public Themphieumuon()
         {
             InitializeComponent();
@@ -35,7 +36,7 @@ namespace Doanc_sharp
                 return;
             }
             else
-            {return;
+            { return;
 
             }
         }
@@ -57,24 +58,41 @@ namespace Doanc_sharp
 
         private void CbbTrangthai_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(CbbTrangthai.SelectedItem=="Đã trả")
+            if (CbbTrangthai.SelectedItem == "Đã trả")
             {
                 textNgaytra.Text = DateTime.Now.ToString();
             }
             else
             {
-                textNgaytra.Text = "";
-            }    
+                textNgaytra.Text = DateTime.Now.AddDays(3).ToString();
+            }
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
+            string ngaymuon = textBoxsongaymuon.Text.Trim();
+          
+
+            if (string.IsNullOrEmpty(ngaymuon))
+            {
+                textNgaytra.Text = DateTime.Now.ToString();
+                return;
+            }
+
+            if (!tools.IsPositiveInteger(ngaymuon))
+            {
+                MessageBox.Show("Vui lòng nhập số ngày mượn là số dương!");
+                return;
+            }
+
+            int songay = Convert.ToInt32(ngaymuon);
+            textNgaytra.Text = DateTime.Now.AddDays(songay).ToString();
 
         }
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            if (!tools.IsNotEmpty(txtMatb.Text,"Mã thiết bị") || !tools.IsNotEmpty(txtSoluong.Text,"Số luọng"))
+            if (!tools.IsNotEmpty(txtMatb.Text, "Mã thiết bị") || !tools.IsNotEmpty(txtSoluong.Text, "Số luọng"))
             {
                 MessageBox.Show("Vui lòng nhập đầy đủ mã thiết bị và số lượng!");
                 return;
@@ -92,10 +110,16 @@ namespace Doanc_sharp
             tbbus = new ThietBiBUS();
             DataTable dt = tbbus.Timkiemtheoma(matb);
 
+
             if (dt != null && dt.Rows.Count > 0)
             {
                 DataRow newRow = dt.Rows[0];
                 bool found = false;
+                if (newRow["Trangthai"]!="Đang trống") {
+                    MessageBox.Show("Thiết bị đang cho thuê vui lòng nhập mã thiết bị khác!");
+                    txtMatb.Text = "";
+                    return;
+                }
 
                 foreach (DataGridViewRow row in Datatbmuon.Rows)
                 {
@@ -141,29 +165,31 @@ namespace Doanc_sharp
             textBoxMaphieumuon.Text = Convert.ToString(mapm);
             textBoxMaphieumuon.ReadOnly = true;
             txtNgayMuon.Text = DateTime.Now.ToString();
-            textNgaytra.Text= DateTime.MinValue.ToString();
+            textNgaytra.Text = DateTime.Now.AddDays(3).ToString();
             txtNgayMuon.ReadOnly = true;
-            if (CbbTrangthai.Items.Count==0)
+            if (CbbTrangthai.Items.Count == 0)
             {
                 CbbTrangthai.DropDownStyle = ComboBoxStyle.DropDownList;
                 CbbTrangthai.Items.Clear();
                 CbbTrangthai.Items.Add("Đang mượn");
                 CbbTrangthai.Items.Add("Đã trả");
-                
+
             }
             CbbTrangthai.SelectedItem = "Đang mượn";
+            txtSoluong.Text = "1";
+            txtSoluong.ReadOnly = true;
 
         }
-        public void  loadUpdate( int mapm, DateTime ngaymuon, DateTime ngaytra, string trangthai, int mathanhvien, string label)
-        {this.labelTitle.Text = label;
+        public void loadUpdate(int mapm, DateTime ngaymuon, DateTime ngaytra, string trangthai, int mathanhvien, string label)
+        { this.labelTitle.Text = label;
             tbbus = new ThietBiBUS();
             phieuMuonbus = new PhieuMuonBUS();
             ctPhieuMuonbus = new CtPhieuMuonBUS();
             textBoxMaphieumuon.Text = mapm.ToString();
             txtMathanhvien.Text = mathanhvien.ToString();
-            Datatbmuon.DataSource= ctPhieuMuonbus.LayDanhSachChiTiet(mapm);
-            txtNgayMuon.Text= ngaymuon.ToString();
-            textNgaytra.Text = DateTime.MinValue.ToString();
+            Datatbmuon.DataSource = ctPhieuMuonbus.LayDanhSachChiTiet(mapm);
+            txtNgayMuon.Text = ngaymuon.ToString();
+            textNgaytra.Text = DateTime.Now.ToString();
             textBoxMaphieumuon.ReadOnly = true;
             txtMathanhvien.ReadOnly = true;
             textBoxMaphieumuon.ReadOnly = true;
@@ -171,17 +197,30 @@ namespace Doanc_sharp
 
             // Xóa và thêm lại danh sách mỗi lần (tránh tình trạng chỉ có 1 mục do đã thêm trước đó)
             CbbTrangthai.Items.Clear();
-            CbbTrangthai.Items.Add("Đang mượn");
             CbbTrangthai.Items.Add("Đã trả");
             if (!string.IsNullOrWhiteSpace(trangthai))
             {
-                CbbTrangthai.SelectedItem = trangthai.Trim();
+                CbbTrangthai.SelectedItem = "Đã trả";
             }
             else
             {
                 CbbTrangthai.SelectedIndex = 0; // hoặc -1 nếu không muốn chọn sẵn
             }
 
+
+            CbbTrangthai.Enabled = false;
+            txtMatb.Visible = false;
+            txtSoluong.Visible = false;
+            label5.Visible = false;
+            label6.Visible = false;
+            Btnbo.Visible = false;
+            btnThem.Visible = false;
+            label1.Visible = false;
+            textBoxsongaymuon.Visible = false;
+            textBoxsongaymuon.Enabled = false;
+
+            txtNgayMuon.ReadOnly = true;
+            BtnXacnhan.Text = "Xác nhận trả";
         }
 
         private void Btnbo_Click(object sender, EventArgs e)
@@ -205,7 +244,7 @@ namespace Doanc_sharp
         private void BtnXacnhan_Click(object sender, EventArgs e)
         {
 
-         
+
 
             // Kiểm tra dữ liệu nhập
             if (!tools.IsNotEmpty(textBoxMaphieumuon.Text, "Mã phiếu mượn") ||
@@ -229,20 +268,30 @@ namespace Doanc_sharp
                 return;
             }
 
-        
+
 
             DialogResult result = MessageBox.Show("Bạn đã chắc chắn xác nhận  không?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
-               if(CbbTrangthai.SelectedItem=="Đang mượn")
+                if (CbbTrangthai.SelectedItem == "Đang mượn")
                 {
                     phieuMuonbus = new PhieuMuonBUS();
                     ctPhieuMuonbus = new CtPhieuMuonBUS();
                     lshdBUS = new LSHoatDongBUS();
-
+                    tbbus = new ThietBiBUS();
+                    tvbus = new ThanhVienBUS();
+                    
                     int maphieumuon = Convert.ToInt32(textBoxMaphieumuon.Text);
                     int matv = Convert.ToInt32(txtMathanhvien.Text);
+                    ThanhVienDTO temptv = tvbus.TimThanhVienTheoMa(matv);
+                    if(temptv ==null)
+                    {
+                        MessageBox.Show("Mã thành viên không  tồn tại!!");
+                        return;
+                    }    
+
                     string trangthai = CbbTrangthai.SelectedItem.ToString();
+
 
                     phieuMuonbus.ThemPhieuMuon(new PhieuMuonDTO(maphieumuon, nm, ntr, trangthai, matv));
 
@@ -252,43 +301,83 @@ namespace Doanc_sharp
                         {
                             int mathietbi = Convert.ToInt32(row.Cells["Mathietbi"].Value.ToString());
                             int soluong = Convert.ToInt32(row.Cells["Soluong"].Value.ToString());
-
+                            DataTable dt = tbbus.Timkiemtheoma(mathietbi);
+                            ThietBiDTO tbtemp = null;
+                            foreach (DataRow rowtb in dt.Rows)
+                            {
+                                tbtemp = new ThietBiDTO
+                                {
+                                    Mathietbi = Convert.ToInt32(rowtb["Mathietbi"]),
+                                    Tenthietbi = rowtb["Tenthietbi"].ToString(),
+                                    Madanhmuc = rowtb["Madanhmuc"].ToString(),
+                                    Giathue = Convert.ToInt32(rowtb["Giathue"]),
+                                    Trangthai = rowtb["Trangthai"].ToString(),
+                                };
+                            }
+                            tbtemp.Trangthai = "Đang thuê";
+                            tbbus.CapNhatThietBi(tbtemp);
                             ChiTietPhieuMuonDTO temp = new ChiTietPhieuMuonDTO(maphieumuon, mathietbi, soluong);
                             ctPhieuMuonbus.ThemChiTiet(temp);
                         }
                     }
-                  
-                    LSHoatDongDTO  templshd = new LSHoatDongDTO(matv,tools.GenerateUniqueNumber("lichsuhoatdong","Mahoatdong"),"Mượn thiết bị ","Mượn thành công",DateTime.Now);
+
+                    LSHoatDongDTO templshd = new LSHoatDongDTO(matv, tools.GenerateUniqueNumber("lichsuhoatdong", "Mahoatdong"), "Mượn thiết bị ", "Mượn thành công", DateTime.Now);
                     lshdBUS.InsertLSHoatDong(templshd);
 
                     MessageBox.Show("Thêm phiếu mượn thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Dispose();
                 }
-                else 
+                else
                 {
                     phieuMuonbus = new PhieuMuonBUS();
                     ctPhieuMuonbus = new CtPhieuMuonBUS();
                     lshdBUS = new LSHoatDongBUS();
+                    tbbus = new ThietBiBUS();
 
                     int maphieumuon = Convert.ToInt32(textBoxMaphieumuon.Text);
                     int matv = Convert.ToInt32(txtMathanhvien.Text);
                     string trangthai = CbbTrangthai.SelectedItem.ToString();
                     phieuMuonbus.CapNhatPhieuMuon(new PhieuMuonDTO(maphieumuon, nm, ntr, trangthai, matv));
-                    MessageBox.Show("Xác nhận trả thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                 
-                    LSHoatDongDTO templshd = new LSHoatDongDTO(matv, tools.GenerateUniqueNumber("lichsuhoatdong", "Mahoatdong"), "Trả thiết bị ", "Trảthành công", DateTime.Now);
-                    lshdBUS.InsertLSHoatDong(templshd);
+                    foreach (DataGridViewRow row in Datatbmuon.Rows)
+                    {
+                        if (!row.IsNewRow)
+                        {
+                            int mathietbi = Convert.ToInt32(row.Cells["Mathietbi"].Value.ToString());
+
+                            DataTable dt = tbbus.Timkiemtheoma(mathietbi);
+                            ThietBiDTO tbtemp = null;
+                            foreach (DataRow rowtb in dt.Rows)
+                            {
+                                tbtemp = new ThietBiDTO
+                                {
+                                    Mathietbi = Convert.ToInt32(rowtb["Mathietbi"]),
+                                    Tenthietbi = rowtb["Tenthietbi"].ToString(),
+                                    Madanhmuc = rowtb["Madanhmuc"].ToString(),
+                                    Giathue = Convert.ToInt32(rowtb["Giathue"]),
+                                    Trangthai = rowtb["Trangthai"].ToString(),
+                                };
+                            }
+                            tbtemp.Trangthai = "Đang trống";
+                            tbbus.CapNhatThietBi(tbtemp);
+
+                        }
+                     }
+                        MessageBox.Show("Xác nhận trả thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        LSHoatDongDTO templshd = new LSHoatDongDTO(matv, tools.GenerateUniqueNumber("lichsuhoatdong", "Mahoatdong"), "Trả thiết bị ", "Trả thành công", DateTime.Now);
+                        lshdBUS.InsertLSHoatDong(templshd);
+                        this.Dispose();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Hủy thao tác thêm phiếu mượn.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Dispose();
                 }
+
+
+
             }
-            else
-            {
-                MessageBox.Show("Hủy thao tác thêm phiếu mượn.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Dispose();
-            }
-
-
-
         }
-    }
 }
+

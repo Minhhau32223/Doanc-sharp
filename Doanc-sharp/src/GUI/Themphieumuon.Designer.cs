@@ -53,6 +53,8 @@
             txtNgayMuon = new TextBox();
             label9 = new Label();
             Btnbo = new Button();
+            label1 = new Label();
+            textBoxsongaymuon = new TextBox();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)Datatbmuon).BeginInit();
             SuspendLayout();
@@ -132,7 +134,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Roboto", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.Location = new Point(77, 218);
+            label4.Location = new Point(77, 263);
             label4.Name = "label4";
             label4.Size = new Size(149, 23);
             label4.TabIndex = 25;
@@ -142,7 +144,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Roboto", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.Location = new Point(551, 271);
+            label5.Location = new Point(551, 318);
             label5.Name = "label5";
             label5.Size = new Size(150, 23);
             label5.TabIndex = 25;
@@ -152,7 +154,7 @@
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Roboto", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label7.Location = new Point(77, 255);
+            label7.Location = new Point(77, 318);
             label7.Name = "label7";
             label7.Size = new Size(160, 23);
             label7.TabIndex = 27;
@@ -162,7 +164,7 @@
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Roboto", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label8.Location = new Point(77, 479);
+            label8.Location = new Point(77, 533);
             label8.Name = "label8";
             label8.Size = new Size(93, 23);
             label8.TabIndex = 28;
@@ -173,7 +175,7 @@
             // 
             CbbTrangthai.FormattingEnabled = true;
             CbbTrangthai.Items.AddRange(new object[] { "Đang mượn" });
-            CbbTrangthai.Location = new Point(261, 482);
+            CbbTrangthai.Location = new Point(260, 533);
             CbbTrangthai.Name = "CbbTrangthai";
             CbbTrangthai.Size = new Size(290, 23);
             CbbTrangthai.TabIndex = 29;
@@ -195,7 +197,7 @@
             // 
             // textNgaytra
             // 
-            textNgaytra.Location = new Point(260, 221);
+            textNgaytra.Location = new Point(260, 266);
             textNgaytra.Name = "textNgaytra";
             textNgaytra.Size = new Size(291, 23);
             textNgaytra.TabIndex = 33;
@@ -204,7 +206,7 @@
             // 
             // btnThem
             // 
-            btnThem.Location = new Point(551, 439);
+            btnThem.Location = new Point(556, 486);
             btnThem.Name = "btnThem";
             btnThem.Size = new Size(76, 23);
             btnThem.TabIndex = 35;
@@ -216,7 +218,7 @@
             // 
             Datatbmuon.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             Datatbmuon.Columns.AddRange(new DataGridViewColumn[] { Mathietbi, Tenthietbi, Soluong });
-            Datatbmuon.Location = new Point(261, 271);
+            Datatbmuon.Location = new Point(260, 318);
             Datatbmuon.Name = "Datatbmuon";
             Datatbmuon.Size = new Size(290, 191);
             Datatbmuon.TabIndex = 36;
@@ -252,7 +254,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Roboto", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label6.Location = new Point(576, 345);
+            label6.Location = new Point(576, 392);
             label6.Name = "label6";
             label6.Size = new Size(86, 23);
             label6.TabIndex = 25;
@@ -260,14 +262,14 @@
             // 
             // txtSoluong
             // 
-            txtSoluong.Location = new Point(563, 385);
+            txtSoluong.Location = new Point(563, 432);
             txtSoluong.Name = "txtSoluong";
             txtSoluong.Size = new Size(125, 23);
             txtSoluong.TabIndex = 32;
             // 
             // txtMatb
             // 
-            txtMatb.Location = new Point(563, 308);
+            txtMatb.Location = new Point(563, 355);
             txtMatb.Name = "txtMatb";
             txtMatb.Size = new Size(125, 23);
             txtMatb.TabIndex = 32;
@@ -292,13 +294,31 @@
             // 
             // Btnbo
             // 
-            Btnbo.Location = new Point(633, 439);
+            Btnbo.Location = new Point(638, 486);
             Btnbo.Name = "Btnbo";
             Btnbo.Size = new Size(55, 23);
             Btnbo.TabIndex = 38;
             Btnbo.Text = "Bỏ";
             Btnbo.UseVisualStyleBackColor = true;
             Btnbo.Click += Btnbo_Click;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Roboto", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(76, 219);
+            label1.Name = "label1";
+            label1.Size = new Size(132, 23);
+            label1.TabIndex = 25;
+            label1.Text = "Số ngày mượn";
+            // 
+            // textBoxsongaymuon
+            // 
+            textBoxsongaymuon.Location = new Point(259, 222);
+            textBoxsongaymuon.Name = "textBoxsongaymuon";
+            textBoxsongaymuon.Size = new Size(291, 23);
+            textBoxsongaymuon.TabIndex = 33;
+            textBoxsongaymuon.TextChanged += textBox2_TextChanged;
             // 
             // Themphieumuon
             // 
@@ -309,6 +329,7 @@
             Controls.Add(Btnbo);
             Controls.Add(Datatbmuon);
             Controls.Add(btnThem);
+            Controls.Add(textBoxsongaymuon);
             Controls.Add(textNgaytra);
             Controls.Add(txtMatb);
             Controls.Add(txtSoluong);
@@ -320,6 +341,7 @@
             Controls.Add(label7);
             Controls.Add(label6);
             Controls.Add(label9);
+            Controls.Add(label1);
             Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(label3);
@@ -365,5 +387,7 @@
         private TextBox txtNgayMuon;
         private Label label9;
         private Button Btnbo;
+        private Label label1;
+        private TextBox textBoxsongaymuon;
     }
 }

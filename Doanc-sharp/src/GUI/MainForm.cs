@@ -3,21 +3,24 @@ using Doanc_sharp.src.DAO;
 using Doanc_sharp.src.DTO;
 using Doanc_sharp.src.GUI;
 
+
 namespace Doanc_sharp
 {
     public partial class MainForm : Form
-    {
+    { 
         public MainForm()
         {
             InitializeComponent();
             leftmenu1.ButtonClicked += Leftmenu1_ButtonClicked;
-          
+
+
         }
+
         private void ShowControlInRightPanel(UserControl control)
         {
             Rightpanel.Controls.Clear(); // Xóa control cũ
             //control.Dock = DockStyle.Fill;
-            control.Location = new Point(100, 100);// Để fill toàn panel
+            control.Location = new Point(45, 60);// Để fill toàn panel
             Rightpanel.Controls.Add(control); // Thêm control mới
         }
 
@@ -26,6 +29,7 @@ namespace Doanc_sharp
 
         }
 
+     
         private void leftmenu1_Load(object sender, EventArgs e)
         {
 
@@ -76,6 +80,24 @@ namespace Doanc_sharp
             }
         }
 
-        
+
+        private void Rightpanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void youraccount_Click(object sender, EventArgs e)
+        {
+
+        }
+        public void setTaikhoan(String taikhoan)
+        {
+            youraccount.Text = $"Tài khoản {taikhoan} đang đăng nhập!";
+        }
+
+        private void headerpanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

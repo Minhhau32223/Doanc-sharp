@@ -30,16 +30,15 @@
         {
             label1 = new Label();
             dgvThietbi = new DataGridView();
-            btnCapnhat = new Button();
-            btnXoa = new Button();
-            btnExcel = new Button();
-            btnReset = new Button();
-            btnThem = new Button();
             Mathietbi = new DataGridViewTextBoxColumn();
             TenThietBi = new DataGridViewTextBoxColumn();
             Giathue = new DataGridViewTextBoxColumn();
             Madanhmuc = new DataGridViewTextBoxColumn();
             Trangthai = new DataGridViewTextBoxColumn();
+            btnCapnhat = new Button();
+            btnXoa = new Button();
+            btnReset = new Button();
+            btnThem = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvThietbi).BeginInit();
             SuspendLayout();
             // 
@@ -66,75 +65,6 @@
             dgvThietbi.Size = new Size(887, 598);
             dgvThietbi.TabIndex = 2;
             dgvThietbi.CellContentClick += dataGridView1_CellContentClick;
-            // 
-            // btnCapnhat
-            // 
-            btnCapnhat.BackColor = Color.SkyBlue;
-            btnCapnhat.BackgroundImageLayout = ImageLayout.Zoom;
-            btnCapnhat.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnCapnhat.ForeColor = SystemColors.ControlLightLight;
-            btnCapnhat.Location = new Point(537, 10);
-            btnCapnhat.Name = "btnCapnhat";
-            btnCapnhat.Size = new Size(81, 40);
-            btnCapnhat.TabIndex = 12;
-            btnCapnhat.Text = "Cập nhật";
-            btnCapnhat.UseVisualStyleBackColor = false;
-            btnCapnhat.Click += btnCapnhat_Click;
-            // 
-            // btnXoa
-            // 
-            btnXoa.BackColor = Color.Red;
-            btnXoa.BackgroundImageLayout = ImageLayout.Zoom;
-            btnXoa.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnXoa.ForeColor = SystemColors.ControlLightLight;
-            btnXoa.Location = new Point(624, 11);
-            btnXoa.Name = "btnXoa";
-            btnXoa.Size = new Size(81, 40);
-            btnXoa.TabIndex = 12;
-            btnXoa.Text = "Xoá";
-            btnXoa.UseVisualStyleBackColor = false;
-            btnXoa.Click += btnXoa_Click;
-            // 
-            // btnExcel
-            // 
-            btnExcel.BackColor = Color.Green;
-            btnExcel.BackgroundImageLayout = ImageLayout.Zoom;
-            btnExcel.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnExcel.ForeColor = SystemColors.ControlLightLight;
-            btnExcel.Location = new Point(711, 11);
-            btnExcel.Name = "btnExcel";
-            btnExcel.Size = new Size(81, 40);
-            btnExcel.TabIndex = 12;
-            btnExcel.Text = "Excel";
-            btnExcel.UseVisualStyleBackColor = false;
-            // 
-            // btnReset
-            // 
-            btnReset.BackColor = Color.Purple;
-            btnReset.BackgroundImageLayout = ImageLayout.Zoom;
-            btnReset.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnReset.ForeColor = SystemColors.ControlLightLight;
-            btnReset.Location = new Point(798, 11);
-            btnReset.Name = "btnReset";
-            btnReset.Size = new Size(81, 40);
-            btnReset.TabIndex = 12;
-            btnReset.Text = "Reset";
-            btnReset.UseVisualStyleBackColor = false;
-            btnReset.Click += btnReset_Click;
-            // 
-            // btnThem
-            // 
-            btnThem.BackColor = Color.Gold;
-            btnThem.BackgroundImageLayout = ImageLayout.Zoom;
-            btnThem.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnThem.ForeColor = SystemColors.ControlLightLight;
-            btnThem.Location = new Point(450, 10);
-            btnThem.Name = "btnThem";
-            btnThem.Size = new Size(81, 40);
-            btnThem.TabIndex = 12;
-            btnThem.Text = "Thêm";
-            btnThem.UseVisualStyleBackColor = false;
-            btnThem.Click += btnThem_Click;
             // 
             // Mathietbi
             // 
@@ -179,13 +109,68 @@
             Trangthai.Name = "Trangthai";
             Trangthai.Resizable = DataGridViewTriState.False;
             // 
+            // btnCapnhat
+            // 
+            btnCapnhat.BackColor = Color.SkyBlue;
+            btnCapnhat.BackgroundImageLayout = ImageLayout.Zoom;
+            btnCapnhat.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnCapnhat.ForeColor = SystemColors.ControlLightLight;
+            btnCapnhat.Location = new Point(624, 10);
+            btnCapnhat.Name = "btnCapnhat";
+            btnCapnhat.Size = new Size(81, 40);
+            btnCapnhat.TabIndex = 12;
+            btnCapnhat.Text = "Cập nhật";
+            btnCapnhat.UseVisualStyleBackColor = false;
+            btnCapnhat.Click += btnCapnhat_Click;
+            // 
+            // btnXoa
+            // 
+            btnXoa.BackColor = Color.Red;
+            btnXoa.BackgroundImageLayout = ImageLayout.Zoom;
+            btnXoa.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnXoa.ForeColor = SystemColors.ControlLightLight;
+            btnXoa.Location = new Point(711, 11);
+            btnXoa.Name = "btnXoa";
+            btnXoa.Size = new Size(81, 40);
+            btnXoa.TabIndex = 12;
+            btnXoa.Text = "Xoá";
+            btnXoa.UseVisualStyleBackColor = false;
+            btnXoa.Click += btnXoa_Click;
+            // 
+            // btnReset
+            // 
+            btnReset.BackColor = Color.Purple;
+            btnReset.BackgroundImageLayout = ImageLayout.Zoom;
+            btnReset.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnReset.ForeColor = SystemColors.ControlLightLight;
+            btnReset.Location = new Point(798, 11);
+            btnReset.Name = "btnReset";
+            btnReset.Size = new Size(81, 40);
+            btnReset.TabIndex = 12;
+            btnReset.Text = "Reset";
+            btnReset.UseVisualStyleBackColor = false;
+            btnReset.Click += btnReset_Click;
+            // 
+            // btnThem
+            // 
+            btnThem.BackColor = Color.Gold;
+            btnThem.BackgroundImageLayout = ImageLayout.Zoom;
+            btnThem.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnThem.ForeColor = SystemColors.ControlLightLight;
+            btnThem.Location = new Point(537, 10);
+            btnThem.Name = "btnThem";
+            btnThem.Size = new Size(81, 40);
+            btnThem.TabIndex = 12;
+            btnThem.Text = "Thêm";
+            btnThem.UseVisualStyleBackColor = false;
+            btnThem.Click += btnThem_Click;
+            // 
             // Thietbi
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Bisque;
             Controls.Add(btnReset);
-            Controls.Add(btnExcel);
             Controls.Add(btnXoa);
             Controls.Add(btnThem);
             Controls.Add(btnCapnhat);
@@ -206,7 +191,6 @@
         private DataGridView dgvThietbi;
         private Button btnCapnhat;
         private Button btnXoa;
-        private Button btnExcel;
         private Button btnReset;
         private Button btnThem;
         private DataGridViewTextBoxColumn Mathietbi;

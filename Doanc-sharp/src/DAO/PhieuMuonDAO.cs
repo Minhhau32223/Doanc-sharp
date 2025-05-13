@@ -21,8 +21,8 @@ namespace Doanc_sharp.src.DAO
 
         public bool Add(PhieuMuonDTO pm)
         {
-            string query = $"INSERT INTO phieumuon (Maphieumuon,Ngaymuon, Ngaytra, Trangthai, Mathanhvien) VALUES " +
-                           $"('{pm.Maphieumuon}','{pm.Ngaymuon:yyyy-MM-dd HH:mm:ss}', '{pm.Ngaytra:yyyyy--MM-dd HH:mm:ss}', '{pm.Trangthai}', {pm.Mathanhvien})";
+            string query = $"INSERT INTO phieumuon (Maphieumuon,Ngaymuon,Ngaytra, Trangthai, Mathanhvien) VALUES " +
+                           $"('{pm.Maphieumuon}','{pm.Ngaymuon:yyyy-MM-dd HH:mm:ss}', '{pm.Ngaytra:yyyy-MM-dd HH:mm:ss}', '{pm.Trangthai}', {pm.Mathanhvien})";
             return db.ExecuteNonQuery(query) > 0;
         }
 

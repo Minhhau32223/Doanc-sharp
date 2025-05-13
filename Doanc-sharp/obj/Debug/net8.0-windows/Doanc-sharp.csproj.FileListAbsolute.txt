@@ -138,3 +138,5 @@ D:\code\css\Doanc-sharp\obj\Debug\net8.0-windows\Doanc-sharp.genruntimeconfig.ca
 D:\code\css\Doanc-sharp\obj\Debug\net8.0-windows\ref\Doanc-sharp.dll
 D:\code\css\Doanc-sharp\bin\Debug\net8.0-windows\WinForms.DataVisualization.Utilities.dll
 D:\code\css\Doanc-sharp\bin\Debug\net8.0-windows\WinForms.DataVisualization.dll
+C:\Users\hau66\Downloads\csharp\Doanc-sharp\Doanc-sharp\bin\Debug\net8.0-windows\WinForms.DataVisualization.Utilities.dll
+C:\Users\hau66\Downloads\csharp\Doanc-sharp\Doanc-sharp\bin\Debug\net8.0-windows\WinForms.DataVisualization.dll

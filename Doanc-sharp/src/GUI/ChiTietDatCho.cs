@@ -19,14 +19,14 @@ namespace Doanc_sharp
         private PhieuMuonBUS phieuMuonbus;
         private CtPhieuMuonBUS ctPhieuMuonBUS;
         private DatChoBUS datchobus;
-        private  Tools tools;
+        private Tools tools;
         public ChiTietDatCho()
         {
             InitializeComponent();
 
-          
 
-          
+
+
 
 
 
@@ -36,18 +36,22 @@ namespace Doanc_sharp
         {
             ctdatchobus = new CtDatChoBUS();
             this.txtID.Text = id;
+            this.txtID.ReadOnly = true;
             this.dgvCTDC.DataSource = ctdatchobus.LayDanhSachChiTietTheoMaDatCho(Convert.ToInt32(id));
             this.txtThoiGianDatCho.Text = ngay;
+            this.txtThoiGianDatCho.ReadOnly = true;
             this.txtMaThanhVien.Text = mathanhvien;
+            this.txtMaThanhVien.ReadOnly = true;
             if (cmbTrangThai.Items.Count == 0)
+                
             {
                 cmbTrangThai.DropDownStyle = ComboBoxStyle.DropDownList;
                 cmbTrangThai.Items.Clear();
-                cmbTrangThai.Items.Add("Đang chờ");
+                cmbTrangThai.Items.Add("Đang xác nhận");
                 cmbTrangThai.Items.Add("Đã xác nhận");
                 cmbTrangThai.Items.Add("Đã hủy");
             }
-            cmbTrangThai.SelectedItem= trangthai.Trim();
+            cmbTrangThai.SelectedItem = trangthai.Trim();
 
 
 
@@ -76,15 +80,15 @@ namespace Doanc_sharp
             if (result == DialogResult.Yes)
             {
                 this.Dispose();
-             
-              
+
+
             }
             else
             {
                 // Người dùng bấm No
                 // Không làm gì cả
             }
-            
+
         }
 
         private void pnTop_Paint(object sender, PaintEventArgs e)
@@ -109,26 +113,34 @@ namespace Doanc_sharp
 
         private void btnXacNhan_Click(object sender, EventArgs e)
         {
-                DialogResult result = MessageBox.Show(
-                        "Bạn có chắc chắn muốn xác nhận mượn thiết bị cho đặt chỗ này không?",
-                        "Xác nhận",
-                        MessageBoxButtons.YesNo,
-                        MessageBoxIcon.Question);
+            DialogResult result = MessageBox.Show(
+                    "Bạn có chắc chắn muốn xác nhận mượn thiết bị cho đặt chỗ này không?",
+                    "Xác nhận",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
-                phieuMuonbus= new PhieuMuonBUS();
+                phieuMuonbus = new PhieuMuonBUS();
                 ctPhieuMuonBUS = new CtPhieuMuonBUS();
-                datchobus =new DatChoBUS();
+                datchobus = new DatChoBUS();
                 tools = new Tools();
                 int matv = Convert.ToInt32(txtMaThanhVien.Text.ToString());
                 int madatcho = Convert.ToInt32(txtID.Text.ToString());
+             
                 if (cmbTrangThai.SelectedItem.ToString().Contains("Đã xác nhận"))
-                { int mapm = tools.GenerateUniqueNumber("phieumuon", "Maphieumuon");
-                   
-                    PhieuMuonDTO pm= new PhieuMuonDTO(
+                {
+                    if ( !tools.IsPositiveInteger(textBoxsongaymuon.Text)||textBoxsongaymuon.Text=="" ){
+                        MessageBox.Show("Vui lòng nhập số dương hoặc không bỏ trống");
+                        return;
+                    }
+                    int songaymuon = Convert.ToInt32(textBoxsongaymuon.Text.ToString());
+                    DateTime ngaytra = DateTime.Now.AddDays(songaymuon);
+                    int mapm = tools.GenerateUniqueNumber("phieumuon", "Maphieumuon");
+
+                    PhieuMuonDTO pm = new PhieuMuonDTO(
                         mapm,
                         DateTime.Now,
-                        DateTime.MinValue,
+                        ngaytra,
                         "Đang mượn",
                         matv
                         );
@@ -138,20 +150,21 @@ namespace Doanc_sharp
                     {
                         if (!row.IsNewRow)
                         {
-                            
+
                             int mathietbi = Convert.ToInt32(row.Cells["IDTB"].Value.ToString());
                             int soluong = Convert.ToInt32(row.Cells["Soluong"].Value.ToString());
 
                             ChiTietPhieuMuonDTO temp = new ChiTietPhieuMuonDTO(mapm, mathietbi, soluong);
                             ctPhieuMuonBUS.ThemChiTiet(temp);
-                            
+
                         }
-                        
+
                     }
 
                     DatChoDTO datCho = new DatChoDTO();
                     datCho = datchobus.Timkiemtheoma(madatcho);
-                    if (datCho != null) {
+                    if (datCho != null)
+                    {
                         datCho.Trangthai = "Đã xác nhận";
                         datchobus.Update(datCho);
                     }
@@ -161,7 +174,7 @@ namespace Doanc_sharp
                     this.Dispose();
 
                 }
-                else if(cmbTrangThai.SelectedItem.ToString().Contains("Đã hủy"))
+                else if (cmbTrangThai.SelectedItem.ToString().Contains("Đã hủy"))
                 {
                     DatChoDTO datCho = new DatChoDTO();
                     datCho = datchobus.Timkiemtheoma(madatcho);
@@ -170,7 +183,7 @@ namespace Doanc_sharp
                         datCho.Trangthai = "Đã hủy";
                         datchobus.Update(datCho);
                     }
-                     MessageBox.Show("Xác nhận đã hủy !");
+                    MessageBox.Show("Xác nhận đã hủy !");
                     this.Dispose();
                 }
                 else
@@ -178,17 +191,22 @@ namespace Doanc_sharp
                     this.Dispose(true);
                     return;
 
-                } 
+                }
 
-                
-              
-                
+
+
+
             }
             else
             {
                 // Người dùng bấm No
                 // Không làm gì cả
             }
+        }
+
+        private void textBoxsongaymuon_TextChanged(object sender, EventArgs e)
+        {
+           
         }
     }
 }
