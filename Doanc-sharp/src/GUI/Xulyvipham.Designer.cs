@@ -38,7 +38,7 @@
             XulyBtn = new Button();
             ThoatBtn = new Button();
             MotaTbx = new TextBox();
-            comboBox1 = new ComboBox();
+            hinhThucXuLyCbx = new ComboBox();
             label6 = new Label();
             TenvpTbx = new TextBox();
             TvvpTbx = new TextBox();
@@ -154,16 +154,16 @@
             MotaTbx.Size = new Size(297, 23);
             MotaTbx.TabIndex = 17;
             // 
-            // comboBox1
+            // hinhThucXuLyCbx
             // 
-            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Cảnh cáo", "Khóa thẻ 1 ngày", "Khóa thẻ 3 ngày", "Khóa thẻ 7 ngày", "Khóa thẻ 1 tháng", "Khóa thẻ 1 năm", "Khóa thẻ vĩnh viễn" });
-            comboBox1.Location = new Point(317, 245);
-            comboBox1.Margin = new Padding(3, 2, 3, 2);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(297, 23);
-            comboBox1.TabIndex = 28;
+            hinhThucXuLyCbx.DropDownStyle = ComboBoxStyle.DropDownList;
+            hinhThucXuLyCbx.FormattingEnabled = true;
+            hinhThucXuLyCbx.Items.AddRange(new object[] { "Cảnh cáo", "Khóa thẻ 1 ngày", "Khóa thẻ 3 ngày", "Khóa thẻ 7 ngày", "Khóa thẻ 1 tháng", "Khóa thẻ 1 năm", "Khóa thẻ vĩnh viễn" });
+            hinhThucXuLyCbx.Location = new Point(317, 245);
+            hinhThucXuLyCbx.Margin = new Padding(3, 2, 3, 2);
+            hinhThucXuLyCbx.Name = "hinhThucXuLyCbx";
+            hinhThucXuLyCbx.Size = new Size(297, 23);
+            hinhThucXuLyCbx.TabIndex = 28;
             // 
             // label6
             // 
@@ -201,7 +201,7 @@
             ClientSize = new Size(700, 377);
             Controls.Add(TvvpTbx);
             Controls.Add(label6);
-            Controls.Add(comboBox1);
+            Controls.Add(hinhThucXuLyCbx);
             Controls.Add(TrangthaiCbx);
             Controls.Add(panel1);
             Controls.Add(label5);
@@ -233,7 +233,7 @@
         private Button XulyBtn;
         private Button ThoatBtn;
         private TextBox MotaTbx;
-        private ComboBox comboBox1;
+        private ComboBox hinhThucXuLyCbx;
         private Label label6;
         private TextBox TenvpTbx;
         private TextBox TvvpTbx;

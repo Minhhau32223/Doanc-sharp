@@ -14,7 +14,7 @@ namespace Doanc_sharp.src.DAO
 
         public DataTable GetAllViPham()
         {
-            string query = "SELECT tvvp.Mavipham, tv.HoTen, vp.Tenvipham, vp.Mota, tvvp.Ngayvp, tvvp.Trangthai " +
+            string query = "SELECT tvvp.Mavipham, tv.Mathanhvien, tv.HoTen, vp.Tenvipham, vp.Mota, tvvp.Ngayvp, tvvp.Trangthai " +
                           "FROM Thanhvienvipham tvvp " +
                           "LEFT JOIN thanhvien tv ON tvvp.MaThanhVien = tv.Mathanhvien " +
                           "LEFT JOIN vipham vp ON tvvp.Mavipham = vp.Mavipham";

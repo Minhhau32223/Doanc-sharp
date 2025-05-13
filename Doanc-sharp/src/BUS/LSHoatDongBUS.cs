@@ -1,11 +1,12 @@
-﻿using System;
+﻿using Doanc_sharp.src.DAO;
+using Doanc_sharp.src.DTO;
+using Doanc_sharp.src.Helpers;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Doanc_sharp.src.DAO;
-using Doanc_sharp.src.DTO;
-using System.Data;
 
 namespace Doanc_sharp.src.BUS
 {
@@ -152,5 +153,13 @@ namespace Doanc_sharp.src.BUS
             return lsHoatDongDAO.layDuLieuLuotVao(tuNgay, denNgay);
         }
 
+        public void themLichSuHD(int matv, string status)
+        {
+            Tools tools = new Tools();
+            int mahd = tools.GenerateUniqueNumber("lichsuhoatdong", "Mahoatdong");
+            LSHoatDongDTO lichSuHD = new LSHoatDongDTO(matv, mahd, "Vào thư quán", status, DateTime.Now);
+            LSHoatDongBUS lichSuHD_BUS = new LSHoatDongBUS();
+            lichSuHD_BUS.InsertLSHoatDong(lichSuHD);
+        }
     }
 }
