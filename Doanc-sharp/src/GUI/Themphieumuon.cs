@@ -110,16 +110,27 @@ namespace Doanc_sharp
             tbbus = new ThietBiBUS();
             DataTable dt = tbbus.Timkiemtheoma(matb);
 
+            foreach (DataRow dr in dt.Rows) {
+                ThietBiDTO thietbitemp = new ThietBiDTO
+                {
+                    Mathietbi = Convert.ToInt32(dr["Mathietbi"]),
+                    Tenthietbi = dr["Tenthietbi"].ToString(),
+                    Madanhmuc = dr["Madanhmuc"].ToString(),
+                    Giathue = Convert.ToInt32(dr["Giathue"]),
+                    Trangthai = dr["Trangthai"].ToString(),
+                };
+                if(!thietbitemp.Trangthai.ToString().Contains("Đang trống"))
+                {
+                    MessageBox.Show("Thiết bị đang cho thuê vui lòng chọn thiết bị khác");
+                    return;
+                }    
+            }
 
             if (dt != null && dt.Rows.Count > 0)
             {
                 DataRow newRow = dt.Rows[0];
                 bool found = false;
-                if (newRow["Trangthai"]!="Đang trống") {
-                    MessageBox.Show("Thiết bị đang cho thuê vui lòng nhập mã thiết bị khác!");
-                    txtMatb.Text = "";
-                    return;
-                }
+              
 
                 foreach (DataGridViewRow row in Datatbmuon.Rows)
                 {

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "XXnIuKJWir8=",
+  "dgSpecHash": "nAwEFDLW9Ro=",
   "success": true,
-  "projectFilePath": "C:\\Users\\hau66\\Downloads\\csharp\\Doanc-sharp\\Doanc-sharp\\Doanc-sharp.csproj",
+  "projectFilePath": "C:\\Users\\hau66\\Downloads\\Doanc-sharp\\Doanc-sharp\\Doanc-sharp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\hau66\\.nuget\\packages\\aforge\\2.2.5\\aforge.2.2.5.nupkg.sha512",
     "C:\\Users\\hau66\\.nuget\\packages\\aforge.video\\2.2.5\\aforge.video.2.2.5.nupkg.sha512",
