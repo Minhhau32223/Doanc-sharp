@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Doanc-sharp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+955d83ca7709dee4290b6856b2d0c10ffefd95bd")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fa282de4ca8496e8b265ca63f110da029d7cceeb")]
 [assembly: System.Reflection.AssemblyProductAttribute("Doanc-sharp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Doanc-sharp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
