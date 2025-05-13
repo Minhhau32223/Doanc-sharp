@@ -143,6 +143,16 @@ namespace Doanc_sharp.src.BUS
             }
             return resultTable;
         }
+        //public List<Tuple<DateTime, int>> LayDuLieuLuotVao(DateTime tuNgay, DateTime denNgay)
+        //{
+        //    return lsHoatDongDAO.LayDuLieuLuotVao(tuNgay, denNgay);
+        //}
+
+        public List<Tuple<int, string, string, string, DateTime, int>> layDuLieuLuotVao(DateTime tuNgay, DateTime denNgay)
+        {
+            return lsHoatDongDAO.layDuLieuLuotVao(tuNgay, denNgay);
+        }
+
         public void themLichSuHD(int matv, string status)
         {
             Tools tools = new Tools();

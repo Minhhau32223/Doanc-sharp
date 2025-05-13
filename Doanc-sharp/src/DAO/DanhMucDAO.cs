@@ -32,7 +32,7 @@ namespace Doanc_sharp.src.DAO
                 {
                     Madanhmuc = row["Madanhmuc"].ToString(),
                     Tendanhmuc = row["Tendanhmuc"].ToString(),
-                    Mota = row["Mota"].ToString()
+                    Danhmuc = row["Danhmuc"].ToString()
                 };
 
                 list.Add(dm);
@@ -45,12 +45,12 @@ namespace Doanc_sharp.src.DAO
         {
             string count = "SELECT COUNT(Madanhmuc) FROM danhmuc";
             string MaDM = "dm" + Convert.ToInt32(db.ExecuteScalar(count));
-            string query = "INSERT INTO danhmuc(Madanhmuc, Tendanhmuc, Mota) VALUES (@maDM, @ten, @mota)";
+            string query = "INSERT INTO danhmuc(Madanhmuc, Tendanhmuc, Danhmuc) VALUES (@maDM, @ten, @mota)";
             MySqlConnection conn = db.GetConnection();
             conn.Open();
             MySqlCommand cmd = new MySqlCommand(query, conn);
             cmd.Parameters.AddWithValue("@ten", dm.Tendanhmuc);
-            cmd.Parameters.AddWithValue("@mota", dm.Mota);
+            cmd.Parameters.AddWithValue("@mota", dm.Danhmuc);
             cmd.Parameters.AddWithValue("@maDM", MaDM);
             int result = cmd.ExecuteNonQuery();
 
@@ -69,12 +69,12 @@ namespace Doanc_sharp.src.DAO
 
         public Boolean Edit(DanhMucDTO dm)
         {
-            string query = "UPDATE danhmuc SET Tendanhmuc = @ten, Mota = @mota WHERE Madanhmuc = @maDM";
+            string query = "UPDATE danhmuc SET Tendanhmuc = @ten, Danhmuc = @mota WHERE Madanhmuc = @maDM";
             MySqlConnection conn = db.GetConnection();
             conn.Open();
-            MySqlCommand cmd = new MySqlCommand(query,conn);
+            MySqlCommand cmd = new MySqlCommand(query, conn);
             cmd.Parameters.AddWithValue("@ten", dm.Tendanhmuc);
-            cmd.Parameters.AddWithValue("@mota", dm.Mota);
+            cmd.Parameters.AddWithValue("@mota", dm.Danhmuc);
             cmd.Parameters.AddWithValue("@maDM", dm.Madanhmuc);
             int result = cmd.ExecuteNonQuery();
 

@@ -21,8 +21,8 @@ namespace Doanc_sharp
         {
             InitializeComponent();
             TenTbx.Text = row.Cells["Tendanhmuc"].Value?.ToString();
-            MotaTbx.Text = row.Cells["Mota"].Value ? .ToString();
-            MaDM = row.Cells["ID"].Value ? .ToString();
+            MotaTbx.Text = row.Cells["Mota"].Value?.ToString();
+            MaDM = row.Cells["ID"].Value?.ToString();
         }
 
         private void ThoatBtn_Click(object sender, EventArgs e)
@@ -35,7 +35,7 @@ namespace Doanc_sharp
             DanhMucDTO dm = new DanhMucDTO();
             dm.Madanhmuc = MaDM;
             dm.Tendanhmuc = TenTbx.Text;
-            dm.Mota = MotaTbx.Text;
+            dm.Danhmuc = MotaTbx.Text;
 
             MessageBox.Show(dm.Madanhmuc);
             DanhMucBus = new DanhMucBUS();
