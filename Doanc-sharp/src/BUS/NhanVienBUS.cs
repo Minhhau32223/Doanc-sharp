@@ -14,6 +14,7 @@ namespace Doanc_sharp.src.BUS
 
         public NhanVienBUS()
         { 
+            dao = new NhanVienDAO();
         }
         public List<NhanVienDTO> docDsnv()
         {
@@ -39,7 +40,18 @@ namespace Doanc_sharp.src.BUS
 
             return dsnv;
         }
-        
+        public bool ThemNhanVien(NhanVienDTO nv)
+        {
+            if (string.IsNullOrWhiteSpace(nv.Hoten) || string.IsNullOrWhiteSpace(nv.Taikhoan))
+            {
+                throw new ArgumentException("Họ tên và tài khoản không được để trống.");
+            }
+            return dao.ThemNhanVien(nv);
+        }
+        public NhanVienDTO DangNhap(string taikhoan, string matkhau)
+        {
+            return dao.DangNhap(taikhoan, matkhau);
+        }
 
     }
 }

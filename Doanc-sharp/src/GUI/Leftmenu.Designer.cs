@@ -41,7 +41,6 @@
             label1 = new Label();
             panel1 = new Panel();
             label2 = new Label();
-            btn_baotri = new Button();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -92,7 +91,7 @@
             btn_datcho.BackColor = Color.FromArgb(167, 123, 79);
             btn_datcho.Font = new Font("Roboto", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btn_datcho.ForeColor = Color.White;
-            btn_datcho.Location = new Point(0, 599);
+            btn_datcho.Location = new Point(0, 532);
             btn_datcho.Name = "btn_datcho";
             btn_datcho.Size = new Size(300, 70);
             btn_datcho.TabIndex = 5;
@@ -105,7 +104,7 @@
             btn_muon.BackColor = Color.FromArgb(167, 123, 79);
             btn_muon.Font = new Font("Roboto", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btn_muon.ForeColor = Color.White;
-            btn_muon.Location = new Point(0, 666);
+            btn_muon.Location = new Point(0, 599);
             btn_muon.Name = "btn_muon";
             btn_muon.Size = new Size(300, 70);
             btn_muon.TabIndex = 6;
@@ -118,7 +117,7 @@
             btn_danhmuc.BackColor = Color.FromArgb(167, 123, 79);
             btn_danhmuc.Font = new Font("Roboto", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btn_danhmuc.ForeColor = Color.White;
-            btn_danhmuc.Location = new Point(0, 733);
+            btn_danhmuc.Location = new Point(0, 666);
             btn_danhmuc.Name = "btn_danhmuc";
             btn_danhmuc.Size = new Size(300, 70);
             btn_danhmuc.TabIndex = 7;
@@ -131,7 +130,7 @@
             btn_vipham.BackColor = Color.FromArgb(167, 123, 79);
             btn_vipham.Font = new Font("Roboto", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btn_vipham.ForeColor = Color.White;
-            btn_vipham.Location = new Point(0, 800);
+            btn_vipham.Location = new Point(0, 733);
             btn_vipham.Name = "btn_vipham";
             btn_vipham.Size = new Size(300, 67);
             btn_vipham.TabIndex = 8;
@@ -144,7 +143,7 @@
             btn_lshoatdong.BackColor = Color.FromArgb(167, 123, 79);
             btn_lshoatdong.Font = new Font("Roboto", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btn_lshoatdong.ForeColor = Color.White;
-            btn_lshoatdong.Location = new Point(0, 861);
+            btn_lshoatdong.Location = new Point(0, 794);
             btn_lshoatdong.Name = "btn_lshoatdong";
             btn_lshoatdong.Size = new Size(300, 70);
             btn_lshoatdong.TabIndex = 9;
@@ -157,7 +156,7 @@
             btn_baocao_thongke.BackColor = Color.FromArgb(167, 123, 79);
             btn_baocao_thongke.Font = new Font("Roboto", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btn_baocao_thongke.ForeColor = Color.White;
-            btn_baocao_thongke.Location = new Point(0, 927);
+            btn_baocao_thongke.Location = new Point(0, 860);
             btn_baocao_thongke.Name = "btn_baocao_thongke";
             btn_baocao_thongke.Size = new Size(300, 70);
             btn_baocao_thongke.TabIndex = 10;
@@ -207,19 +206,6 @@
             label2.TabIndex = 0;
             label2.Text = "img";
             // 
-            // btn_baotri
-            // 
-            btn_baotri.BackColor = Color.FromArgb(167, 123, 79);
-            btn_baotri.Font = new Font("Roboto", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btn_baotri.ForeColor = Color.White;
-            btn_baotri.Location = new Point(0, 532);
-            btn_baotri.Name = "btn_baotri";
-            btn_baotri.Size = new Size(300, 70);
-            btn_baotri.TabIndex = 1;
-            btn_baotri.Text = "Quản lý bảo trì";
-            btn_baotri.UseVisualStyleBackColor = false;
-            btn_baotri.Click += btn_baotri_Click;
-            // 
             // Leftmenu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -227,7 +213,6 @@
             BackColor = Color.Beige;
             Controls.Add(panel1);
             Controls.Add(label1);
-            Controls.Add(btn_baotri);
             Controls.Add(btnCheck);
             Controls.Add(btn_thanhvien);
             Controls.Add(btn_nhanvien);
@@ -239,7 +224,7 @@
             Controls.Add(btn_lshoatdong);
             Controls.Add(btn_baocao_thongke);
             Name = "Leftmenu";
-            Size = new Size(300, 1024);
+            Size = new Size(300, 941);
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);
@@ -260,6 +245,5 @@
         private Label label1;
         private Panel panel1;
         private Label label2;
-        private Button btn_baotri;
     }
 }

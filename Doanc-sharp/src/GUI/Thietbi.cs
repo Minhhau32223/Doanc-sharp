@@ -64,7 +64,7 @@ namespace Doanc_sharp
                     Giathue = Convert.ToInt32(dgvThietbi.CurrentRow.Cells["Giathue"].Value.ToString()),
                     Trangthai = dgvThietbi.CurrentRow.Cells["Trangthai"].Value.ToString(),
                 };
-                SuaThietBi formThem = new SuaThietBi (selected);
+                SuaThietBi formThem = new SuaThietBi(selected);
 
                 if (formThem.ShowDialog() == DialogResult.OK)
                 {
@@ -102,6 +102,11 @@ namespace Doanc_sharp
         private void btnReset_Click(object sender, EventArgs e)
         {
             LoadData();
+        }
+
+        private void btnExcel_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

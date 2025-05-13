@@ -82,12 +82,22 @@ namespace Doanc_sharp
                 DateTime nm = Convert.ToDateTime(DataMuon.CurrentRow.Cells["Ngaymuon"].Value.ToString());
                 DateTime ntr = Convert.ToDateTime(DataMuon.CurrentRow.Cells["Ngaytra"].Value.ToString());
                 string trangthai = DataMuon.CurrentRow.Cells["Trangthai"].Value.ToString();
+                if (trangthai.Contains("Đã trả"))
+                {
+                    MessageBox.Show("Vui lòng chọn phiếu mượn chưa được trả!");
+                    return;
+                }
                 Themphieumuon tpm = new Themphieumuon();
-                tpm.loadUpdate(mapm, nm, ntr, trangthai, matv, "Cập nhật phiếu mượn");
+                tpm.loadUpdate(mapm, nm, ntr, trangthai, matv, "Xác nhận trả thiết bị");
 
                 tpm.ShowDialog();
 
 
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn một dòng hợp lệ.");
+                return;
             }
         }
 
@@ -167,6 +177,31 @@ namespace Doanc_sharp
                 ).ToList();
 
                 DataMuon.DataSource = danhSachLoc;
+            }
+        }
+
+        private void textBoxTimkiemtra_TextChanged(object sender, EventArgs e)
+        {
+             string keyword = textBoxTimkiemtra.Text.Trim().ToLower();
+
+            // Lấy toàn bộ danh sách gốc
+            List<PhieuMuonDTO> danhSachGoc = pmbus.LayDanhSachPhieuTra();
+
+            if (string.IsNullOrEmpty(keyword))
+            {
+                // Nếu không có từ khóa, hiển thị toàn bộ
+                dataTra.DataSource = danhSachGoc;
+            }
+            else
+            {
+                // Lọc theo Maphieumuon, Mathanhvien, hoặc Trangthai (tuỳ bạn thêm cột nào)
+                var danhSachLoc = danhSachGoc.Where(pt =>
+                    pt.Maphieumuon.ToString().Contains(keyword) ||
+                    pt.Mathanhvien.ToString().Contains(keyword) ||
+                    (!string.IsNullOrEmpty(pt.Trangthai) && pt.Trangthai.ToLower().Contains(keyword))
+                ).ToList();
+
+                dataTra.DataSource = danhSachLoc;
             }
         }
     }

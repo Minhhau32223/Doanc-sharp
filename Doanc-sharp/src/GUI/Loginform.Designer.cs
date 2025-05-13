@@ -48,6 +48,7 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(681, 83);
             panel1.TabIndex = 17;
+            panel1.Paint += panel1_Paint;
             // 
             // label1
             // 
@@ -88,24 +89,26 @@
             btnThoat.BackColor = Color.Red;
             btnThoat.Font = new Font("Times New Roman", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnThoat.ForeColor = Color.White;
-            btnThoat.Location = new Point(202, 257);
+            btnThoat.Location = new Point(105, 257);
             btnThoat.Name = "btnThoat";
             btnThoat.Size = new Size(209, 69);
             btnThoat.TabIndex = 28;
             btnThoat.Text = "Thoát";
             btnThoat.UseVisualStyleBackColor = false;
+            btnThoat.Click += btnThoat_Click;
             // 
             // btnDangnhap
             // 
             btnDangnhap.BackColor = Color.Green;
             btnDangnhap.Font = new Font("Times New Roman", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnDangnhap.ForeColor = Color.White;
-            btnDangnhap.Location = new Point(442, 257);
+            btnDangnhap.Location = new Point(387, 257);
             btnDangnhap.Name = "btnDangnhap";
             btnDangnhap.Size = new Size(209, 69);
             btnDangnhap.TabIndex = 28;
             btnDangnhap.Text = "Đăng nhập";
             btnDangnhap.UseVisualStyleBackColor = false;
+            btnDangnhap.Click += btnDangnhap_Click;
             // 
             // accountTbox
             // 
@@ -142,6 +145,7 @@
             MdiChildrenMinimizedAnchorBottom = false;
             MinimizeBox = false;
             Name = "Loginform";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Loginform";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();

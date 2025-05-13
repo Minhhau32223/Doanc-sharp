@@ -28,16 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             tab = new TabControl();
             tabLuotVao = new TabPage();
             tblLuotVao = new DataGridView();
-            MaThanhVien = new DataGridViewTextBoxColumn();
-            HoTen = new DataGridViewTextBoxColumn();
-            Loai = new DataGridViewTextBoxColumn();
-            ChiTiet = new DataGridViewTextBoxColumn();
-            ThoiGian = new DataGridViewTextBoxColumn();
-            SoLuong = new DataGridViewTextBoxColumn();
             lblTongSoLuong = new Label();
             lblDenNgay = new Label();
             lblTuNgay = new Label();
@@ -46,12 +40,6 @@
             tabTBDuocMuon = new TabPage();
             label7 = new Label();
             tblTBDuocMuon = new DataGridView();
-            tab2HoTen = new DataGridViewTextBoxColumn();
-            tab2TenThietBi = new DataGridViewTextBoxColumn();
-            tab2NgayMuon = new DataGridViewTextBoxColumn();
-            tab2NgayTra = new DataGridViewTextBoxColumn();
-            tab2TrangThai = new DataGridViewTextBoxColumn();
-            tab2SoLuong = new DataGridViewTextBoxColumn();
             label1 = new Label();
             label2 = new Label();
             txtTenTBDuocMuon = new TextBox();
@@ -60,12 +48,6 @@
             tabTBDangDuocMuon = new TabPage();
             label8 = new Label();
             tblTBDangDuocMuon = new DataGridView();
-            dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn4 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn5 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn6 = new DataGridViewTextBoxColumn();
             txtTenTBDangDuocMuon = new TextBox();
             label3 = new Label();
             label4 = new Label();
@@ -74,13 +56,31 @@
             tabViPham = new TabPage();
             cmbViPham = new ComboBox();
             tblViPham = new DataGridView();
+            lblThongKe = new Label();
+            MaThanhVien = new DataGridViewTextBoxColumn();
+            HoTen = new DataGridViewTextBoxColumn();
+            Loai = new DataGridViewTextBoxColumn();
+            ChiTiet = new DataGridViewTextBoxColumn();
+            ThoiGian = new DataGridViewTextBoxColumn();
+            SoLuong = new DataGridViewTextBoxColumn();
+            tab2HoTen = new DataGridViewTextBoxColumn();
+            tab2TenThietBi = new DataGridViewTextBoxColumn();
+            tab2NgayMuon = new DataGridViewTextBoxColumn();
+            tab2NgayTra = new DataGridViewTextBoxColumn();
+            tab2TrangThai = new DataGridViewTextBoxColumn();
+            tab2SoLuong = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn4 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn5 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn6 = new DataGridViewTextBoxColumn();
             tab4MaViPham = new DataGridViewTextBoxColumn();
             tab4HoTen = new DataGridViewTextBoxColumn();
             tab4TenViPham = new DataGridViewTextBoxColumn();
             tab4MoTa = new DataGridViewTextBoxColumn();
             tab4NgayVP = new DataGridViewTextBoxColumn();
             tab4TrangThai = new DataGridViewTextBoxColumn();
-            lblThongKe = new Label();
             tab.SuspendLayout();
             tabLuotVao.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)tblLuotVao).BeginInit();
@@ -126,68 +126,20 @@
             tblLuotVao.AllowUserToDeleteRows = false;
             tblLuotVao.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             tblLuotVao.Columns.AddRange(new DataGridViewColumn[] { MaThanhVien, HoTen, Loai, ChiTiet, ThoiGian, SoLuong });
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = SystemColors.Window;
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle1.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.False;
-            tblLuotVao.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.Window;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            tblLuotVao.DefaultCellStyle = dataGridViewCellStyle2;
             tblLuotVao.Location = new Point(33, 94);
             tblLuotVao.Name = "tblLuotVao";
             tblLuotVao.ReadOnly = true;
             tblLuotVao.Size = new Size(866, 452);
             tblLuotVao.TabIndex = 7;
             tblLuotVao.CellToolTipTextNeeded += tblLuotVao_CellToolTipTextNeeded;
-            // 
-            // MaThanhVien
-            // 
-            MaThanhVien.DataPropertyName = "Mathanhvien";
-            MaThanhVien.HeaderText = "Mã thành viên";
-            MaThanhVien.Name = "MaThanhVien";
-            MaThanhVien.ReadOnly = true;
-            MaThanhVien.Width = 137;
-            // 
-            // HoTen
-            // 
-            HoTen.DataPropertyName = "Hoten";
-            HoTen.HeaderText = "Họ tên";
-            HoTen.Name = "HoTen";
-            HoTen.ReadOnly = true;
-            HoTen.Width = 137;
-            // 
-            // Loai
-            // 
-            Loai.DataPropertyName = "Loai";
-            Loai.HeaderText = "Loại hoạt động";
-            Loai.Name = "Loai";
-            Loai.ReadOnly = true;
-            Loai.Width = 138;
-            // 
-            // ChiTiet
-            // 
-            ChiTiet.DataPropertyName = "Chitiet";
-            ChiTiet.HeaderText = "Chi tiết hoạt động";
-            ChiTiet.Name = "ChiTiet";
-            ChiTiet.ReadOnly = true;
-            ChiTiet.Width = 137;
-            // 
-            // ThoiGian
-            // 
-            ThoiGian.DataPropertyName = "Thoigian";
-            ThoiGian.HeaderText = "Thời gian";
-            ThoiGian.Name = "ThoiGian";
-            ThoiGian.ReadOnly = true;
-            ThoiGian.Width = 137;
-            // 
-            // SoLuong
-            // 
-            SoLuong.DataPropertyName = "SoLuong";
-            SoLuong.HeaderText = "Số lượt vào";
-            SoLuong.Name = "SoLuong";
-            SoLuong.ReadOnly = true;
-            SoLuong.Width = 137;
             // 
             // lblTongSoLuong
             // 
@@ -269,48 +221,6 @@
             tblTBDuocMuon.TabIndex = 11;
             tblTBDuocMuon.CellToolTipTextNeeded += tblTBDuocMuon_CellToolTipTextNeeded;
             // 
-            // tab2HoTen
-            // 
-            tab2HoTen.DataPropertyName = "Hoten";
-            tab2HoTen.HeaderText = "Họ tên";
-            tab2HoTen.Name = "tab2HoTen";
-            tab2HoTen.Width = 150;
-            // 
-            // tab2TenThietBi
-            // 
-            tab2TenThietBi.DataPropertyName = "Tenthietbi";
-            tab2TenThietBi.HeaderText = "Tên thiết bị";
-            tab2TenThietBi.Name = "tab2TenThietBi";
-            tab2TenThietBi.Width = 150;
-            // 
-            // tab2NgayMuon
-            // 
-            tab2NgayMuon.DataPropertyName = "Ngaymuon";
-            tab2NgayMuon.HeaderText = "Ngày mượn";
-            tab2NgayMuon.Name = "tab2NgayMuon";
-            tab2NgayMuon.Width = 150;
-            // 
-            // tab2NgayTra
-            // 
-            tab2NgayTra.DataPropertyName = "Ngaytra";
-            tab2NgayTra.HeaderText = "Ngày trả";
-            tab2NgayTra.Name = "tab2NgayTra";
-            tab2NgayTra.Width = 150;
-            // 
-            // tab2TrangThai
-            // 
-            tab2TrangThai.DataPropertyName = "Trangthai";
-            tab2TrangThai.HeaderText = "Trạng thái";
-            tab2TrangThai.Name = "tab2TrangThai";
-            tab2TrangThai.Width = 150;
-            // 
-            // tab2SoLuong
-            // 
-            tab2SoLuong.DataPropertyName = "Soluong";
-            tab2SoLuong.HeaderText = "Số lượng";
-            tab2SoLuong.Name = "tab2SoLuong";
-            tab2SoLuong.Width = 60;
-            // 
             // label1
             // 
             label1.AutoSize = true;
@@ -389,48 +299,6 @@
             tblTBDangDuocMuon.TabIndex = 14;
             tblTBDangDuocMuon.CellToolTipTextNeeded += tblTBDangDuocMuon_CellToolTipTextNeeded;
             // 
-            // dataGridViewTextBoxColumn1
-            // 
-            dataGridViewTextBoxColumn1.DataPropertyName = "Hoten";
-            dataGridViewTextBoxColumn1.HeaderText = "Họ tên";
-            dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            dataGridViewTextBoxColumn1.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            dataGridViewTextBoxColumn2.DataPropertyName = "Tenthietbi";
-            dataGridViewTextBoxColumn2.HeaderText = "Tên thiết bị";
-            dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            dataGridViewTextBoxColumn2.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            dataGridViewTextBoxColumn3.DataPropertyName = "Ngaymuon";
-            dataGridViewTextBoxColumn3.HeaderText = "Ngày mượn";
-            dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            dataGridViewTextBoxColumn3.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            dataGridViewTextBoxColumn4.DataPropertyName = "Ngaytra";
-            dataGridViewTextBoxColumn4.HeaderText = "Ngày trả";
-            dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            dataGridViewTextBoxColumn4.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            dataGridViewTextBoxColumn5.DataPropertyName = "Trangthai";
-            dataGridViewTextBoxColumn5.HeaderText = "Trạng thái";
-            dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            dataGridViewTextBoxColumn5.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            dataGridViewTextBoxColumn6.DataPropertyName = "Soluong";
-            dataGridViewTextBoxColumn6.HeaderText = "Số lượng";
-            dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            dataGridViewTextBoxColumn6.Width = 60;
-            // 
             // txtTenTBDangDuocMuon
             // 
             txtTenTBDangDuocMuon.Location = new Point(41, 60);
@@ -506,48 +374,6 @@
             tblViPham.TabIndex = 11;
             tblViPham.CellToolTipTextNeeded += tblViPham_CellToolTipTextNeeded;
             // 
-            // tab4MaViPham
-            // 
-            tab4MaViPham.DataPropertyName = "Mavipham";
-            tab4MaViPham.HeaderText = "Mã vi phạm";
-            tab4MaViPham.Name = "tab4MaViPham";
-            tab4MaViPham.Width = 75;
-            // 
-            // tab4HoTen
-            // 
-            tab4HoTen.DataPropertyName = "Hoten";
-            tab4HoTen.HeaderText = "Họ tên";
-            tab4HoTen.Name = "tab4HoTen";
-            tab4HoTen.Width = 150;
-            // 
-            // tab4TenViPham
-            // 
-            tab4TenViPham.DataPropertyName = "Tenvipham";
-            tab4TenViPham.HeaderText = "Tên vi phạm";
-            tab4TenViPham.Name = "tab4TenViPham";
-            tab4TenViPham.Width = 150;
-            // 
-            // tab4MoTa
-            // 
-            tab4MoTa.DataPropertyName = "Mota";
-            tab4MoTa.HeaderText = "Mô tả";
-            tab4MoTa.Name = "tab4MoTa";
-            tab4MoTa.Width = 150;
-            // 
-            // tab4NgayVP
-            // 
-            tab4NgayVP.DataPropertyName = "Ngayvp";
-            tab4NgayVP.HeaderText = "Ngày vi phạm";
-            tab4NgayVP.Name = "tab4NgayVP";
-            tab4NgayVP.Width = 150;
-            // 
-            // tab4TrangThai
-            // 
-            tab4TrangThai.DataPropertyName = "Trangthai";
-            tab4TrangThai.HeaderText = "Trạng thái";
-            tab4TrangThai.Name = "tab4TrangThai";
-            tab4TrangThai.Width = 150;
-            // 
             // lblThongKe
             // 
             lblThongKe.AutoSize = true;
@@ -557,6 +383,211 @@
             lblThongKe.Size = new Size(107, 28);
             lblThongKe.TabIndex = 1;
             lblThongKe.Text = "THỐNG KÊ";
+            // 
+            // MaThanhVien
+            // 
+            MaThanhVien.DataPropertyName = "Mathanhvien";
+            MaThanhVien.HeaderText = "Mã thành viên";
+            MaThanhVien.Name = "MaThanhVien";
+            MaThanhVien.ReadOnly = true;
+            MaThanhVien.Resizable = DataGridViewTriState.False;
+            MaThanhVien.Width = 137;
+            // 
+            // HoTen
+            // 
+            HoTen.DataPropertyName = "Hoten";
+            HoTen.HeaderText = "Họ tên";
+            HoTen.Name = "HoTen";
+            HoTen.ReadOnly = true;
+            HoTen.Resizable = DataGridViewTriState.False;
+            HoTen.Width = 137;
+            // 
+            // Loai
+            // 
+            Loai.DataPropertyName = "Loai";
+            Loai.HeaderText = "Loại hoạt động";
+            Loai.Name = "Loai";
+            Loai.ReadOnly = true;
+            Loai.Resizable = DataGridViewTriState.False;
+            Loai.Width = 138;
+            // 
+            // ChiTiet
+            // 
+            ChiTiet.DataPropertyName = "Chitiet";
+            ChiTiet.HeaderText = "Chi tiết hoạt động";
+            ChiTiet.Name = "ChiTiet";
+            ChiTiet.ReadOnly = true;
+            ChiTiet.Resizable = DataGridViewTriState.False;
+            ChiTiet.Width = 137;
+            // 
+            // ThoiGian
+            // 
+            ThoiGian.DataPropertyName = "Thoigian";
+            ThoiGian.HeaderText = "Thời gian";
+            ThoiGian.Name = "ThoiGian";
+            ThoiGian.ReadOnly = true;
+            ThoiGian.Resizable = DataGridViewTriState.False;
+            ThoiGian.Width = 137;
+            // 
+            // SoLuong
+            // 
+            SoLuong.DataPropertyName = "SoLuong";
+            SoLuong.HeaderText = "Số lượt vào";
+            SoLuong.Name = "SoLuong";
+            SoLuong.ReadOnly = true;
+            SoLuong.Resizable = DataGridViewTriState.False;
+            SoLuong.Width = 137;
+            // 
+            // tab2HoTen
+            // 
+            tab2HoTen.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            tab2HoTen.DataPropertyName = "Hoten";
+            tab2HoTen.HeaderText = "Họ tên";
+            tab2HoTen.Name = "tab2HoTen";
+            // 
+            // tab2TenThietBi
+            // 
+            tab2TenThietBi.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            tab2TenThietBi.DataPropertyName = "Tenthietbi";
+            tab2TenThietBi.HeaderText = "Tên thiết bị";
+            tab2TenThietBi.Name = "tab2TenThietBi";
+            // 
+            // tab2NgayMuon
+            // 
+            tab2NgayMuon.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            tab2NgayMuon.DataPropertyName = "Ngaymuon";
+            tab2NgayMuon.HeaderText = "Ngày mượn";
+            tab2NgayMuon.Name = "tab2NgayMuon";
+            // 
+            // tab2NgayTra
+            // 
+            tab2NgayTra.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            tab2NgayTra.DataPropertyName = "Ngaytra";
+            tab2NgayTra.HeaderText = "Ngày trả";
+            tab2NgayTra.Name = "tab2NgayTra";
+            // 
+            // tab2TrangThai
+            // 
+            tab2TrangThai.AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
+            tab2TrangThai.DataPropertyName = "Trangthai";
+            tab2TrangThai.HeaderText = "Trạng thái";
+            tab2TrangThai.Name = "tab2TrangThai";
+            tab2TrangThai.Width = 85;
+            // 
+            // tab2SoLuong
+            // 
+            tab2SoLuong.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            tab2SoLuong.DataPropertyName = "Soluong";
+            tab2SoLuong.HeaderText = "Số lượng";
+            tab2SoLuong.Name = "tab2SoLuong";
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            dataGridViewTextBoxColumn1.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewTextBoxColumn1.DataPropertyName = "Hoten";
+            dataGridViewTextBoxColumn1.HeaderText = "Họ tên";
+            dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            dataGridViewTextBoxColumn1.ReadOnly = true;
+            dataGridViewTextBoxColumn1.Resizable = DataGridViewTriState.False;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            dataGridViewTextBoxColumn2.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewTextBoxColumn2.DataPropertyName = "Tenthietbi";
+            dataGridViewTextBoxColumn2.HeaderText = "Tên thiết bị";
+            dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            dataGridViewTextBoxColumn2.ReadOnly = true;
+            dataGridViewTextBoxColumn2.Resizable = DataGridViewTriState.False;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            dataGridViewTextBoxColumn3.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewTextBoxColumn3.DataPropertyName = "Ngaymuon";
+            dataGridViewTextBoxColumn3.HeaderText = "Ngày mượn";
+            dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            dataGridViewTextBoxColumn3.ReadOnly = true;
+            dataGridViewTextBoxColumn3.Resizable = DataGridViewTriState.False;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            dataGridViewTextBoxColumn4.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewTextBoxColumn4.DataPropertyName = "Ngaytra";
+            dataGridViewTextBoxColumn4.HeaderText = "Ngày trả";
+            dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            dataGridViewTextBoxColumn4.ReadOnly = true;
+            dataGridViewTextBoxColumn4.Resizable = DataGridViewTriState.False;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            dataGridViewTextBoxColumn5.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewTextBoxColumn5.DataPropertyName = "Trangthai";
+            dataGridViewTextBoxColumn5.HeaderText = "Trạng thái";
+            dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            dataGridViewTextBoxColumn5.ReadOnly = true;
+            dataGridViewTextBoxColumn5.Resizable = DataGridViewTriState.False;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            dataGridViewTextBoxColumn6.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewTextBoxColumn6.DataPropertyName = "Soluong";
+            dataGridViewTextBoxColumn6.HeaderText = "Số lượng";
+            dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            dataGridViewTextBoxColumn6.ReadOnly = true;
+            dataGridViewTextBoxColumn6.Resizable = DataGridViewTriState.False;
+            // 
+            // tab4MaViPham
+            // 
+            tab4MaViPham.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            tab4MaViPham.DataPropertyName = "Mavipham";
+            tab4MaViPham.HeaderText = "Mã vi phạm";
+            tab4MaViPham.Name = "tab4MaViPham";
+            tab4MaViPham.ReadOnly = true;
+            tab4MaViPham.Resizable = DataGridViewTriState.False;
+            // 
+            // tab4HoTen
+            // 
+            tab4HoTen.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            tab4HoTen.DataPropertyName = "Hoten";
+            tab4HoTen.HeaderText = "Họ tên";
+            tab4HoTen.Name = "tab4HoTen";
+            tab4HoTen.ReadOnly = true;
+            tab4HoTen.Resizable = DataGridViewTriState.False;
+            // 
+            // tab4TenViPham
+            // 
+            tab4TenViPham.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            tab4TenViPham.DataPropertyName = "Tenvipham";
+            tab4TenViPham.HeaderText = "Tên vi phạm";
+            tab4TenViPham.Name = "tab4TenViPham";
+            tab4TenViPham.ReadOnly = true;
+            tab4TenViPham.Resizable = DataGridViewTriState.False;
+            // 
+            // tab4MoTa
+            // 
+            tab4MoTa.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            tab4MoTa.DataPropertyName = "Mota";
+            tab4MoTa.HeaderText = "Mô tả";
+            tab4MoTa.Name = "tab4MoTa";
+            tab4MoTa.ReadOnly = true;
+            tab4MoTa.Resizable = DataGridViewTriState.False;
+            // 
+            // tab4NgayVP
+            // 
+            tab4NgayVP.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            tab4NgayVP.DataPropertyName = "Ngayvp";
+            tab4NgayVP.HeaderText = "Ngày vi phạm";
+            tab4NgayVP.Name = "tab4NgayVP";
+            tab4NgayVP.ReadOnly = true;
+            tab4NgayVP.Resizable = DataGridViewTriState.False;
+            // 
+            // tab4TrangThai
+            // 
+            tab4TrangThai.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            tab4TrangThai.DataPropertyName = "Trangthai";
+            tab4TrangThai.HeaderText = "Trạng thái";
+            tab4TrangThai.Name = "tab4TrangThai";
+            tab4TrangThai.ReadOnly = true;
+            tab4TrangThai.Resizable = DataGridViewTriState.False;
             // 
             // ThongKeBaoCao
             // 
@@ -610,29 +641,29 @@
         private DataGridView tblViPham;
         private DataGridView tblLuotVao;
         private Label lblTongSoLuong;
+        private Label label7;
+        private Label label8;
+        private DataGridView tblTBDangDuocMuon;
+        private TextBox txtTenTBDangDuocMuon;
+        private ComboBox cmbViPham;
         private DataGridViewTextBoxColumn MaThanhVien;
         private DataGridViewTextBoxColumn HoTen;
         private DataGridViewTextBoxColumn Loai;
         private DataGridViewTextBoxColumn ChiTiet;
         private DataGridViewTextBoxColumn ThoiGian;
         private DataGridViewTextBoxColumn SoLuong;
-        private Label label7;
         private DataGridViewTextBoxColumn tab2HoTen;
         private DataGridViewTextBoxColumn tab2TenThietBi;
         private DataGridViewTextBoxColumn tab2NgayMuon;
         private DataGridViewTextBoxColumn tab2NgayTra;
         private DataGridViewTextBoxColumn tab2TrangThai;
         private DataGridViewTextBoxColumn tab2SoLuong;
-        private Label label8;
-        private DataGridView tblTBDangDuocMuon;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private TextBox txtTenTBDangDuocMuon;
-        private ComboBox cmbViPham;
         private DataGridViewTextBoxColumn tab4MaViPham;
         private DataGridViewTextBoxColumn tab4HoTen;
         private DataGridViewTextBoxColumn tab4TenViPham;

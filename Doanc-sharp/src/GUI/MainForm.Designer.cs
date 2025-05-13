@@ -60,8 +60,9 @@
             Rightpanel.BackColor = Color.FromArgb(184, 145, 99);
             Rightpanel.Location = new Point(303, 117);
             Rightpanel.Name = "Rightpanel";
-            Rightpanel.Size = new Size(1124, 896);
+            Rightpanel.Size = new Size(1021, 896);
             Rightpanel.TabIndex = 1;
+            Rightpanel.Paint += Rightpanel_Paint;
             // 
             // headerpanel
             // 
@@ -69,24 +70,26 @@
             headerpanel.Controls.Add(youraccount);
             headerpanel.Location = new Point(303, -5);
             headerpanel.Name = "headerpanel";
-            headerpanel.Size = new Size(1124, 122);
+            headerpanel.Size = new Size(1021, 122);
             headerpanel.TabIndex = 2;
+            headerpanel.Paint += headerpanel_Paint;
             // 
             // youraccount
             // 
             youraccount.AutoSize = true;
             youraccount.Font = new Font("Times New Roman", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            youraccount.Location = new Point(674, 34);
+            youraccount.Location = new Point(485, 38);
             youraccount.Name = "youraccount";
             youraccount.Size = new Size(345, 36);
             youraccount.TabIndex = 0;
             youraccount.Text = "Tài khoản đang đăng nhập";
+            youraccount.Click += youraccount_Click;
             // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1424, 1011);
+            ClientSize = new Size(1324, 941);
             Controls.Add(headerpanel);
             Controls.Add(Rightpanel);
             Controls.Add(Leftpanel);

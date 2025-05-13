@@ -46,6 +46,8 @@
             IDTB = new DataGridViewTextBoxColumn();
             Tentb = new DataGridViewTextBoxColumn();
             Soluong = new DataGridViewTextBoxColumn();
+            label1 = new Label();
+            textBoxsongaymuon = new TextBox();
             pnTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvCTDC).BeginInit();
             SuspendLayout();
@@ -87,7 +89,7 @@
             btnXacNhan.BackColor = Color.Green;
             btnXacNhan.Font = new Font("Sitka Text", 16.1999989F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnXacNhan.ForeColor = SystemColors.ButtonHighlight;
-            btnXacNhan.Location = new Point(477, 442);
+            btnXacNhan.Location = new Point(484, 459);
             btnXacNhan.Margin = new Padding(3, 2, 3, 2);
             btnXacNhan.Name = "btnXacNhan";
             btnXacNhan.Size = new Size(218, 52);
@@ -101,7 +103,7 @@
             btnThoat.BackColor = Color.Red;
             btnThoat.Font = new Font("Sitka Text", 16.1999989F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnThoat.ForeColor = SystemColors.ButtonHighlight;
-            btnThoat.Location = new Point(155, 442);
+            btnThoat.Location = new Point(158, 459);
             btnThoat.Margin = new Padding(3, 2, 3, 2);
             btnThoat.Name = "btnThoat";
             btnThoat.Size = new Size(218, 52);
@@ -153,7 +155,7 @@
             // 
             lblTrangThai.AutoSize = true;
             lblTrangThai.Font = new Font("Times New Roman", 13.8F);
-            lblTrangThai.Location = new Point(193, 367);
+            lblTrangThai.Location = new Point(193, 415);
             lblTrangThai.Name = "lblTrangThai";
             lblTrangThai.Size = new Size(88, 21);
             lblTrangThai.TabIndex = 35;
@@ -169,7 +171,7 @@
             // 
             // txtMaThanhVien
             // 
-            txtMaThanhVien.Location = new Point(424, 327);
+            txtMaThanhVien.Location = new Point(422, 327);
             txtMaThanhVien.Margin = new Padding(3, 2, 3, 2);
             txtMaThanhVien.Name = "txtMaThanhVien";
             txtMaThanhVien.Size = new Size(297, 23);
@@ -179,7 +181,7 @@
             // cmbTrangThai
             // 
             cmbTrangThai.FormattingEnabled = true;
-            cmbTrangThai.Location = new Point(424, 368);
+            cmbTrangThai.Location = new Point(422, 415);
             cmbTrangThai.Margin = new Padding(3, 2, 3, 2);
             cmbTrangThai.Name = "cmbTrangThai";
             cmbTrangThai.Size = new Size(297, 23);
@@ -221,6 +223,26 @@
             Soluong.Name = "Soluong";
             Soluong.Resizable = DataGridViewTriState.False;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Times New Roman", 13.8F);
+            label1.Location = new Point(191, 369);
+            label1.Name = "label1";
+            label1.Size = new Size(123, 21);
+            label1.TabIndex = 34;
+            label1.Text = "Số ngày mượn:";
+            label1.Click += lblMaThanhVien_Click;
+            // 
+            // textBoxsongaymuon
+            // 
+            textBoxsongaymuon.Location = new Point(422, 367);
+            textBoxsongaymuon.Margin = new Padding(3, 2, 3, 2);
+            textBoxsongaymuon.Name = "textBoxsongaymuon";
+            textBoxsongaymuon.Size = new Size(297, 23);
+            textBoxsongaymuon.TabIndex = 39;
+            textBoxsongaymuon.TextChanged += textBoxsongaymuon_TextChanged;
+            // 
             // ChiTietDatCho
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -229,8 +251,10 @@
             ClientSize = new Size(880, 550);
             Controls.Add(dgvCTDC);
             Controls.Add(cmbTrangThai);
+            Controls.Add(textBoxsongaymuon);
             Controls.Add(txtMaThanhVien);
             Controls.Add(txtThoiGianDatCho);
+            Controls.Add(label1);
             Controls.Add(lblTrangThai);
             Controls.Add(lblMaThanhVien);
             Controls.Add(lblThoiGianDatCho);
@@ -270,5 +294,7 @@
         private DataGridViewTextBoxColumn IDTB;
         private DataGridViewTextBoxColumn Tentb;
         private DataGridViewTextBoxColumn Soluong;
+        private Label label1;
+        private TextBox textBoxsongaymuon;
     }
 }

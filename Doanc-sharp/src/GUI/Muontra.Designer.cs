@@ -51,6 +51,8 @@
             Ngaytra1 = new DataGridViewTextBoxColumn();
             Mathanhvien1 = new DataGridViewTextBoxColumn();
             Trangthai1 = new DataGridViewTextBoxColumn();
+            textBoxTimkiemtra = new TextBox();
+            label2 = new Label();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)DataMuon).BeginInit();
@@ -130,7 +132,7 @@
             btnCapnhat.Name = "btnCapnhat";
             btnCapnhat.Size = new Size(98, 30);
             btnCapnhat.TabIndex = 8;
-            btnCapnhat.Text = "Cập nhật ";
+            btnCapnhat.Text = "Xác nhận trả";
             btnCapnhat.UseVisualStyleBackColor = true;
             btnCapnhat.Click += btnCapnhat_Click;
             // 
@@ -216,6 +218,8 @@
             // 
             // tabPage2
             // 
+            tabPage2.Controls.Add(textBoxTimkiemtra);
+            tabPage2.Controls.Add(label2);
             tabPage2.Controls.Add(button1);
             tabPage2.Controls.Add(dataTra);
             tabPage2.Location = new Point(4, 24);
@@ -281,6 +285,24 @@
             Trangthai1.HeaderText = "Trạng thái";
             Trangthai1.Name = "Trangthai1";
             // 
+            // textBoxTimkiemtra
+            // 
+            textBoxTimkiemtra.Location = new Point(163, 11);
+            textBoxTimkiemtra.Name = "textBoxTimkiemtra";
+            textBoxTimkiemtra.Size = new Size(175, 23);
+            textBoxTimkiemtra.TabIndex = 14;
+            textBoxTimkiemtra.TextChanged += textBoxTimkiemtra_TextChanged;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Location = new Point(65, 12);
+            label2.Name = "label2";
+            label2.Size = new Size(90, 23);
+            label2.TabIndex = 13;
+            label2.Text = "Tìm kiếm";
+            // 
             // Muontra
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -297,6 +319,7 @@
             tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)DataMuon).EndInit();
             tabPage2.ResumeLayout(false);
+            tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataTra).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -326,5 +349,7 @@
         private DataGridViewTextBoxColumn Ngaytra1;
         private DataGridViewTextBoxColumn Mathanhvien1;
         private DataGridViewTextBoxColumn Trangthai1;
+        private TextBox textBoxTimkiemtra;
+        private Label label2;
     }
 }
