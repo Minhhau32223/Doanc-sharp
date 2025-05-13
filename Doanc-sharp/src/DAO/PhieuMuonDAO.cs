@@ -136,11 +136,11 @@ namespace Doanc_sharp.src.DAO
         public DataTable layDuLieuThietBiDangDuocMuon(DateTime tuNgay, DateTime denNgay, string tuKhoa)
         {
             string query = "SELECT tv.Hoten, tb.Tenthietbi, pm.Ngaymuon, pm.Ngaytra, pm.Trangthai, ctpm.Soluong FROM phieumuon pm " +
-                "JOIN chitietphieumuon ctpm ON pm.Maphieumuon=ctpm.Maphieumuon " +
-                "JOIN thietbi tb ON tb.Mathietbi=ctpm.Mathietbi " +
-                "JOIN thanhvien tv ON tv.Mathanhvien=pm.Mathanhvien " +
-                "WHERE pm.Trangthai='Đang mượn' " +
-                "AND pm.Ngaymuon <= @denNgay AND pm.Ngaytra >= @tuNgay ";
+            "JOIN chitietphieumuon ctpm ON pm.Maphieumuon=ctpm.Maphieumuon " +
+            "JOIN thietbi tb ON tb.Mathietbi=ctpm.Mathietbi " +
+            "JOIN thanhvien tv ON tv.Mathanhvien=pm.Mathanhvien " +
+            "WHERE pm.Trangthai='Đang mượn' " +
+            "AND pm.Ngaymuon <= @denNgay AND pm.Ngaytra >= @tuNgay AND pm.Ngaytra >= @denNgay AND pm.Ngaymuon >= @tuNgay";
             if (!string.IsNullOrEmpty(tuKhoa))
             {
                 query += "AND tb.Tenthietbi LIKE @tuKhoa ";
